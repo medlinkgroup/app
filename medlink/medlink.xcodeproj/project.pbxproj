@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE1AED9724212C93009A86D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED9624212C93009A86D2 /* AppDelegate.swift */; };
+		CE1AED9924212C93009A86D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED9824212C93009A86D2 /* SceneDelegate.swift */; };
+		CE1AED9B24212C93009A86D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED9A24212C93009A86D2 /* ViewController.swift */; };
+		CE1AED9E24212C93009A86D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1AED9C24212C93009A86D2 /* Main.storyboard */; };
+		CE1AEDA024212C96009A86D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1AED9F24212C96009A86D2 /* Assets.xcassets */; };
+		CE1AEDA324212C96009A86D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1AEDA124212C96009A86D2 /* LaunchScreen.storyboard */; };
+		CE1AEDAE24212C96009A86D2 /* medlinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AEDAD24212C96009A86D2 /* medlinkTests.swift */; };
+		CE1AEDBA24212D01009A86D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AEDB824212D01009A86D2 /* HomeViewController.swift */; };
+		CE1AEDBB24212D01009A86D2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1AEDB924212D01009A86D2 /* HomeViewController.xib */; };
+		CE2CDD9E2428BCD900034E61 /* HomeSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CDD9C2428BCD900034E61 /* HomeSignUpViewController.swift */; };
+		CE2CDD9F2428BCD900034E61 /* HomeSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */; };
+		CE2CDDA22428BE4100034E61 /* DocProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CDDA02428BE4100034E61 /* DocProfileListViewController.swift */; };
+		CE2CDDA32428BE4100034E61 /* DocProfileListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2CDDA12428BE4100034E61 /* DocProfileListViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE1AEDAA24212C96009A86D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE1AED8B24212C92009A86D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE1AED9224212C92009A86D2;
+			remoteInfo = medlink;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE1AED9324212C93009A86D2 /* medlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1AED9624212C93009A86D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE1AED9824212C93009A86D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE1AED9A24212C93009A86D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE1AED9D24212C93009A86D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE1AED9F24212C96009A86D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE1AEDA224212C96009A86D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE1AEDA424212C96009A86D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1AEDA924212C96009A86D2 /* medlinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = medlinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1AEDAD24212C96009A86D2 /* medlinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medlinkTests.swift; sourceTree = "<group>"; };
+		CE1AEDAF24212C96009A86D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1AEDB824212D01009A86D2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CE1AEDB924212D01009A86D2 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		CE2CDD9C2428BCD900034E61 /* HomeSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSignUpViewController.swift; sourceTree = "<group>"; };
+		CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSignUpViewController.xib; sourceTree = "<group>"; };
+		CE2CDDA02428BE4100034E61 /* DocProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocProfileListViewController.swift; sourceTree = "<group>"; };
+		CE2CDDA12428BE4100034E61 /* DocProfileListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocProfileListViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE1AED9024212C92009A86D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1AEDA624212C96009A86D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE1AED8A24212C92009A86D2 = {
+			isa = PBXGroup;
+			children = (
+				CE1AED9524212C93009A86D2 /* medlink */,
+				CE1AEDAC24212C96009A86D2 /* medlinkTests */,
+				CE1AED9424212C93009A86D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE1AED9424212C93009A86D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE1AED9324212C93009A86D2 /* medlink.app */,
+				CE1AEDA924212C96009A86D2 /* medlinkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE1AED9524212C93009A86D2 /* medlink */ = {
+			isa = PBXGroup;
+			children = (
+				CE1AED9624212C93009A86D2 /* AppDelegate.swift */,
+				CE1AED9824212C93009A86D2 /* SceneDelegate.swift */,
+				CE1AED9A24212C93009A86D2 /* ViewController.swift */,
+				CE1AED9C24212C93009A86D2 /* Main.storyboard */,
+				CE1AED9F24212C96009A86D2 /* Assets.xcassets */,
+				CE1AEDA124212C96009A86D2 /* LaunchScreen.storyboard */,
+				CE1AEDA424212C96009A86D2 /* Info.plist */,
+				CE1AEDB824212D01009A86D2 /* HomeViewController.swift */,
+				CE1AEDB924212D01009A86D2 /* HomeViewController.xib */,
+				CE2CDD9C2428BCD900034E61 /* HomeSignUpViewController.swift */,
+				CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */,
+				CE2CDDA02428BE4100034E61 /* DocProfileListViewController.swift */,
+				CE2CDDA12428BE4100034E61 /* DocProfileListViewController.xib */,
+			);
+			path = medlink;
+			sourceTree = "<group>";
+		};
+		CE1AEDAC24212C96009A86D2 /* medlinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE1AEDAD24212C96009A86D2 /* medlinkTests.swift */,
+				CE1AEDAF24212C96009A86D2 /* Info.plist */,
+			);
+			path = medlinkTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE1AED9224212C92009A86D2 /* medlink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE1AEDB224212C96009A86D2 /* Build configuration list for PBXNativeTarget "medlink" */;
+			buildPhases = (
+				CE1AED8F24212C92009A86D2 /* Sources */,
+				CE1AED9024212C92009A86D2 /* Frameworks */,
+				CE1AED9124212C92009A86D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = medlink;
+			productName = medlink;
+			productReference = CE1AED9324212C93009A86D2 /* medlink.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE1AEDA824212C96009A86D2 /* medlinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE1AEDB524212C96009A86D2 /* Build configuration list for PBXNativeTarget "medlinkTests" */;
+			buildPhases = (
+				CE1AEDA524212C96009A86D2 /* Sources */,
+				CE1AEDA624212C96009A86D2 /* Frameworks */,
+				CE1AEDA724212C96009A86D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE1AEDAB24212C96009A86D2 /* PBXTargetDependency */,
+			);
+			name = medlinkTests;
+			productName = medlinkTests;
+			productReference = CE1AEDA924212C96009A86D2 /* medlinkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE1AED8B24212C92009A86D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Fabiana Montiel";
+				TargetAttributes = {
+					CE1AED9224212C92009A86D2 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					CE1AEDA824212C96009A86D2 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = CE1AED9224212C92009A86D2;
+					};
+				};
+			};
+			buildConfigurationList = CE1AED8E24212C92009A86D2 /* Build configuration list for PBXProject "medlink" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE1AED8A24212C92009A86D2;
+			productRefGroup = CE1AED9424212C93009A86D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE1AED9224212C92009A86D2 /* medlink */,
+				CE1AEDA824212C96009A86D2 /* medlinkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE1AED9124212C92009A86D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2CDDA32428BE4100034E61 /* DocProfileListViewController.xib in Resources */,
+				CE2CDD9F2428BCD900034E61 /* HomeSignUpViewController.xib in Resources */,
+				CE1AEDA324212C96009A86D2 /* LaunchScreen.storyboard in Resources */,
+				CE1AEDA024212C96009A86D2 /* Assets.xcassets in Resources */,
+				CE1AED9E24212C93009A86D2 /* Main.storyboard in Resources */,
+				CE1AEDBB24212D01009A86D2 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1AEDA724212C96009A86D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE1AED8F24212C92009A86D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1AED9B24212C93009A86D2 /* ViewController.swift in Sources */,
+				CE1AED9724212C93009A86D2 /* AppDelegate.swift in Sources */,
+				CE1AED9924212C93009A86D2 /* SceneDelegate.swift in Sources */,
+				CE2CDDA22428BE4100034E61 /* DocProfileListViewController.swift in Sources */,
+				CE1AEDBA24212D01009A86D2 /* HomeViewController.swift in Sources */,
+				CE2CDD9E2428BCD900034E61 /* HomeSignUpViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1AEDA524212C96009A86D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1AEDAE24212C96009A86D2 /* medlinkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE1AEDAB24212C96009A86D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE1AED9224212C92009A86D2 /* medlink */;
+			targetProxy = CE1AEDAA24212C96009A86D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE1AED9C24212C93009A86D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE1AED9D24212C93009A86D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE1AEDA124212C96009A86D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE1AEDA224212C96009A86D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE1AEDB024212C96009A86D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE1AEDB124212C96009A86D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE1AEDB324212C96009A86D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = medlink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = esgi.medlink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE1AEDB424212C96009A86D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = medlink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = esgi.medlink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE1AEDB624212C96009A86D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = medlinkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = esgi.medlinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/medlink.app/medlink";
+			};
+			name = Debug;
+		};
+		CE1AEDB724212C96009A86D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = medlinkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = esgi.medlinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/medlink.app/medlink";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE1AED8E24212C92009A86D2 /* Build configuration list for PBXProject "medlink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE1AEDB024212C96009A86D2 /* Debug */,
+				CE1AEDB124212C96009A86D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE1AEDB224212C96009A86D2 /* Build configuration list for PBXNativeTarget "medlink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE1AEDB324212C96009A86D2 /* Debug */,
+				CE1AEDB424212C96009A86D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE1AEDB524212C96009A86D2 /* Build configuration list for PBXNativeTarget "medlinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE1AEDB624212C96009A86D2 /* Debug */,
+				CE1AEDB724212C96009A86D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE1AED8B24212C92009A86D2 /* Project object */;
+}
