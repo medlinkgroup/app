@@ -7,24 +7,91 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class HomeSignUpViewController: UIViewController {
-
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        errorLabel.alpha = 0
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    func valedateFields() -> String? {
+              let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+              let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+              // check that all fields are filled in
+              if email == "" && password == "" {
+                      return "Erreur : les champs ne sont pas complets"
+              }
+              return nil
+          }
+    func showError(_ message:String) {
+        errorLabel.text = message
+        errorLabel.alpha = 1
     }
-    */
+    
+
+    func transitionToHomeEvent() {
+        self.dismiss(animated: true, completion: nil)
+      
+             // go to home
+             self.navigationController?.setViewControllers([HomeViewController()], animated: true)
+             let alertController = UIAlertController(title: nil, message: "User was sucessfully created", preferredStyle: .alert)
+              alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+             self.present(alertController, animated: true, completion: nil)
+    
+             
+       
+         }
+    
+    
+
+    @IBAction func signUpBtn(_ sender: Any) {
+        let error = valedateFields()
+        if (error != nil){
+            showError(error!)
+        }else {
+           
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+          
+            Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
+                if error != nil {
+                    self.showError("Cette email existe")
+                    return
+                }
+                guard let userID = Auth.auth().currentUser?.uid else { return }
+                
+                let db = Firestore.firestore()
+                
+                db.collection("users").document(userID).setData([
+                            
+                            "email": email,
+                            "uid": userID,
+                          
+                ]) { (err) in
+                        if err != nil {
+                            self.showError("error saveing data user")
+                        } else {
+                           
+                            print("Document added with ID: \(userID)")
+                            self.transitionToHomeEvent()
+                        }
+                    }
+                
+            }
+        }
+        
+    }
+    
+    
+    
+ 
 
 }

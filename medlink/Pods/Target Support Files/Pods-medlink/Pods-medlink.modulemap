@@ -1,0 +1,6 @@
+framework module Pods_medlink {
+  umbrella header "Pods-medlink-umbrella.h"
+
+  export *
+  module * { export * }
+}

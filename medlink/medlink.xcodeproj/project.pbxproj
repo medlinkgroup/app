@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5671ADA97027FEC6D9EFFB60 /* Pods_medlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4BC736FF6FEFC0A5FE9B44 /* Pods_medlink.framework */; };
+		7A6D180524532F56002E4FB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D180424532F56002E4FB2 /* GoogleService-Info.plist */; };
 		CE1AED9724212C93009A86D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED9624212C93009A86D2 /* AppDelegate.swift */; };
 		CE1AED9B24212C93009A86D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED9A24212C93009A86D2 /* ViewController.swift */; };
 		CE1AEDA024212C96009A86D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1AED9F24212C96009A86D2 /* Assets.xcassets */; };
@@ -18,6 +20,7 @@
 		CE2CDD9F2428BCD900034E61 /* HomeSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */; };
 		CE2CDDA22428BE4100034E61 /* DocProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CDDA02428BE4100034E61 /* DocProfileListViewController.swift */; };
 		CE2CDDA32428BE4100034E61 /* DocProfileListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2CDDA12428BE4100034E61 /* DocProfileListViewController.xib */; };
+		E407D49F0A7EF61B263FFFBC /* Pods_medlinkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65B55DBF0DCDDF43947C069D /* Pods-medlinkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlinkTests.release.xcconfig"; path = "Target Support Files/Pods-medlinkTests/Pods-medlinkTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A6D180424532F56002E4FB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90961D039CD43F420F5747AF /* Pods-medlink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlink.release.xcconfig"; path = "Target Support Files/Pods-medlink/Pods-medlink.release.xcconfig"; sourceTree = "<group>"; };
+		9B4BC736FF6FEFC0A5FE9B44 /* Pods_medlink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C0D459E2288E7DA6F3CB9F /* Pods-medlinkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlinkTests.debug.xcconfig"; path = "Target Support Files/Pods-medlinkTests/Pods-medlinkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1AED9324212C93009A86D2 /* medlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1AED9624212C93009A86D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1AED9A24212C93009A86D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +55,7 @@
 		CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSignUpViewController.xib; sourceTree = "<group>"; };
 		CE2CDDA02428BE4100034E61 /* DocProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocProfileListViewController.swift; sourceTree = "<group>"; };
 		CE2CDDA12428BE4100034E61 /* DocProfileListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocProfileListViewController.xib; sourceTree = "<group>"; };
+		FF0ACFB9C891651B4354D898 /* Pods-medlink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlink.debug.xcconfig"; path = "Target Support Files/Pods-medlink/Pods-medlink.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5671ADA97027FEC6D9EFFB60 /* Pods_medlink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,18 +71,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E407D49F0A7EF61B263FFFBC /* Pods_medlinkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3277F2426180F1CFA77D7A2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B4BC736FF6FEFC0A5FE9B44 /* Pods_medlink.framework */,
+				8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE1AED8A24212C92009A86D2 = {
 			isa = PBXGroup;
 			children = (
 				CE1AED9524212C93009A86D2 /* medlink */,
 				CE1AEDAC24212C96009A86D2 /* medlinkTests */,
 				CE1AED9424212C93009A86D2 /* Products */,
+				FA8945DC31C5C476B7F28523 /* Pods */,
+				3277F2426180F1CFA77D7A2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +121,7 @@
 				CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */,
 				CE2CDDA02428BE4100034E61 /* DocProfileListViewController.swift */,
 				CE2CDDA12428BE4100034E61 /* DocProfileListViewController.xib */,
+				7A6D180424532F56002E4FB2 /* GoogleService-Info.plist */,
 			);
 			path = medlink;
 			sourceTree = "<group>";
@@ -111,6 +135,17 @@
 			path = medlinkTests;
 			sourceTree = "<group>";
 		};
+		FA8945DC31C5C476B7F28523 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF0ACFB9C891651B4354D898 /* Pods-medlink.debug.xcconfig */,
+				90961D039CD43F420F5747AF /* Pods-medlink.release.xcconfig */,
+				B8C0D459E2288E7DA6F3CB9F /* Pods-medlinkTests.debug.xcconfig */,
+				65B55DBF0DCDDF43947C069D /* Pods-medlinkTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE1AEDB224212C96009A86D2 /* Build configuration list for PBXNativeTarget "medlink" */;
 			buildPhases = (
+				2C5C618AA323C28F49612563 /* [CP] Check Pods Manifest.lock */,
 				CE1AED8F24212C92009A86D2 /* Sources */,
 				CE1AED9024212C92009A86D2 /* Frameworks */,
 				CE1AED9124212C92009A86D2 /* Resources */,
+				B06B8B96C08CF20DE5F5D584 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +172,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE1AEDB524212C96009A86D2 /* Build configuration list for PBXNativeTarget "medlinkTests" */;
 			buildPhases = (
+				7354AE9E330C4715E2444859 /* [CP] Check Pods Manifest.lock */,
 				CE1AEDA524212C96009A86D2 /* Sources */,
 				CE1AEDA624212C96009A86D2 /* Frameworks */,
 				CE1AEDA724212C96009A86D2 /* Resources */,
@@ -193,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2CDDA32428BE4100034E61 /* DocProfileListViewController.xib in Resources */,
+				7A6D180524532F56002E4FB2 /* GoogleService-Info.plist in Resources */,
 				CE2CDD9F2428BCD900034E61 /* HomeSignUpViewController.xib in Resources */,
 				CE1AEDA324212C96009A86D2 /* LaunchScreen.storyboard in Resources */,
 				CE1AEDA024212C96009A86D2 /* Assets.xcassets in Resources */,
@@ -208,6 +247,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C5C618AA323C28F49612563 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-medlink-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7354AE9E330C4715E2444859 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-medlinkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B06B8B96C08CF20DE5F5D584 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-medlink/Pods-medlink-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-medlink/Pods-medlink-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-medlink/Pods-medlink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE1AED8F24212C92009A86D2 /* Sources */ = {
@@ -368,6 +471,7 @@
 		};
 		CE1AEDB324212C96009A86D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF0ACFB9C891651B4354D898 /* Pods-medlink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -385,6 +489,7 @@
 		};
 		CE1AEDB424212C96009A86D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90961D039CD43F420F5747AF /* Pods-medlink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -402,6 +507,7 @@
 		};
 		CE1AEDB624212C96009A86D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8C0D459E2288E7DA6F3CB9F /* Pods-medlinkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -423,6 +529,7 @@
 		};
 		CE1AEDB724212C96009A86D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65B55DBF0DCDDF43947C069D /* Pods-medlinkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
