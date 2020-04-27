@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AuthCheck()
         errorLabel.alpha = 0
 
         // Do any additional setup after loading the view.
@@ -36,6 +37,14 @@ class HomeViewController: UIViewController {
         errorLabel.alpha = 1
     }
 
+    private func AuthCheck(){
+
+           if (Auth.auth().currentUser?.uid) != nil {
+                 self.navigationController?.setViewControllers([DocAccountViewController()], animated: false)
+           }
+           
+    }
+       
     @IBAction func signUpBtn(_ sender: Any) {
         self.navigationController?.pushViewController(HomeSignUpViewController(), animated: true)
     }
@@ -60,6 +69,8 @@ class HomeViewController: UIViewController {
                }
      
     }
+    
+    
     
 
 }

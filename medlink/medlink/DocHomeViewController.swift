@@ -7,24 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
 class DocHomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkIfUserIsSignedIn()
 
-        // Do any additional setup after loading the view.
     }
+   private func checkIfUserIsSignedIn() {
+      
+               let db = Firestore.firestore()
 
+               if Auth.auth().currentUser  == nil {
+                   //Check si un user est connecté
+                   self.navigationController?.pushViewController(HomeViewController(), animated: false)
+               }
+       }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

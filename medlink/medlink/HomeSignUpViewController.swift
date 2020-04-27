@@ -13,6 +13,8 @@ import Firebase
 class HomeSignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
@@ -60,6 +62,8 @@ class HomeSignUpViewController: UIViewController {
            
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let firstname = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastname = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
           
             Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
                 if error != nil {
@@ -74,6 +78,8 @@ class HomeSignUpViewController: UIViewController {
                             
                             "email": email,
                             "uid": userID,
+                            "fistname": firstname,
+                            "lastname": lastname,
                           
                 ]) { (err) in
                         if err != nil {

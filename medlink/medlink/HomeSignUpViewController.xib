@@ -11,6 +11,8 @@
             <connections>
                 <outlet property="emailTextField" destination="pRl-7m-cIE" id="9J3-ll-qVo"/>
                 <outlet property="errorLabel" destination="lQq-WQ-eeC" id="jol-yv-UlQ"/>
+                <outlet property="firstNameTextField" destination="HSK-5B-v01" id="g2C-JL-f5h"/>
+                <outlet property="lastNameTextField" destination="hO4-xR-5ic" id="azR-yi-YJy"/>
                 <outlet property="passwordTextField" destination="EkX-p5-hhM" id="egK-xR-eig"/>
                 <outlet property="view" destination="ndh-cV-7x8" id="y0P-mj-Gu8"/>
             </connections>
@@ -68,7 +70,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQq-WQ-eeC">
-                            <rect key="frame" x="60" y="567" width="186" height="21"/>
+                            <rect key="frame" x="58" y="567" width="186" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>

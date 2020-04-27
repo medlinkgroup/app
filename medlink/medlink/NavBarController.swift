@@ -20,13 +20,7 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        /*navBarCont.tabBar.barTintColor = UIColor.yellow
-        var tabFrame = self.navBarCont.tabBar.frame
-        tabFrame.size.height = 50
-       tabFrame.origin.y = self.view.frame.size.height - 50*/
         setupTabBar()
-        // enlever toute la bar
        self.navigationController?.isNavigationBarHidden = true
 
 
@@ -46,25 +40,32 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         optionA.setNavigationBarHidden(true, animated: true)
         optionA.isNavigationBarHidden = true
         optionA.tabBarItem.title="Account"
-        let image1 = UIImage(named: "profile_icon")
+        let image1 = UIImage(named: "Account")
         optionA.tabBarItem.image  = image1
         
         
-        let optionB = UINavigationController(rootViewController: HomeSignUpViewController())
+        let optionB = UINavigationController(rootViewController: ConsultationsViewController())
         
         optionB.isNavigationBarHidden = true
         optionB.tabBarItem.title="Consultations"
-        optionB.tabBarItem.image = UIImage(named: "Search")
+        optionB.tabBarItem.image = UIImage(named: "")
+        
+        let optionD = UINavigationController(rootViewController: DocHomeViewController())
+            optionD.isNavigationBarHidden = true
+            optionD.tabBarItem.title="Home"
+            let image4 = UIImage(named: "Home")
+              optionD.tabBarItem.image = image4
 
-        let optionC = UINavigationController(rootViewController: ViewController())
+
+        let optionC = UINavigationController(rootViewController: AddPatientViewController())
         optionC.isNavigationBarHidden = true
         optionC.tabBarItem.title="Add"
-        let image2 = UIImage(named: "profile_icon")
-          optionC.tabBarItem.image = image2
+        let image3 = UIImage(named: "")
+          optionC.tabBarItem.image = image3
         
-
+    
      
-        navBarCont.viewControllers = [optionA,optionB,optionC]
+        navBarCont.viewControllers = [optionA,optionB,optionC, optionD]
         self.view.addSubview(navBarCont.view)
     }
 }
