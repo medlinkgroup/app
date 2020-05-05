@@ -15,10 +15,24 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var login_Btn: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet var label_login_title: UILabel!
+    @IBOutlet var label_username: UILabel!
+    @IBOutlet var label_password: UILabel!
+    @IBOutlet var btn_login: UIButton!
+    @IBOutlet var signUp_button: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         AuthCheck()
-        errorLabel.alpha = 0
+        
+        label_login_title.text = NSLocalizedString("login_title", comment: "")
+        label_username.text = NSLocalizedString("username", comment: "")
+        label_password.text = NSLocalizedString("password", comment: "")
+        signUp_button.setTitle(NSLocalizedString("signup", comment: ""), for: .normal)
+        signUp_button.titleLabel?.textAlignment = .center
+        
+        //errorLabel.alpha = 0
 
         // Do any additional setup after loading the view.
     }
@@ -45,12 +59,34 @@ class HomeViewController: UIViewController {
            
     }
        
-    @IBAction func signUpBtn(_ sender: Any) {
+    /*@IBAction func signUpBtn(_ sender: Any) {
+        self.navigationController?.pushViewController(HomeSignUpViewController(), animated: true)
+    }*/
+    
+    @IBAction func go_to_sign_up(_ sender: Any) {
         self.navigationController?.pushViewController(HomeSignUpViewController(), animated: true)
     }
     
+    @IBAction func login_btn(_ sender: Any) {
+        let error = valedateFields()
+        if error != nil {
+               showError(error!)
+        }else {
+            // create cleaned textfield
+            let email = loginTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            // connection
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error != nil {
+                    self.showError("Mot de passe incorrect")
+                } else {
+                    self.navigationController?.setViewControllers([DocProfileListViewController()], animated: true)
+                }
+            })
+        }
+    }
     
-    @IBAction func loginBtn(_ sender: Any) {
+    /*@IBAction func loginBtn(_ sender: Any) {
         let error = valedateFields()
                if error != nil {
                       showError(error!)
@@ -68,7 +104,7 @@ class HomeViewController: UIViewController {
                    })
                }
      
-    }
+    }*/
     
     
     
