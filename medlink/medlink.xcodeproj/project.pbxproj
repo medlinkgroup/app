@@ -21,6 +21,10 @@
 		7A6D180524532F56002E4FB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D180424532F56002E4FB2 /* GoogleService-Info.plist */; };
 		CE02178B24619A9A00D36114 /* DocDashboardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02178924619A9A00D36114 /* DocDashboardListViewController.swift */; };
 		CE02178C24619A9A00D36114 /* DocDashboardListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02178A24619A9A00D36114 /* DocDashboardListViewController.xib */; };
+		CE0217922461B9A300D36114 /* Consultation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217912461B9A300D36114 /* Consultation.swift */; };
+		CE0217942461B9C800D36114 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217932461B9C800D36114 /* Patient.swift */; };
+		CE0217962461B9E000D36114 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217952461B9E000D36114 /* Doctor.swift */; };
+		CE0217982461B9FB00D36114 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217972461B9FB00D36114 /* Location.swift */; };
 		CE1AED9724212C93009A86D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED9624212C93009A86D2 /* AppDelegate.swift */; };
 		CE1AED9B24212C93009A86D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED9A24212C93009A86D2 /* ViewController.swift */; };
 		CE1AEDA324212C96009A86D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1AEDA124212C96009A86D2 /* LaunchScreen.storyboard */; };
@@ -65,6 +69,10 @@
 		B8C0D459E2288E7DA6F3CB9F /* Pods-medlinkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlinkTests.debug.xcconfig"; path = "Target Support Files/Pods-medlinkTests/Pods-medlinkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE02178924619A9A00D36114 /* DocDashboardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocDashboardListViewController.swift; sourceTree = "<group>"; };
 		CE02178A24619A9A00D36114 /* DocDashboardListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocDashboardListViewController.xib; sourceTree = "<group>"; };
+		CE0217912461B9A300D36114 /* Consultation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consultation.swift; sourceTree = "<group>"; };
+		CE0217932461B9C800D36114 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		CE0217952461B9E000D36114 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		CE0217972461B9FB00D36114 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CE1AED9324212C93009A86D2 /* medlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1AED9624212C93009A86D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1AED9A24212C93009A86D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +123,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE02178D2461B97500D36114 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				CE0217902461B98B00D36114 /* Models */,
+				CE02178F2461B98600D36114 /* Mocks */,
+				CE02178E2461B97F00D36114 /* Calls */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		CE02178E2461B97F00D36114 /* Calls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calls;
+			sourceTree = "<group>";
+		};
+		CE02178F2461B98600D36114 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		CE0217902461B98B00D36114 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE0217912461B9A300D36114 /* Consultation.swift */,
+				CE0217932461B9C800D36114 /* Patient.swift */,
+				CE0217952461B9E000D36114 /* Doctor.swift */,
+				CE0217972461B9FB00D36114 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CE1AED8A24212C92009A86D2 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +181,7 @@
 		CE1AED9524212C93009A86D2 /* medlink */ = {
 			isa = PBXGroup;
 			children = (
+				CE02178D2461B97500D36114 /* Ressources */,
 				CE1AED9624212C93009A86D2 /* AppDelegate.swift */,
 				CE1AED9A24212C93009A86D2 /* ViewController.swift */,
 				CE1AED9F24212C96009A86D2 /* Assets.xcassets */,
@@ -369,11 +413,15 @@
 				7A628BB9245733C200C3FAFE /* AddPatientViewController.swift in Sources */,
 				CE1AED9B24212C93009A86D2 /* ViewController.swift in Sources */,
 				7A628BB52457333B00C3FAFE /* ConsultationsViewController.swift in Sources */,
+				CE0217942461B9C800D36114 /* Patient.swift in Sources */,
 				7A628BAD24571D5700C3FAFE /* DocHomeViewController.swift in Sources */,
 				CE1AED9724212C93009A86D2 /* AppDelegate.swift in Sources */,
+				CE0217962461B9E000D36114 /* Doctor.swift in Sources */,
+				CE0217982461B9FB00D36114 /* Location.swift in Sources */,
 				7A628BB124571D9000C3FAFE /* DocAccountViewController.swift in Sources */,
 				7A628BA92456FD5500C3FAFE /* NavBarController.swift in Sources */,
 				CE2CDDA22428BE4100034E61 /* DocProfileListViewController.swift in Sources */,
+				CE0217922461B9A300D36114 /* Consultation.swift in Sources */,
 				CE1AEDBA24212D01009A86D2 /* HomeViewController.swift in Sources */,
 				CE02178B24619A9A00D36114 /* DocDashboardListViewController.swift in Sources */,
 				CE2CDD9E2428BCD900034E61 /* HomeSignUpViewController.swift in Sources */,
