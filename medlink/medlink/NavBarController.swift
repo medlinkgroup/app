@@ -35,37 +35,33 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         
         navBarCont.delegate = self
         
-
-        let optionA = UINavigationController(rootViewController: HomeViewController())
+        let optionD = UINavigationController(rootViewController: HomeViewController())
+        optionD.isNavigationBarHidden = true
+        optionD.tabBarItem.title="Home"
+        let image4 = UIImage(named: "Home")
+        optionD.tabBarItem.image = image4
+        
+        let optionA = UINavigationController(rootViewController: DocAccountViewController())
         optionA.setNavigationBarHidden(true, animated: true)
         optionA.isNavigationBarHidden = true
         optionA.tabBarItem.title="Account"
         let image1 = UIImage(named: "Account")
         optionA.tabBarItem.image  = image1
         
-        
         let optionB = UINavigationController(rootViewController: ConsultationsViewController())
-        
         optionB.isNavigationBarHidden = true
         optionB.tabBarItem.title="Consultations"
         optionB.tabBarItem.image = UIImage(named: "")
-        
-        let optionD = UINavigationController(rootViewController: DocHomeViewController())
-            optionD.isNavigationBarHidden = true
-            optionD.tabBarItem.title="Home"
-            let image4 = UIImage(named: "Home")
-              optionD.tabBarItem.image = image4
-
 
         let optionC = UINavigationController(rootViewController: AddPatientViewController())
         optionC.isNavigationBarHidden = true
         optionC.tabBarItem.title="Add"
         let image3 = UIImage(named: "")
-          optionC.tabBarItem.image = image3
+        optionC.tabBarItem.image = image3
         
     
      
-        navBarCont.viewControllers = [optionA,optionB,optionC, optionD]
+        navBarCont.viewControllers = [optionD, optionB, optionC, optionA]
         self.view.addSubview(navBarCont.view)
     }
 }

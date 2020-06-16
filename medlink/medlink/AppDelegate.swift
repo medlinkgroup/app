@@ -17,9 +17,10 @@ var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         let window = UIWindow(frame: UIScreen.main.bounds)
-        
-        window.rootViewController = UINavigationController(rootViewController:
-        HomeViewController())
+        let root =  UINavigationController(rootViewController: NavBarController())
+
+        //window.rootViewController = UINavigationController(rootViewController:
+        //HomeViewController())
         //HomeSignUpViewController())
         //AddPatientViewController())
         
@@ -28,11 +29,10 @@ var window: UIWindow?
         //DocProfileListViewController())
 
             
-        /*
-        let root =  UINavigationController(rootViewController: NavBarController())
+        
         //root.setNavigationBarHidden(YES , animated: YES)
         root.isNavigationBarHidden = true
-        window.rootViewController = root*/
+        window.rootViewController = root
         window.makeKeyAndVisible()
         self.window = window
         return true
