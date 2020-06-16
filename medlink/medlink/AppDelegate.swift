@@ -19,12 +19,12 @@ var window: UIWindow?
         let window = UIWindow(frame: UIScreen.main.bounds)
         
         window.rootViewController = UINavigationController(rootViewController:
-        HomeViewController())
+        //HomeViewController())
         //HomeSignUpViewController())
         //AddPatientViewController())
         
             
-        //DocDashboardListViewController())
+        DocDashboardListViewController())
         //DocProfileListViewController())
 
             

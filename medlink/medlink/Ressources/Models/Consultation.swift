@@ -10,6 +10,7 @@ import Foundation
 
 struct Consultation {
     
+    var id: String
     var title: String
     var description: String
     var doctor_uid: String
@@ -20,6 +21,7 @@ struct Consultation {
     
     func dictionnary() -> [String : Any] {
         return [
+            "id": self.id,
             "title": self.title,
             "description": self.description,
             "medecinUid": self.patient_uid,

@@ -9,6 +9,7 @@ target 'medlink' do
      pod 'Firebase/Firestore'
      pod 'Firebase/Storage'
      pod 'FirebaseDatabase'
+     pod 'Alamofire'
    
   # Pods for medlink
 

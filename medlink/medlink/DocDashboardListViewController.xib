@@ -11,12 +11,14 @@
                 <outlet property="btn_add_consultation" destination="CzU-4u-lcA" id="zT7-w6-eWl"/>
                 <outlet property="btn_add_patient" destination="w3P-Mq-1dS" id="giJ-xu-WlD"/>
                 <outlet property="btn_profile" destination="rJT-74-cIM" id="Kct-HA-ad4"/>
+                <outlet property="consultationsTableView" destination="C4q-50-NNi" id="DHF-jC-TNz"/>
                 <outlet property="label_add_consultation" destination="4k3-MV-QQ6" id="eWk-bx-eZG"/>
                 <outlet property="label_add_patient" destination="7cx-ba-GnX" id="40c-TY-sRz"/>
                 <outlet property="label_consultations" destination="iGs-Y3-C8M" id="coK-zW-gp0"/>
                 <outlet property="label_dashboard" destination="KPa-Ts-H6i" id="0xM-zp-YyF"/>
                 <outlet property="label_patients" destination="pfa-ok-627" id="TiC-qF-XcR"/>
                 <outlet property="label_profile" destination="3cu-BE-Unh" id="pck-b1-RE6"/>
+                <outlet property="patientsTableView" destination="lyz-H6-byH" id="yDH-xY-kbU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
