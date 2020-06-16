@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class NavBarController: UITabBarController , UITabBarControllerDelegate {
     
@@ -35,8 +36,8 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         
         navBarCont.delegate = self
         
-        let optionD = UINavigationController(rootViewController: HomeViewController())
-        optionD.isNavigationBarHidden = true
+        let optionD = UINavigationController(rootViewController: DocDashboardListViewController())
+        optionD.isNavigationBarHidden = false
         optionD.tabBarItem.title="Home"
         let image4 = UIImage(named: "Home")
         optionD.tabBarItem.image = image4
@@ -48,20 +49,16 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         let image1 = UIImage(named: "Account")
         optionA.tabBarItem.image  = image1
         
-        let optionB = UINavigationController(rootViewController: ConsultationsViewController())
-        optionB.isNavigationBarHidden = true
-        optionB.tabBarItem.title="Consultations"
-        optionB.tabBarItem.image = UIImage(named: "")
 
-        let optionC = UINavigationController(rootViewController: AddPatientViewController())
+        let optionC = UINavigationController(rootViewController: PatientsListViewController())
         optionC.isNavigationBarHidden = true
-        optionC.tabBarItem.title="Add"
+        optionC.tabBarItem.title="Patients"
         let image3 = UIImage(named: "")
         optionC.tabBarItem.image = image3
         
     
      
-        navBarCont.viewControllers = [optionD, optionB, optionC, optionA]
+        navBarCont.viewControllers = [optionD, optionC, optionA]
         self.view.addSubview(navBarCont.view)
     }
 }

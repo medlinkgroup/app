@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class DocAccountViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -19,9 +21,11 @@ class DocAccountViewController: UIViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
     @IBOutlet weak var specialityTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         let db = Firestore.firestore()
           
               if let user = Auth.auth().currentUser {
@@ -40,15 +44,22 @@ class DocAccountViewController: UIViewController {
                      }
                  }
               } else {
-                  fatalError(" Erreur : aucun user connect")
+                  //fatalError(" Erreur : aucun user connect")
+                if (Auth.auth().currentUser?.uid) == nil {
+                                   self.navigationController?.setViewControllers([HomeViewController()], animated: false)
+                   // self.navigationController?.setNavigationBarHidden(true, animated: true)
+                    
+                             }
+                
               }
 
         // Do any additional setup after loading the view.
     }
  
-
+ 
     @IBAction func SignOut(_ sender: Any) {
         try! Auth.auth().signOut()
+       
                self.navigationController?.setViewControllers([HomeViewController()], animated: true)
     }
     

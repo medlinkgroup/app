@@ -17,7 +17,7 @@ var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let root =  UINavigationController(rootViewController: NavBarController())
+        let root =  UINavigationController(rootViewController: HomeViewController())
 
         //window.rootViewController = UINavigationController(rootViewController:
         //HomeViewController())

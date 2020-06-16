@@ -18,11 +18,17 @@ class HomeViewController: UIViewController {
        
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
 
-        AuthCheck()
+        //AuthCheck()
         errorLabel.alpha = 0
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     func valedateFields() -> String? {
         let email = loginTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -42,7 +48,7 @@ class HomeViewController: UIViewController {
     private func AuthCheck(){
 
            if (Auth.auth().currentUser?.uid) != nil {
-                 self.navigationController?.setViewControllers([DocHomeViewController()], animated: false)
+                 self.navigationController?.setViewControllers([DocDashboardListViewController()], animated: false)
            }
            
     }
@@ -66,7 +72,7 @@ class HomeViewController: UIViewController {
                        if error != nil {
                            self.showError("Mot de passe incorrect")
                        } else {
-                           self.navigationController?.setViewControllers([DocHomeViewController()], animated: true)
+                           self.navigationController?.setViewControllers([NavBarController()], animated: true)
                        }
                    })
                }

@@ -9,28 +9,21 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 class DocDashboardListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     
     @IBOutlet var consultationsTableView: UITableView!
-    @IBOutlet var patientsTableView: UITableView!
-    
-    @IBOutlet var btn_profile: UIImageView!
-    @IBOutlet var btn_add_consultation: UIImageView!
-    @IBOutlet var btn_add_patient: UIImageView!
     @IBOutlet var label_consultations: UILabel!
-    @IBOutlet var label_patients: UILabel!
     @IBOutlet var label_dashboard: UILabel!
-    @IBOutlet var label_profile: UILabel!
-    @IBOutlet var label_add_consultation: UILabel!
-    @IBOutlet var label_add_patient: UILabel!
+    
     
     // API : https://medlinkapi.herokuapp.com/
     
     public static let consultationsTableViewCellId = "ctvc"
-    public static let patientsTableViewCellId = "ptvc"
     
     var consultations: [Consultation] = [] {
         didSet {
@@ -38,12 +31,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
     
-    var patients: [Patient] = [] {
-        didSet {
-            self.patientsTableView.reloadData()
-        }
-    }
-    
+   
     //var filmCall: FilmCall {
     //    return FilmCallAPI()
     //}
@@ -66,24 +54,18 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         
         
         label_consultations.text = NSLocalizedString("list_consultations", comment: "")
-        label_patients.text = NSLocalizedString("list_patients", comment: "")
-        label_profile.text = NSLocalizedString("view_profile", comment: "")
-        label_add_consultation.text = NSLocalizedString("add_consultation", comment: "")
-        label_add_patient.text = NSLocalizedString("add_patient", comment: "")
         label_dashboard.text = NSLocalizedString("dashboard", comment: "")
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         let tap_profile = UITapGestureRecognizer(target: self, action: #selector(DocDashboardListViewController.goToProfile))
-        btn_profile.addGestureRecognizer(tap_profile)
-        btn_profile.isUserInteractionEnabled = true
+        //btn_profile.addGestureRecognizer(tap_profile)
+        //btn_profile.isUserInteractionEnabled = true
         
         let tap_add_consultation = UITapGestureRecognizer(target: self, action: #selector(DocDashboardListViewController.goToAddConsultation))
-        btn_add_consultation.addGestureRecognizer(tap_add_consultation)
-        btn_add_consultation.isUserInteractionEnabled = true
+        //btn_add_consultation.addGestureRecognizer(tap_add_consultation)
+        //btn_add_consultation.isUserInteractionEnabled = true
         
-        let tap_add_patient = UITapGestureRecognizer(target: self, action: #selector(DocDashboardListViewController.goToAddPatient))
-        btn_add_patient.addGestureRecognizer(tap_add_patient)
-        btn_add_patient.isUserInteractionEnabled = true
+       
         
         
         //self.consultationsTableView.rowHeight = 120
@@ -92,11 +74,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         self.consultationsTableView.dataSource = self
         self.consultationsTableView.delegate = self
         
-        //self.patientsTableView.rowHeight = 120
-        self.patientsTableView.backgroundColor = UIColor.clear
-        self.patientsTableView.register(UINib(nibName: "PatientsTableViewCell", bundle: nil), forCellReuseIdentifier: DocDashboardListViewController.patientsTableViewCellId)
-        self.patientsTableView.dataSource = self
-        self.patientsTableView.delegate = self
+        
         
         
         
@@ -114,7 +92,13 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         return ConsultationCallAPI()
     }
     
-    
+    private func AuthCheck(){
+
+           if (Auth.auth().currentUser?.uid) == nil {
+                 self.navigationController?.setViewControllers([HomeViewController()], animated: false)
+           }
+           
+    }
     
     
     @objc func goToProfile()
@@ -125,11 +109,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     {
         print("Tapped on Image consultation")
     }
-    @objc func goToAddPatient()
-    {
-        print("Tapped on Image patient")
-    }
-    
+  
     private func checkIfUserIsSignedIn() {
     
         let db = Firestore.firestore()

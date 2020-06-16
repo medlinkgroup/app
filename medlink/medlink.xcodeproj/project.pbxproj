@@ -10,17 +10,17 @@
 		5671ADA97027FEC6D9EFFB60 /* Pods_medlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4BC736FF6FEFC0A5FE9B44 /* Pods_medlink.framework */; };
 		7A628BA92456FD5500C3FAFE /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A628BA72456FD5500C3FAFE /* NavBarController.swift */; };
 		7A628BAA2456FD5500C3FAFE /* NavBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A628BA82456FD5500C3FAFE /* NavBarController.xib */; };
-		7A628BAD24571D5700C3FAFE /* DocHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A628BAB24571D5700C3FAFE /* DocHomeViewController.swift */; };
-		7A628BAE24571D5700C3FAFE /* DocHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A628BAC24571D5700C3FAFE /* DocHomeViewController.xib */; };
 		7A628BB124571D9000C3FAFE /* DocAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A628BAF24571D9000C3FAFE /* DocAccountViewController.swift */; };
 		7A628BB224571D9000C3FAFE /* DocAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A628BB024571D9000C3FAFE /* DocAccountViewController.xib */; };
-		7A628BB52457333B00C3FAFE /* ConsultationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A628BB32457333B00C3FAFE /* ConsultationsViewController.swift */; };
-		7A628BB62457333B00C3FAFE /* ConsultationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A628BB42457333B00C3FAFE /* ConsultationsViewController.xib */; };
 		7A628BB9245733C200C3FAFE /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A628BB7245733C200C3FAFE /* AddPatientViewController.swift */; };
 		7A628BBA245733C200C3FAFE /* AddPatientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A628BB8245733C200C3FAFE /* AddPatientViewController.xib */; };
 		7A6D180524532F56002E4FB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D180424532F56002E4FB2 /* GoogleService-Info.plist */; };
 		7A6F8F822498F94B00281048 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F802498F94B00281048 /* HomeViewController.swift */; };
 		7A6F8F832498F94B00281048 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6F8F812498F94B00281048 /* HomeViewController.xib */; };
+		7A6F8F862499121C00281048 /* AddConsultationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F842499121C00281048 /* AddConsultationViewController.swift */; };
+		7A6F8F872499121C00281048 /* AddConsultationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6F8F852499121C00281048 /* AddConsultationViewController.xib */; };
+		7A6F8F8A2499127F00281048 /* PatientsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F882499127F00281048 /* PatientsListViewController.swift */; };
+		7A6F8F8B2499127F00281048 /* PatientsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6F8F892499127F00281048 /* PatientsListViewController.xib */; };
 		CE02178B24619A9A00D36114 /* DocDashboardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02178924619A9A00D36114 /* DocDashboardListViewController.swift */; };
 		CE02178C24619A9A00D36114 /* DocDashboardListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02178A24619A9A00D36114 /* DocDashboardListViewController.xib */; };
 		CE0217922461B9A300D36114 /* Consultation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217912461B9A300D36114 /* Consultation.swift */; };
@@ -33,8 +33,6 @@
 		CE1AEDAE24212C96009A86D2 /* medlinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AEDAD24212C96009A86D2 /* medlinkTests.swift */; };
 		CE2CDD9E2428BCD900034E61 /* HomeSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CDD9C2428BCD900034E61 /* HomeSignUpViewController.swift */; };
 		CE2CDD9F2428BCD900034E61 /* HomeSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */; };
-		CE2CDDA22428BE4100034E61 /* DocProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CDDA02428BE4100034E61 /* DocProfileListViewController.swift */; };
-		CE2CDDA32428BE4100034E61 /* DocProfileListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2CDDA12428BE4100034E61 /* DocProfileListViewController.xib */; };
 		CE42952424976F470002DB9A /* ConsultationCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42952324976F470002DB9A /* ConsultationCall.swift */; };
 		CE42952624976F940002DB9A /* ConsultationCallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42952524976F940002DB9A /* ConsultationCallAPI.swift */; };
 		CE429529249772030002DB9A /* ConsultationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE429528249772030002DB9A /* ConsultationUtils.swift */; };
@@ -62,17 +60,17 @@
 		65B55DBF0DCDDF43947C069D /* Pods-medlinkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlinkTests.release.xcconfig"; path = "Target Support Files/Pods-medlinkTests/Pods-medlinkTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A628BA72456FD5500C3FAFE /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		7A628BA82456FD5500C3FAFE /* NavBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavBarController.xib; sourceTree = "<group>"; };
-		7A628BAB24571D5700C3FAFE /* DocHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocHomeViewController.swift; sourceTree = "<group>"; };
-		7A628BAC24571D5700C3FAFE /* DocHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocHomeViewController.xib; sourceTree = "<group>"; };
 		7A628BAF24571D9000C3FAFE /* DocAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocAccountViewController.swift; sourceTree = "<group>"; };
 		7A628BB024571D9000C3FAFE /* DocAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocAccountViewController.xib; sourceTree = "<group>"; };
-		7A628BB32457333B00C3FAFE /* ConsultationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsViewController.swift; sourceTree = "<group>"; };
-		7A628BB42457333B00C3FAFE /* ConsultationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsultationsViewController.xib; sourceTree = "<group>"; };
 		7A628BB7245733C200C3FAFE /* AddPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 		7A628BB8245733C200C3FAFE /* AddPatientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPatientViewController.xib; sourceTree = "<group>"; };
 		7A6D180424532F56002E4FB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A6F8F802498F94B00281048 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7A6F8F812498F94B00281048 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		7A6F8F842499121C00281048 /* AddConsultationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddConsultationViewController.swift; path = Ressources/AddConsultationViewController.swift; sourceTree = "<group>"; };
+		7A6F8F852499121C00281048 /* AddConsultationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddConsultationViewController.xib; path = Ressources/AddConsultationViewController.xib; sourceTree = "<group>"; };
+		7A6F8F882499127F00281048 /* PatientsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsListViewController.swift; sourceTree = "<group>"; };
+		7A6F8F892499127F00281048 /* PatientsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientsListViewController.xib; sourceTree = "<group>"; };
 		8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90961D039CD43F420F5747AF /* Pods-medlink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlink.release.xcconfig"; path = "Target Support Files/Pods-medlink/Pods-medlink.release.xcconfig"; sourceTree = "<group>"; };
 		9B4BC736FF6FEFC0A5FE9B44 /* Pods_medlink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +92,6 @@
 		CE1AEDAF24212C96009A86D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE2CDD9C2428BCD900034E61 /* HomeSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSignUpViewController.swift; sourceTree = "<group>"; };
 		CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSignUpViewController.xib; sourceTree = "<group>"; };
-		CE2CDDA02428BE4100034E61 /* DocProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocProfileListViewController.swift; sourceTree = "<group>"; };
-		CE2CDDA12428BE4100034E61 /* DocProfileListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocProfileListViewController.xib; sourceTree = "<group>"; };
 		CE42952324976F470002DB9A /* ConsultationCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConsultationCall.swift; path = medlink/Ressources/ConsultationCall.swift; sourceTree = SOURCE_ROOT; };
 		CE42952524976F940002DB9A /* ConsultationCallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConsultationCallAPI.swift; path = medlink/Ressources/ConsultationCallAPI.swift; sourceTree = SOURCE_ROOT; };
 		CE429528249772030002DB9A /* ConsultationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationUtils.swift; sourceTree = "<group>"; };
@@ -208,28 +204,26 @@
 				CE1AEDA424212C96009A86D2 /* Info.plist */,
 				CE2CDD9C2428BCD900034E61 /* HomeSignUpViewController.swift */,
 				CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */,
-				CE2CDDA02428BE4100034E61 /* DocProfileListViewController.swift */,
-				CE2CDDA12428BE4100034E61 /* DocProfileListViewController.xib */,
 				CE02178924619A9A00D36114 /* DocDashboardListViewController.swift */,
+				CE02178A24619A9A00D36114 /* DocDashboardListViewController.xib */,
 				7A6F8F802498F94B00281048 /* HomeViewController.swift */,
 				7A6F8F812498F94B00281048 /* HomeViewController.xib */,
-				CE02178A24619A9A00D36114 /* DocDashboardListViewController.xib */,
 				7A6D180424532F56002E4FB2 /* GoogleService-Info.plist */,
 				7A628BA72456FD5500C3FAFE /* NavBarController.swift */,
 				7A628BA82456FD5500C3FAFE /* NavBarController.xib */,
-				7A628BAB24571D5700C3FAFE /* DocHomeViewController.swift */,
-				7A628BAC24571D5700C3FAFE /* DocHomeViewController.xib */,
 				7A628BAF24571D9000C3FAFE /* DocAccountViewController.swift */,
 				7A628BB024571D9000C3FAFE /* DocAccountViewController.xib */,
-				7A628BB32457333B00C3FAFE /* ConsultationsViewController.swift */,
-				7A628BB42457333B00C3FAFE /* ConsultationsViewController.xib */,
 				7A628BB7245733C200C3FAFE /* AddPatientViewController.swift */,
 				7A628BB8245733C200C3FAFE /* AddPatientViewController.xib */,
+				7A6F8F842499121C00281048 /* AddConsultationViewController.swift */,
+				7A6F8F852499121C00281048 /* AddConsultationViewController.xib */,
 				CEF124EC246048A100534FA5 /* Localizable.strings */,
 				CE42952C2498BF330002DB9A /* ConsultationsTableViewCell.swift */,
 				CE42952D2498BF330002DB9A /* ConsultationsTableViewCell.xib */,
 				CE4295302498C1740002DB9A /* PatientsTableViewCell.swift */,
 				CE4295312498C1740002DB9A /* PatientsTableViewCell.xib */,
+				7A6F8F882499127F00281048 /* PatientsListViewController.swift */,
+				7A6F8F892499127F00281048 /* PatientsListViewController.xib */,
 			);
 			path = medlink;
 			sourceTree = "<group>";
@@ -348,10 +342,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A628BAE24571D5700C3FAFE /* DocHomeViewController.xib in Resources */,
+				7A6F8F8B2499127F00281048 /* PatientsListViewController.xib in Resources */,
 				CEF124EA246048A100534FA5 /* Localizable.strings in Resources */,
 				7A6F8F832498F94B00281048 /* HomeViewController.xib in Resources */,
-				CE2CDDA32428BE4100034E61 /* DocProfileListViewController.xib in Resources */,
 				7A6D180524532F56002E4FB2 /* GoogleService-Info.plist in Resources */,
 				7A628BAA2456FD5500C3FAFE /* NavBarController.xib in Resources */,
 				CE02178C24619A9A00D36114 /* DocDashboardListViewController.xib in Resources */,
@@ -360,9 +353,9 @@
 				CE2CDD9F2428BCD900034E61 /* HomeSignUpViewController.xib in Resources */,
 				CE1AEDA324212C96009A86D2 /* LaunchScreen.storyboard in Resources */,
 				7A628BBA245733C200C3FAFE /* AddPatientViewController.xib in Resources */,
-				7A628BB62457333B00C3FAFE /* ConsultationsViewController.xib in Resources */,
 				CE42952F2498BF330002DB9A /* ConsultationsTableViewCell.xib in Resources */,
 				CEF1250124607CAE00534FA5 /* Assets.xcassets in Resources */,
+				7A6F8F872499121C00281048 /* AddConsultationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,20 +441,19 @@
 				7A628BB9245733C200C3FAFE /* AddPatientViewController.swift in Sources */,
 				CE429529249772030002DB9A /* ConsultationUtils.swift in Sources */,
 				CE1AED9B24212C93009A86D2 /* ViewController.swift in Sources */,
-				7A628BB52457333B00C3FAFE /* ConsultationsViewController.swift in Sources */,
 				7A6F8F822498F94B00281048 /* HomeViewController.swift in Sources */,
 				CE42952624976F940002DB9A /* ConsultationCallAPI.swift in Sources */,
 				CE0217942461B9C800D36114 /* Patient.swift in Sources */,
-				7A628BAD24571D5700C3FAFE /* DocHomeViewController.swift in Sources */,
 				CE42952E2498BF330002DB9A /* ConsultationsTableViewCell.swift in Sources */,
+				7A6F8F8A2499127F00281048 /* PatientsListViewController.swift in Sources */,
 				CE1AED9724212C93009A86D2 /* AppDelegate.swift in Sources */,
 				CE0217962461B9E000D36114 /* Doctor.swift in Sources */,
 				CE0217982461B9FB00D36114 /* Location.swift in Sources */,
 				CE42952B249772510002DB9A /* UserUtils.swift in Sources */,
 				7A628BB124571D9000C3FAFE /* DocAccountViewController.swift in Sources */,
 				CE4295322498C1740002DB9A /* PatientsTableViewCell.swift in Sources */,
+				7A6F8F862499121C00281048 /* AddConsultationViewController.swift in Sources */,
 				7A628BA92456FD5500C3FAFE /* NavBarController.swift in Sources */,
-				CE2CDDA22428BE4100034E61 /* DocProfileListViewController.swift in Sources */,
 				CE0217922461B9A300D36114 /* Consultation.swift in Sources */,
 				CE02178B24619A9A00D36114 /* DocDashboardListViewController.swift in Sources */,
 				CE2CDD9E2428BCD900034E61 /* HomeSignUpViewController.swift in Sources */,
