@@ -21,6 +21,10 @@
 		7A6F8F872499121C00281048 /* AddConsultationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6F8F852499121C00281048 /* AddConsultationViewController.xib */; };
 		7A6F8F8A2499127F00281048 /* PatientsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F882499127F00281048 /* PatientsListViewController.swift */; };
 		7A6F8F8B2499127F00281048 /* PatientsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6F8F892499127F00281048 /* PatientsListViewController.xib */; };
+		7A6F8F902499336500281048 /* DoctorApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F8F2499336500281048 /* DoctorApiService.swift */; };
+		7A6F8F922499338D00281048 /* DoctorMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F912499338D00281048 /* DoctorMockService.swift */; };
+		7A6F8F94249933AD00281048 /* DoctorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F93249933AD00281048 /* DoctorService.swift */; };
+		7A6F8F96249934D800281048 /* DoctorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F95249934D800281048 /* DoctorFactory.swift */; };
 		CE02178B24619A9A00D36114 /* DocDashboardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02178924619A9A00D36114 /* DocDashboardListViewController.swift */; };
 		CE02178C24619A9A00D36114 /* DocDashboardListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02178A24619A9A00D36114 /* DocDashboardListViewController.xib */; };
 		CE0217922461B9A300D36114 /* Consultation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217912461B9A300D36114 /* Consultation.swift */; };
@@ -71,6 +75,10 @@
 		7A6F8F852499121C00281048 /* AddConsultationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddConsultationViewController.xib; path = Ressources/AddConsultationViewController.xib; sourceTree = "<group>"; };
 		7A6F8F882499127F00281048 /* PatientsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsListViewController.swift; sourceTree = "<group>"; };
 		7A6F8F892499127F00281048 /* PatientsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientsListViewController.xib; sourceTree = "<group>"; };
+		7A6F8F8F2499336500281048 /* DoctorApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorApiService.swift; sourceTree = "<group>"; };
+		7A6F8F912499338D00281048 /* DoctorMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMockService.swift; sourceTree = "<group>"; };
+		7A6F8F93249933AD00281048 /* DoctorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorService.swift; sourceTree = "<group>"; };
+		7A6F8F95249934D800281048 /* DoctorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorFactory.swift; sourceTree = "<group>"; };
 		8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90961D039CD43F420F5747AF /* Pods-medlink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlink.release.xcconfig"; path = "Target Support Files/Pods-medlink/Pods-medlink.release.xcconfig"; sourceTree = "<group>"; };
 		9B4BC736FF6FEFC0A5FE9B44 /* Pods_medlink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,12 +143,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A6F8F8C249932C500281048 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				7A6F8F8E2499330800281048 /* Api */,
+				7A6F8F8D249932FF00281048 /* Mock */,
+			);
+			path = Platforms;
+			sourceTree = "<group>";
+		};
+		7A6F8F8D249932FF00281048 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				7A6F8F912499338D00281048 /* DoctorMockService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		7A6F8F8E2499330800281048 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				7A6F8F8F2499336500281048 /* DoctorApiService.swift */,
+				7A6F8F95249934D800281048 /* DoctorFactory.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		CE02178D2461B97500D36114 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				7A6F8F8C249932C500281048 /* Platforms */,
 				CE429527249771F30002DB9A /* Utils */,
 				CE0217902461B98B00D36114 /* Models */,
-				CE02178F2461B98600D36114 /* Mocks */,
 				CE02178E2461B97F00D36114 /* Calls */,
 			);
 			path = Ressources;
@@ -155,17 +189,11 @@
 			path = Calls;
 			sourceTree = "<group>";
 		};
-		CE02178F2461B98600D36114 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
 		CE0217902461B98B00D36114 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CE0217952461B9E000D36114 /* Doctor.swift */,
+				7A6F8F93249933AD00281048 /* DoctorService.swift */,
 				CE0217912461B9A300D36114 /* Consultation.swift */,
 				CE0217932461B9C800D36114 /* Patient.swift */,
 				CE0217972461B9FB00D36114 /* Location.swift */,
@@ -447,10 +475,14 @@
 				CE42952E2498BF330002DB9A /* ConsultationsTableViewCell.swift in Sources */,
 				7A6F8F8A2499127F00281048 /* PatientsListViewController.swift in Sources */,
 				CE1AED9724212C93009A86D2 /* AppDelegate.swift in Sources */,
+				7A6F8F902499336500281048 /* DoctorApiService.swift in Sources */,
 				CE0217962461B9E000D36114 /* Doctor.swift in Sources */,
+				7A6F8F922499338D00281048 /* DoctorMockService.swift in Sources */,
 				CE0217982461B9FB00D36114 /* Location.swift in Sources */,
+				7A6F8F94249933AD00281048 /* DoctorService.swift in Sources */,
 				CE42952B249772510002DB9A /* UserUtils.swift in Sources */,
 				7A628BB124571D9000C3FAFE /* DocAccountViewController.swift in Sources */,
+				7A6F8F96249934D800281048 /* DoctorFactory.swift in Sources */,
 				CE4295322498C1740002DB9A /* PatientsTableViewCell.swift in Sources */,
 				7A6F8F862499121C00281048 /* AddConsultationViewController.swift in Sources */,
 				7A628BA92456FD5500C3FAFE /* NavBarController.swift in Sources */,

@@ -7,9 +7,23 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Doctor {
-    
+    var _id: String
+    var first_name: String
+    var last_name: String
+    var phone_number: String
+    var photo: URL?
+    var email: String
+    var birth_date: String
+    var specialty: String
+    var creatorUid: String
+    var place: String
+    var location: CLLocation
+  
+}
+/*struct Doctor {
     var id: String = ""
     var first_name: String = ""
     var last_name: String = ""
@@ -53,4 +67,4 @@ struct Doctor {
             //"password": self.password
         ]
     }
-}
+}*/
