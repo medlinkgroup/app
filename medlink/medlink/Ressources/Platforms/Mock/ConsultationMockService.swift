@@ -51,7 +51,16 @@ class ConsultationMockService: ConsultationService {
         date: "2019-12-26T00:00:00.000Z",
         appointmentTime: "10:00:00",
         timeEnd: "10:00:00"
-        )
+        ),
+        Consultation(_id: "3",
+                     title: "event1",
+                     description: "event1des",
+                     doctorUid: "event1 freetaxt",
+                     patientUid: "testtt",
+                     date: "2021-12-26T00:00:00.000Z",
+                     appointmentTime: "10:00:00",
+                     timeEnd: "10:00:00"
+                     ),
         
     ]
     
