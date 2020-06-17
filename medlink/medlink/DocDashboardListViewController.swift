@@ -31,21 +31,6 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
     
-   
-    var consultationsCall: FilmCall {
-        return ConsultationCallAPI()
-    }
-    /*
-    var consultationService: ConsultationCall {
-        return BilletCallAPI()
-    }
-    var reservations: [Billet] = [] {
-        didSet {
-            self.reservationsList.reloadData()
-        }
-    }*/
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -78,20 +63,11 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         
         
         
-        self.ConsultationService.all { (consultations) in
-            self.consultations = consultations
-            print(self.consultations)
-        }
-        
         // Do any additional setup after loading the view.
     }
     
     
-    var ConsultationService: ConsultationCall {
-        //return ConsultationsMockService()
-        return ConsultationCallAPI()
-    }
-    
+ 
     
     
     
