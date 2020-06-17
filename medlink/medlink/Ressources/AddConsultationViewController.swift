@@ -10,6 +10,16 @@ import UIKit
 
 class AddConsultationViewController: UIViewController {
 
+    @IBOutlet var label_add_consultation: UILabel!
+    @IBOutlet var label_title_consultation: UILabel!
+    @IBOutlet var label_patient_name_lastname: UILabel!
+    @IBOutlet var label_date: UILabel!
+    @IBOutlet var label_time_start: UILabel!
+    @IBOutlet var label_time_end: UILabel!
+    @IBOutlet var btn_add_consultation: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

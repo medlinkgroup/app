@@ -32,9 +32,9 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     }
     
    
-    //var filmCall: FilmCall {
-    //    return FilmCallAPI()
-    //}
+    var consultationsCall: FilmCall {
+        return ConsultationCallAPI()
+    }
     /*
     var consultationService: ConsultationCall {
         return BilletCallAPI()
