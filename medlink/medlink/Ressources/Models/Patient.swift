@@ -17,6 +17,7 @@ struct Patient {
     var phone: String
     var photo: URL?
     var email: String
+    var doctorUid: String
     var place: String
     var location: CLLocation
     var birthDate: String

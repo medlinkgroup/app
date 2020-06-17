@@ -10,12 +10,14 @@ import Foundation
 import CoreLocation
 
 class PatientMockService: PatientService {
+
     
-    func create(id: String, firstName: String, lastName: String, phone: String, photo: URL, email: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
+    
+    func create(id: String, firstName: String, lastName: String, phone: String, photo: URL, email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
          completion(false)
     }
     
-    func edit(id: String, firstName: String, lastName: String, phone: String, photo: URL, email: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
+    func edit(id: String, firstName: String, lastName: String, phone: String, photo: URL, email: String,doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
         completion(false)
     }
     
@@ -41,6 +43,7 @@ class PatientMockService: PatientService {
             phone: "0652468349",
             photo: URL(string: ""),
             email: "madeleine@mail.com",
+            doctorUid: "ZTN6IL7T9nZLVcyh1Jkxzhhk73O2",
             place: "10 rue Lafayette 75009 Paris",
             location: CLLocation(latitude: 48.849329, longitude: 2.3875453),
             birthDate: "1963-07-28T00:00:00.000Z"
@@ -53,6 +56,7 @@ class PatientMockService: PatientService {
             phone: "0652468622",
             photo: URL(string: ""),
             email: "martin@mail.com",
+            doctorUid: "ZTN6IL7T9nZLVcyh1Jkxzhhk73O2",
             place: "16 rue Médéric 75017 Paris",
             location: CLLocation(latitude: 48.849329, longitude: 2.3875453),
             birthDate: "1984-03-02T00:00:00.000Z"
@@ -65,6 +69,7 @@ class PatientMockService: PatientService {
             phone: "0653568347",
             photo: URL(string: ""),
             email: "liliane@mail.com",
+            doctorUid: "ggg",
             place: "1 boulevard Sebastopool 75004 Paris",
             location: CLLocation(latitude: 48.849329, longitude: 2.3875453),
             birthDate: "1994-01-12T00:00:00.000Z"
@@ -77,6 +82,7 @@ class PatientMockService: PatientService {
             phone: "0754644634",
             photo: URL(string: ""),
             email: "bernard@mail.com",
+            doctorUid: "jjj",
             place: "63 rue de Rivoli 75001 Paris",
             location: CLLocation(latitude: 48.849329, longitude: 2.3875453),
             birthDate: "1972-10-05T00:00:00.000Z"

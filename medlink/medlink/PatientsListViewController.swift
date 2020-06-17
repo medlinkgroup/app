@@ -41,12 +41,17 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
         self.tableview_list_patients.delegate = self
         let db = Firestore.firestore()
         if let user = Auth.auth().currentUser{
-           let docRef = db.collection("users").document(user.uid)
+            let docRef = db.collection("users").document(user.uid)
+            self.DoctorUID = user.uid
+            print(docRef)
+        
+           docRef.getDocument { (document, error) in
                 
-               docRef.getDocument { (document, error) in
-               if let document = document, document.exists {
-                   //print(document.data()!)
-                self.DoctorUID = document["uid"] as? String
+            
+              if let document = document, document.exists {
+              
+                   print(document.data()!)
+                   self.DoctorUID = document["uid"] as? String
                    } else {
                        print("Document does not exist")
                    }
@@ -65,7 +70,8 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
     override func viewDidAppear(_ animated: Bool) {
         self.patientService.getAll { (patients) in
             print(patients)
-            self.patients = patients
+             
+            self.patients = patients.filter({$0.doctorUid == self.DoctorUID})
             // filter just doctorId
             
             print(self.patients)
