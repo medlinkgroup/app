@@ -84,7 +84,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_add_patient_title" translatesAutoresizingMaskIntoConstraints="NO" id="b2y-gH-Jvf">
-                            <rect key="frame" x="84" y="8" width="127" height="97.000000000000114"/>
+                            <rect key="frame" x="84" y="8" width="127" height="97"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hH2-qg-SGX">
                             <rect key="frame" x="117" y="544" width="64" height="40"/>
