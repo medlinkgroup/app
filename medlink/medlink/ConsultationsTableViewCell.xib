@@ -17,32 +17,43 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNS-iD-jb8">
-                        <rect key="frame" x="16" y="13" width="288" height="28"/>
+                        <rect key="frame" x="16" y="13" width="49" height="28"/>
                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                         <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.36299796039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2S-De-syx">
-                        <rect key="frame" x="16" y="43" width="298" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2S-De-syx">
+                        <rect key="frame" x="16" y="43" width="228" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="tJ6-hS-hof"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                         <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.15577942440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TTb-2E-xwQ">
+                        <rect key="frame" x="252" y="3" width="63" height="63"/>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="hNS-iD-jb8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="14v-eA-GOk"/>
-                    <constraint firstItem="hNS-iD-jb8" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="YJZ-Lj-eIa"/>
-                    <constraint firstAttribute="trailing" secondItem="hNS-iD-jb8" secondAttribute="trailing" constant="16" id="a7j-pU-Kyb"/>
+                    <constraint firstAttribute="bottom" secondItem="TTb-2E-xwQ" secondAttribute="bottom" constant="5" id="3Xh-GV-RCA"/>
+                    <constraint firstAttribute="trailing" secondItem="TTb-2E-xwQ" secondAttribute="trailing" constant="5" id="75V-qA-ESh"/>
+                    <constraint firstItem="TTb-2E-xwQ" firstAttribute="leading" secondItem="hNS-iD-jb8" secondAttribute="trailing" constant="187" id="7Tq-qK-wJO"/>
+                    <constraint firstItem="TTb-2E-xwQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="Lsi-iU-fVk"/>
+                    <constraint firstItem="V2S-De-syx" firstAttribute="leading" secondItem="hNS-iD-jb8" secondAttribute="leading" id="Z4H-QN-jC0"/>
                     <constraint firstItem="hNS-iD-jb8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="mTW-Jp-Bg6"/>
+                    <constraint firstItem="V2S-De-syx" firstAttribute="top" secondItem="hNS-iD-jb8" secondAttribute="bottom" constant="2" id="wSR-6L-vCK"/>
+                    <constraint firstItem="TTb-2E-xwQ" firstAttribute="leading" secondItem="V2S-De-syx" secondAttribute="trailing" constant="8" id="wpK-8R-u4O"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="img_patient" destination="TTb-2E-xwQ" id="7ED-j5-MiX"/>
                 <outlet property="label_date" destination="V2S-De-syx" id="Bjw-KA-qUg"/>
                 <outlet property="label_patient" destination="hNS-iD-jb8" id="1F0-Yg-yY9"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="100.78125"/>
+            <point key="canvasLocation" x="79.710144927536234" y="91.40625"/>
         </tableViewCell>
     </objects>
 </document>
