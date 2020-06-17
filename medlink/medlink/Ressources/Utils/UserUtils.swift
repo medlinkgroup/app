@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/*
 class UserUtils {
     
     //static var user: Doctor = UserUtils.getModeNotLogged()
@@ -48,4 +48,4 @@ class UserUtils {
     }
      */
      
-}
+}*/

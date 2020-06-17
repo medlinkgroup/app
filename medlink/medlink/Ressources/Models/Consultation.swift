@@ -10,25 +10,14 @@ import Foundation
 
 struct Consultation {
     
-    var id: String
+    var _id: String
     var title: String
     var description: String
-    var doctor_uid: String
-    var patient_uid: String
+    var doctorUid: String
+    var patientUid: String
     var date: String
-    var time_start: String
-    var time_end: String
+    var appointmentTime: String
+    var timeEnd: String
     
-    func dictionnary() -> [String : Any] {
-        return [
-            "id": self.id,
-            "title": self.title,
-            "description": self.description,
-            "medecinUid": self.patient_uid,
-            "patientUid": self.date,
-            "date": self.date,
-            "timeStart": self.time_start,
-            "timeEnd": self.time_end
-        ]
-    }
+
 }

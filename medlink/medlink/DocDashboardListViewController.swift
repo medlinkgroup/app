@@ -92,13 +92,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         return ConsultationCallAPI()
     }
     
-    private func AuthCheck(){
-
-           if (Auth.auth().currentUser?.uid) == nil {
-                 self.navigationController?.setViewControllers([HomeViewController()], animated: false)
-           }
-           
-    }
+    
     
     
     @objc func goToProfile()

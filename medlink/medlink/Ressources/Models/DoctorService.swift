@@ -13,11 +13,6 @@ protocol DoctorService {
     
     func getAll(completion: @escaping ([Doctor]) -> Void)
     
-   
-   // func edit(  id: String ,title: String, description: String,freeText: String, pictureURL: String ,email: String, creatorUid: String, place: String, location: CLLocation,  date: String, category: String,  timeStart: String, timeEnd: String, address: String, completion: @escaping (Bool) -> Void)
-   
-    //  all reservation by id user
-    //func getByIdUser(id: String, completion: @escaping ([Doctor]) -> Void)
 
 
 }

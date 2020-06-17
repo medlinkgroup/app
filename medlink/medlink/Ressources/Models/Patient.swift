@@ -7,32 +7,18 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Patient {
     
     var id: String
-    var first_name: String
-    var last_name: String
-    var phone_number: String
-    var photo: String
+    var firstName: String
+    var lastName: String
+    var phone: String
+    var photo: URL?
     var email: String
-    var adress: String
-    var birth_date: String
-    var location: Location
-    
-    
-    func dictionnary() -> [String : Any] {
-        return [
-            "id": self.id,
-            "name": self.first_name,
-            "familyName": self.last_name,
-            "numberPhone": self.phone_number,
-            "photo": self.photo,
-            "email": self.email,
-            "address": self.adress,
-            "location": self.location,
-            "birthDate": self.birth_date
-        ]
-    }
+    var place: String
+    var location: CLLocation
+    var birthDate: String
     
 }

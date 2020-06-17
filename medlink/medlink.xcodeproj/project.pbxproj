@@ -25,21 +25,22 @@
 		7A6F8F922499338D00281048 /* DoctorMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F912499338D00281048 /* DoctorMockService.swift */; };
 		7A6F8F94249933AD00281048 /* DoctorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F93249933AD00281048 /* DoctorService.swift */; };
 		7A6F8F96249934D800281048 /* DoctorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F95249934D800281048 /* DoctorFactory.swift */; };
+		7A6F8F98249A2BD200281048 /* ConsultationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F97249A2BD200281048 /* ConsultationService.swift */; };
+		7A6F8F9A249A2BE700281048 /* PatientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F99249A2BE700281048 /* PatientService.swift */; };
+		7A6F8F9C249A40BD00281048 /* ConsultationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F9B249A40BD00281048 /* ConsultationFactory.swift */; };
+		7A6F8F9E249A40E300281048 /* ConsultationApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F9D249A40E300281048 /* ConsultationApiService.swift */; };
+		7A6F8FA0249A48A400281048 /* ConsultationMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F9F249A48A400281048 /* ConsultationMockService.swift */; };
 		CE02178B24619A9A00D36114 /* DocDashboardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02178924619A9A00D36114 /* DocDashboardListViewController.swift */; };
 		CE02178C24619A9A00D36114 /* DocDashboardListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02178A24619A9A00D36114 /* DocDashboardListViewController.xib */; };
 		CE0217922461B9A300D36114 /* Consultation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217912461B9A300D36114 /* Consultation.swift */; };
 		CE0217942461B9C800D36114 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217932461B9C800D36114 /* Patient.swift */; };
 		CE0217962461B9E000D36114 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217952461B9E000D36114 /* Doctor.swift */; };
-		CE0217982461B9FB00D36114 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217972461B9FB00D36114 /* Location.swift */; };
 		CE1AED9724212C93009A86D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED9624212C93009A86D2 /* AppDelegate.swift */; };
 		CE1AED9B24212C93009A86D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED9A24212C93009A86D2 /* ViewController.swift */; };
 		CE1AEDA324212C96009A86D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1AEDA124212C96009A86D2 /* LaunchScreen.storyboard */; };
 		CE1AEDAE24212C96009A86D2 /* medlinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AEDAD24212C96009A86D2 /* medlinkTests.swift */; };
 		CE2CDD9E2428BCD900034E61 /* HomeSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CDD9C2428BCD900034E61 /* HomeSignUpViewController.swift */; };
 		CE2CDD9F2428BCD900034E61 /* HomeSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */; };
-		CE42952424976F470002DB9A /* ConsultationCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42952324976F470002DB9A /* ConsultationCall.swift */; };
-		CE42952624976F940002DB9A /* ConsultationCallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42952524976F940002DB9A /* ConsultationCallAPI.swift */; };
-		CE429529249772030002DB9A /* ConsultationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE429528249772030002DB9A /* ConsultationUtils.swift */; };
 		CE42952B249772510002DB9A /* UserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42952A249772510002DB9A /* UserUtils.swift */; };
 		CE42952E2498BF330002DB9A /* ConsultationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42952C2498BF330002DB9A /* ConsultationsTableViewCell.swift */; };
 		CE42952F2498BF330002DB9A /* ConsultationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE42952D2498BF330002DB9A /* ConsultationsTableViewCell.xib */; };
@@ -79,6 +80,11 @@
 		7A6F8F912499338D00281048 /* DoctorMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMockService.swift; sourceTree = "<group>"; };
 		7A6F8F93249933AD00281048 /* DoctorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorService.swift; sourceTree = "<group>"; };
 		7A6F8F95249934D800281048 /* DoctorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorFactory.swift; sourceTree = "<group>"; };
+		7A6F8F97249A2BD200281048 /* ConsultationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationService.swift; sourceTree = "<group>"; };
+		7A6F8F99249A2BE700281048 /* PatientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientService.swift; sourceTree = "<group>"; };
+		7A6F8F9B249A40BD00281048 /* ConsultationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationFactory.swift; sourceTree = "<group>"; };
+		7A6F8F9D249A40E300281048 /* ConsultationApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationApiService.swift; sourceTree = "<group>"; };
+		7A6F8F9F249A48A400281048 /* ConsultationMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationMockService.swift; sourceTree = "<group>"; };
 		8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90961D039CD43F420F5747AF /* Pods-medlink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlink.release.xcconfig"; path = "Target Support Files/Pods-medlink/Pods-medlink.release.xcconfig"; sourceTree = "<group>"; };
 		9B4BC736FF6FEFC0A5FE9B44 /* Pods_medlink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +94,6 @@
 		CE0217912461B9A300D36114 /* Consultation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consultation.swift; sourceTree = "<group>"; };
 		CE0217932461B9C800D36114 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		CE0217952461B9E000D36114 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
-		CE0217972461B9FB00D36114 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CE1AED9324212C93009A86D2 /* medlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1AED9624212C93009A86D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1AED9A24212C93009A86D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,9 +105,6 @@
 		CE1AEDAF24212C96009A86D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE2CDD9C2428BCD900034E61 /* HomeSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSignUpViewController.swift; sourceTree = "<group>"; };
 		CE2CDD9D2428BCD900034E61 /* HomeSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSignUpViewController.xib; sourceTree = "<group>"; };
-		CE42952324976F470002DB9A /* ConsultationCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConsultationCall.swift; path = medlink/Ressources/ConsultationCall.swift; sourceTree = SOURCE_ROOT; };
-		CE42952524976F940002DB9A /* ConsultationCallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConsultationCallAPI.swift; path = medlink/Ressources/ConsultationCallAPI.swift; sourceTree = SOURCE_ROOT; };
-		CE429528249772030002DB9A /* ConsultationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationUtils.swift; sourceTree = "<group>"; };
 		CE42952A249772510002DB9A /* UserUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUtils.swift; sourceTree = "<group>"; };
 		CE42952C2498BF330002DB9A /* ConsultationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsTableViewCell.swift; sourceTree = "<group>"; };
 		CE42952D2498BF330002DB9A /* ConsultationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsultationsTableViewCell.xib; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				7A6F8F912499338D00281048 /* DoctorMockService.swift */,
+				7A6F8F9F249A48A400281048 /* ConsultationMockService.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -165,6 +168,8 @@
 			children = (
 				7A6F8F8F2499336500281048 /* DoctorApiService.swift */,
 				7A6F8F95249934D800281048 /* DoctorFactory.swift */,
+				7A6F8F9D249A40E300281048 /* ConsultationApiService.swift */,
+				7A6F8F9B249A40BD00281048 /* ConsultationFactory.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -175,18 +180,8 @@
 				7A6F8F8C249932C500281048 /* Platforms */,
 				CE429527249771F30002DB9A /* Utils */,
 				CE0217902461B98B00D36114 /* Models */,
-				CE02178E2461B97F00D36114 /* Calls */,
 			);
 			path = Ressources;
-			sourceTree = "<group>";
-		};
-		CE02178E2461B97F00D36114 /* Calls */ = {
-			isa = PBXGroup;
-			children = (
-				CE42952324976F470002DB9A /* ConsultationCall.swift */,
-				CE42952524976F940002DB9A /* ConsultationCallAPI.swift */,
-			);
-			path = Calls;
 			sourceTree = "<group>";
 		};
 		CE0217902461B98B00D36114 /* Models */ = {
@@ -195,8 +190,9 @@
 				CE0217952461B9E000D36114 /* Doctor.swift */,
 				7A6F8F93249933AD00281048 /* DoctorService.swift */,
 				CE0217912461B9A300D36114 /* Consultation.swift */,
+				7A6F8F97249A2BD200281048 /* ConsultationService.swift */,
 				CE0217932461B9C800D36114 /* Patient.swift */,
-				CE0217972461B9FB00D36114 /* Location.swift */,
+				7A6F8F99249A2BE700281048 /* PatientService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,7 +264,6 @@
 		CE429527249771F30002DB9A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CE429528249772030002DB9A /* ConsultationUtils.swift */,
 				CE42952A249772510002DB9A /* UserUtils.swift */,
 			);
 			path = Utils;
@@ -465,21 +460,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE42952424976F470002DB9A /* ConsultationCall.swift in Sources */,
 				7A628BB9245733C200C3FAFE /* AddPatientViewController.swift in Sources */,
-				CE429529249772030002DB9A /* ConsultationUtils.swift in Sources */,
 				CE1AED9B24212C93009A86D2 /* ViewController.swift in Sources */,
 				7A6F8F822498F94B00281048 /* HomeViewController.swift in Sources */,
-				CE42952624976F940002DB9A /* ConsultationCallAPI.swift in Sources */,
+				7A6F8F9A249A2BE700281048 /* PatientService.swift in Sources */,
+				7A6F8F98249A2BD200281048 /* ConsultationService.swift in Sources */,
 				CE0217942461B9C800D36114 /* Patient.swift in Sources */,
+				7A6F8F9C249A40BD00281048 /* ConsultationFactory.swift in Sources */,
 				CE42952E2498BF330002DB9A /* ConsultationsTableViewCell.swift in Sources */,
 				7A6F8F8A2499127F00281048 /* PatientsListViewController.swift in Sources */,
+				7A6F8FA0249A48A400281048 /* ConsultationMockService.swift in Sources */,
 				CE1AED9724212C93009A86D2 /* AppDelegate.swift in Sources */,
 				7A6F8F902499336500281048 /* DoctorApiService.swift in Sources */,
 				CE0217962461B9E000D36114 /* Doctor.swift in Sources */,
 				7A6F8F922499338D00281048 /* DoctorMockService.swift in Sources */,
-				CE0217982461B9FB00D36114 /* Location.swift in Sources */,
 				7A6F8F94249933AD00281048 /* DoctorService.swift in Sources */,
+				7A6F8F9E249A40E300281048 /* ConsultationApiService.swift in Sources */,
 				CE42952B249772510002DB9A /* UserUtils.swift in Sources */,
 				7A628BB124571D9000C3FAFE /* DocAccountViewController.swift in Sources */,
 				7A6F8F96249934D800281048 /* DoctorFactory.swift in Sources */,
