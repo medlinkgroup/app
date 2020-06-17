@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  medlink
+
+  Created by Fabiana Montiel on 04/05/2020.
+  Copyright © 2020 Fabiana Montiel. All rights reserved.
+*/
+
+"login" = "Login";
+"logout" = "Log Out";
+"sign_up_title" = "Sign Up";
+"login_title" = "Login";
+"signup" = "Don't have an account?\nClick here to sign up!";
+"username" = "Username";
+"password" = "Password";
+"lastname" = "Last Name";
+"firstname" = "First Name";
+"email" = "Email";
+"btn_signup" = "Create Account";
+"view_profile" = "My Profile";
+"list_consultations" = "My Consultations";
+"list_patients" = "My Patients";
+"add_consultation" = "Add Consultation";
+"add_patient" = "Add Patient";
+"dashboard" = "Dashboard";
+"add_patient" = "Add Patient";
+"add" = "Add";
+"birthdate" = "Date of Birth";
+"objectid" = "Object ID";
