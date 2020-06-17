@@ -1,0 +1,88 @@
+//
+//  PatientMockService.swift
+//  medlink
+//
+//  Created by Fabiana Montiel on 17/06/2020.
+//  Copyright © 2020 Fabiana Montiel. All rights reserved.
+//
+
+import Foundation
+import CoreLocation
+
+class PatientMockService: PatientService {
+    
+    func create(id: String, firstName: String, lastName: String, phone: String, photo: URL, email: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
+         completion(false)
+    }
+    
+    func edit(id: String, firstName: String, lastName: String, phone: String, photo: URL, email: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
+        completion(false)
+    }
+    
+    func getAll(completion: @escaping ([Patient]) -> Void) {
+          completion(self.patients)
+      }
+      
+    
+     func delete(id: String, completion: @escaping (Bool) -> Void) {
+        completion(false)
+      /*self.events.removeAll(where: { (r) -> Bool in
+          
+              return r._id == _id
+          print(r._id)
+          })*/
+    }
+    
+    private var patients: [Patient] = [
+        Patient(
+            id: "1",
+            firstName: "Madeleine",
+            lastName: "Dupont",
+            phone: "0652468349",
+            photo: URL(string: ""),
+            email: "madeleine@mail.com",
+            place: "10 rue Lafayette 75009 Paris",
+            location: CLLocation(latitude: 48.849329, longitude: 2.3875453),
+            birthDate: "1963-07-28T00:00:00.000Z"
+        ),
+        
+        Patient(
+            id: "2",
+            firstName: "Martin",
+            lastName: "Petit",
+            phone: "0652468622",
+            photo: URL(string: ""),
+            email: "martin@mail.com",
+            place: "16 rue Médéric 75017 Paris",
+            location: CLLocation(latitude: 48.849329, longitude: 2.3875453),
+            birthDate: "1984-03-02T00:00:00.000Z"
+        ),
+        
+        Patient(
+            id: "3",
+            firstName: "Liliane",
+            lastName: "Garnier",
+            phone: "0653568347",
+            photo: URL(string: ""),
+            email: "liliane@mail.com",
+            place: "1 boulevard Sebastopool 75004 Paris",
+            location: CLLocation(latitude: 48.849329, longitude: 2.3875453),
+            birthDate: "1994-01-12T00:00:00.000Z"
+        ),
+        
+        Patient(
+            id: "4",
+            firstName: "Bernard",
+            lastName: "Duval",
+            phone: "0754644634",
+            photo: URL(string: ""),
+            email: "bernard@mail.com",
+            place: "63 rue de Rivoli 75001 Paris",
+            location: CLLocation(latitude: 48.849329, longitude: 2.3875453),
+            birthDate: "1972-10-05T00:00:00.000Z"
+        )
+        
+        
+    ]
+    
+}

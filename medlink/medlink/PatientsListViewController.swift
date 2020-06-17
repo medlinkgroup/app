@@ -16,27 +16,64 @@ class PatientsListViewController: UIViewController {
     @IBOutlet weak var label_patients: UILabel!
     @IBOutlet weak var label_my_patients: UILabel!
     @IBOutlet weak var tableview_list_patients: UITableView!
+    
+    public static let patientsTableViewCellId = "ptvc"
+    
+    var patients: [Patient] = [] {
+        didSet {
+            self.tableview_list_patients.reloadData()
+        }
+    }
+    var patientService: PatientService{
+        return PatientMockService()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.patientService.getAll{(patients)in
+            self.patients = patients
+            //self.sortData()
+            self.tableview_list_patients.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         AuthCheck()
         
         // Do any additional setup after loading the view.
     }
+    
     private func AuthCheck(){
 
-           if (Auth.auth().currentUser?.uid) == nil {
-                 self.navigationController?.setViewControllers([HomeViewController()], animated: false)
-           }
+       if (Auth.auth().currentUser?.uid) == nil {
+             self.navigationController?.setViewControllers([HomeViewController()], animated: false)
+       }
            
     }
 
     /*
-    // MARK: - Navigation
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    */
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        patients.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: PatientsListViewController.patientsTableViewCellId, for: indexPath) as! PatientsTableViewCell
+        let patient = self.patients[indexPath.row]
+        cell.label_patient_name.text = patient.lastName
+        return cell
+    }
+    
+    // when cell is selected
+    /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let patientDetail = PatientDetailViewController()
+        //patientDetail.patientSelected = self.patients[indexPath.row]
+        //self.navigationController?.pushViewController(patientDetail, animated: true)
     }
     */
 
