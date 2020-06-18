@@ -41,3 +41,5 @@
 "time_start" = "Time Start";
 "time_end" = "Time End";
 "patients" = "Patients";
+"adress" = "Adress";
+"location" = "Location";

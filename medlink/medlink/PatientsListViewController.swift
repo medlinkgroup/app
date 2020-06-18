@@ -35,11 +35,7 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
            }
        }
     override func viewDidLoad() {
-           super.viewDidLoad()
-        
-        
-        //btn_add_consultation.setTitle(NSLocalizedString("add", comment: ""), for: .normal)
-        //label_add_consultation.text = NSLocalizedString("add_consultation", comment: "")
+        super.viewDidLoad()
 
         label_patients.text = NSLocalizedString("patients", comment: "")
         label_my_patients.text = NSLocalizedString("list_patients", comment: "")
@@ -151,10 +147,12 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
     // when cell is selected
     /*
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let patientDetail = PatientDetailViewController()
+        //let patientDetail = PatientDetailViewController()
         //patientDetail.patientSelected = self.patients[indexPath.row]
         //self.navigationController?.pushViewController(patientDetail, animated: true)
+        self.navigationController?.pushViewController(PatientDetailViewController(),animated:true)
     }
-    */
+ */
+    
 
 }

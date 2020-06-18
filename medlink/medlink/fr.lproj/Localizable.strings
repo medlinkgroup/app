@@ -41,3 +41,5 @@
 "time_start" = "Heure de début";
 "time_end" = "Heure de fin";
 "patients" = "Patients";
+"adress" = "Adresse";
+"location" = "Coordonnées";

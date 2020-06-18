@@ -49,6 +49,8 @@
 		CE6B29D9249A700E001F3732 /* PatientMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B29D8249A700E001F3732 /* PatientMockService.swift */; };
 		CE6B29DC249A79B3001F3732 /* PatientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B29DA249A79B3001F3732 /* PatientDetailViewController.swift */; };
 		CE6B29DD249A79B3001F3732 /* PatientDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6B29DB249A79B3001F3732 /* PatientDetailViewController.xib */; };
+		CECC40C8249B6A1600FFE3E8 /* ConsultationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC40C6249B6A1600FFE3E8 /* ConsultationDetailViewController.swift */; };
+		CECC40C9249B6A1600FFE3E8 /* ConsultationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECC40C7249B6A1600FFE3E8 /* ConsultationDetailViewController.xib */; };
 		CEF124EA246048A100534FA5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF124EC246048A100534FA5 /* Localizable.strings */; };
 		CEF1250124607CAE00534FA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1AED9F24212C96009A86D2 /* Assets.xcassets */; };
 		E407D49F0A7EF61B263FFFBC /* Pods_medlinkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */; };
@@ -116,6 +118,8 @@
 		CE6B29D8249A700E001F3732 /* PatientMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMockService.swift; sourceTree = "<group>"; };
 		CE6B29DA249A79B3001F3732 /* PatientDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailViewController.swift; sourceTree = "<group>"; };
 		CE6B29DB249A79B3001F3732 /* PatientDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientDetailViewController.xib; sourceTree = "<group>"; };
+		CECC40C6249B6A1600FFE3E8 /* ConsultationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationDetailViewController.swift; sourceTree = "<group>"; };
+		CECC40C7249B6A1600FFE3E8 /* ConsultationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsultationDetailViewController.xib; sourceTree = "<group>"; };
 		CEF124E72460487A00534FA5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CEF124EB246048A100534FA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF124ED246048A700534FA5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 				7A6F8F892499127F00281048 /* PatientsListViewController.xib */,
 				CE6B29DA249A79B3001F3732 /* PatientDetailViewController.swift */,
 				CE6B29DB249A79B3001F3732 /* PatientDetailViewController.xib */,
+				CECC40C6249B6A1600FFE3E8 /* ConsultationDetailViewController.swift */,
+				CECC40C7249B6A1600FFE3E8 /* ConsultationDetailViewController.xib */,
 			);
 			path = medlink;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				CE4295332498C1740002DB9A /* PatientsTableViewCell.xib in Resources */,
 				7A628BB224571D9000C3FAFE /* DocAccountViewController.xib in Resources */,
 				CE2CDD9F2428BCD900034E61 /* HomeSignUpViewController.xib in Resources */,
+				CECC40C9249B6A1600FFE3E8 /* ConsultationDetailViewController.xib in Resources */,
 				CE1AEDA324212C96009A86D2 /* LaunchScreen.storyboard in Resources */,
 				7A628BBA245733C200C3FAFE /* AddPatientViewController.xib in Resources */,
 				CE42952F2498BF330002DB9A /* ConsultationsTableViewCell.xib in Resources */,
@@ -484,6 +491,7 @@
 				CE6B29DC249A79B3001F3732 /* PatientDetailViewController.swift in Sources */,
 				7A6F8F902499336500281048 /* DoctorApiService.swift in Sources */,
 				CE0217962461B9E000D36114 /* Doctor.swift in Sources */,
+				CECC40C8249B6A1600FFE3E8 /* ConsultationDetailViewController.swift in Sources */,
 				7A6F8F922499338D00281048 /* DoctorMockService.swift in Sources */,
 				7A6F8F94249933AD00281048 /* DoctorService.swift in Sources */,
 				7A6F8F9E249A40E300281048 /* ConsultationApiService.swift in Sources */,
