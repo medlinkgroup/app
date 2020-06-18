@@ -17,6 +17,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet var label_dashboard: UILabel!
     @IBOutlet var label_consultations: UILabel!
     @IBOutlet var img_add_patient: UIImageView!
+    @IBOutlet var img_add_consultation: UIImageView!
     
     
     enum TableSection: Int {
@@ -45,6 +46,11 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
      override func viewDidLoad() {
          super.viewDidLoad()
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) 
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
         // create tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.action_add_patient(gesture:)))
 
@@ -52,6 +58,17 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         img_add_patient.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
         img_add_patient.isUserInteractionEnabled = true
+        
+        
+        // create tap gesture recognizer
+        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(self.action_add_consultation(gesture:)))
+
+        // add it to the image view;
+        img_add_consultation.addGestureRecognizer(tapGesture2)
+        // make sure imageView can be interacted with by user
+        img_add_consultation.isUserInteractionEnabled = true
+        
+        
         
         label_dashboard.text = NSLocalizedString("dashboard", comment: "")
         label_consultations.text = NSLocalizedString("list_consultations", comment: "")
@@ -61,7 +78,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
                                              forCellReuseIdentifier: DocDashboardListViewController.consultationsTableViewCellId)
         consultationsTableView.dataSource = self
         consultationsTableView.delegate = self
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        //self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
          
        
@@ -155,6 +172,15 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         // if the tapped view is a UIImageView then set it to imageview
         if (gesture.view as? UIImageView) != nil {
             self.navigationController?.pushViewController(AddPatientViewController(),animated:true)
+            //Here you can initiate your new ViewController
+
+        }
+    }
+    
+    @objc func action_add_consultation(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+            self.navigationController?.pushViewController(AddConsultationViewController(),animated:true)
             //Here you can initiate your new ViewController
 
         }

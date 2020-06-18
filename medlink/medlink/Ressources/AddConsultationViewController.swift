@@ -23,6 +23,14 @@ class AddConsultationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        btn_add_consultation.setTitle(NSLocalizedString("add", comment: ""), for: .normal)
+        label_add_consultation.text = NSLocalizedString("add_consultation", comment: "")
+        label_title_consultation.text = NSLocalizedString("title_consultation", comment: "")
+        label_patient_name_lastname.text = NSLocalizedString("patient_name", comment: "")
+        label_date.text = NSLocalizedString("date", comment: "")
+        label_time_start.text = NSLocalizedString("time_start", comment: "")
+        label_time_end.text = NSLocalizedString("time_end", comment: "")
+
         // Do any additional setup after loading the view.
     }
 

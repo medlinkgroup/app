@@ -34,6 +34,13 @@ class DocAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
+        
         label_my_account.text = NSLocalizedString("my_account", comment: "")
         label_first_name.text = NSLocalizedString("firstname", comment: "")
         label_last_name.text = NSLocalizedString("lastname", comment: "")

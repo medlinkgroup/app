@@ -37,21 +37,21 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         navBarCont.delegate = self
 
         let optionD = UINavigationController(rootViewController: DocDashboardListViewController())
-        optionD.isNavigationBarHidden = false
+        //optionD.isNavigationBarHidden = false
         optionD.tabBarItem.title = NSLocalizedString("home", comment: "")
         let image4 = UIImage(named: "Home")
         optionD.tabBarItem.image = image4
         
         let optionA = UINavigationController(rootViewController: DocAccountViewController())
         optionA.setNavigationBarHidden(true, animated: true)
-        optionA.isNavigationBarHidden = true
+        //optionA.isNavigationBarHidden = true
         optionA.tabBarItem.title = NSLocalizedString("view_profile", comment: "")
         let image1 = UIImage(named: "Account")
         optionA.tabBarItem.image  = image1
         
 
         let optionC = UINavigationController(rootViewController: PatientsListViewController())
-        optionC.isNavigationBarHidden = true
+        //optionC.isNavigationBarHidden = true
         optionC.tabBarItem.title = NSLocalizedString("patients", comment: "")
         let image3 = UIImage(named: "")
         optionC.tabBarItem.image = image3

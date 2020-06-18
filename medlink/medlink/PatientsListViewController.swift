@@ -13,9 +13,12 @@ import FirebaseAuth
 
 class PatientsListViewController: UIViewController, UITableViewDataSource , UITableViewDelegate{
 
-    @IBOutlet weak var label_patients: UILabel!
-    @IBOutlet weak var label_my_patients: UILabel!
+    
+    @IBOutlet var label_patients: UILabel!
+    @IBOutlet var label_my_patients: UILabel!
     @IBOutlet weak var tableview_list_patients: UITableView!
+    @IBOutlet var img_add_patient: UIImageView!
+    @IBOutlet var img_add_consultation: UIImageView!
     
     public static let patientsTableViewCellId = "ptvc"
     
@@ -33,7 +36,39 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
        }
     override func viewDidLoad() {
            super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = false
+        
+        
+        //btn_add_consultation.setTitle(NSLocalizedString("add", comment: ""), for: .normal)
+        //label_add_consultation.text = NSLocalizedString("add_consultation", comment: "")
+
+        label_patients.text = NSLocalizedString("patients", comment: "")
+        label_my_patients.text = NSLocalizedString("list_patients", comment: "")
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
+        
+        // create tap gesture recognizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.action_add_patient(gesture:)))
+
+        // add it to the image view;
+        img_add_patient.addGestureRecognizer(tapGesture)
+        // make sure imageView can be interacted with by user
+        img_add_patient.isUserInteractionEnabled = true
+        
+        
+        // create tap gesture recognizer
+        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(self.action_add_consultation(gesture:)))
+
+        // add it to the image view;
+        img_add_consultation.addGestureRecognizer(tapGesture2)
+        // make sure imageView can be interacted with by user
+        img_add_consultation.isUserInteractionEnabled = true
+        
+        
+        
         
         self.tableview_list_patients.rowHeight = 120
         self.tableview_list_patients.register(UINib(nibName: "PatientsTableViewCell", bundle: nil), forCellReuseIdentifier: PatientsListViewController.patientsTableViewCellId)
@@ -65,7 +100,7 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
            // Do any additional setup after loading the view.
        }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        //self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     override func viewDidAppear(_ animated: Bool) {
         self.patientService.getAll { (patients) in
@@ -92,6 +127,26 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
            print("You tapped cell number \(indexPath.row).")
        }
    
+    
+    
+    @objc func action_add_patient(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+            self.navigationController?.pushViewController(AddPatientViewController(),animated:true)
+            //Here you can initiate your new ViewController
+
+        }
+    }
+    
+    @objc func action_add_consultation(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+            self.navigationController?.pushViewController(AddConsultationViewController(),animated:true)
+            //Here you can initiate your new ViewController
+
+        }
+    }
+    
     
     // when cell is selected
     /*

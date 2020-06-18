@@ -24,7 +24,7 @@ class AddPatientViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        //self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         label_add_patient.text = NSLocalizedString("add_patient", comment: "")
         label_name.text = NSLocalizedString("firstname", comment: "")

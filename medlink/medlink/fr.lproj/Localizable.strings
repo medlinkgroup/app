@@ -35,3 +35,9 @@
 "phone_number" = "Numéro de téléphone";
 "field" = "Specialité";
 "save" = "Sauvegarder";
+"title_consultation" = "Titre de la Consultation";
+"patient_name" = "Nom du Patient";
+"date" = "Date";
+"time_start" = "Heure de début";
+"time_end" = "Heure de fin";
+"patients" = "Patients";
