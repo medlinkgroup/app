@@ -9,7 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="medlink" customModuleProvider="target">
             <connections>
-                <outlet property="errorLabel" destination="X8u-US-c1e" id="0kW-CO-xGH"/>
+                <outlet property="label_login_title" destination="uoj-JO-d7m" id="5Uo-PR-sBa"/>
+                <outlet property="label_password" destination="o73-LG-Ahr" id="WRE-DC-2gH"/>
+                <outlet property="label_username" destination="hOD-jL-hDe" id="cfb-be-BOe"/>
                 <outlet property="loginTextField" destination="lFL-jL-5Ra" id="LBK-19-X8J"/>
                 <outlet property="login_Btn" destination="8UP-af-faq" id="jWE-BF-9Uj"/>
                 <outlet property="passwordTextField" destination="bHT-IN-TYj" id="qUD-Z4-VzK"/>
@@ -48,7 +50,7 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qpI-Ga-ovV">
-                            <rect key="frame" x="17" y="464" width="242" height="30"/>
+                            <rect key="frame" x="17" y="468" width="242" height="30"/>
                             <state key="normal" title="sign Up">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
@@ -63,19 +65,20 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UP-af-faq">
-                            <rect key="frame" x="40" y="408" width="189" height="36"/>
-                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                            <rect key="frame" x="40" y="408" width="189" height="40"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                             <state key="normal" title="login">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
                             <connections>
                                 <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="tAv-Ig-lZo"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8u-US-c1e">
-                            <rect key="frame" x="17" y="176" width="242" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.1916592456" green="0.311585222" blue="0.5" alpha="0.50767872430000005" colorSpace="custom" customColorSpace="displayP3"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoj-JO-d7m">
+                            <rect key="frame" x="17" y="184" width="242" height="38.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -84,14 +87,11 @@
                         <constraint firstItem="o73-LG-Ahr" firstAttribute="top" secondItem="lFL-jL-5Ra" secondAttribute="bottom" constant="23" id="19d-he-fbR"/>
                         <constraint firstAttribute="trailing" secondItem="qpI-Ga-ovV" secondAttribute="trailing" constant="17" id="2Rx-I9-iGg"/>
                         <constraint firstAttribute="trailing" secondItem="o73-LG-Ahr" secondAttribute="trailing" constant="17" id="4T4-iz-TH6"/>
-                        <constraint firstItem="X8u-US-c1e" firstAttribute="leading" secondItem="hOD-jL-hDe" secondAttribute="trailing" constant="-242" id="5DZ-0i-wpo"/>
                         <constraint firstItem="8UP-af-faq" firstAttribute="leading" secondItem="cwc-uH-uBp" secondAttribute="leading" constant="40" id="9ll-5o-srl"/>
-                        <constraint firstAttribute="trailing" secondItem="X8u-US-c1e" secondAttribute="trailing" constant="17" id="Dyk-m7-gbh"/>
                         <constraint firstItem="bHT-IN-TYj" firstAttribute="top" secondItem="o73-LG-Ahr" secondAttribute="bottom" constant="8" id="FHM-10-1I5"/>
                         <constraint firstItem="hOD-jL-hDe" firstAttribute="top" secondItem="6ub-Gw-cUW" secondAttribute="bottom" constant="33" id="Fpj-1n-MRy"/>
                         <constraint firstItem="6ub-Gw-cUW" firstAttribute="centerX" secondItem="lFL-jL-5Ra" secondAttribute="centerX" id="HcZ-WM-q9K"/>
                         <constraint firstItem="o73-LG-Ahr" firstAttribute="leading" secondItem="cwc-uH-uBp" secondAttribute="leading" constant="17" id="ITg-4E-T5Z"/>
-                        <constraint firstItem="X8u-US-c1e" firstAttribute="leading" secondItem="cwc-uH-uBp" secondAttribute="leading" constant="17" id="P67-8y-6V4"/>
                         <constraint firstItem="lFL-jL-5Ra" firstAttribute="top" secondItem="hOD-jL-hDe" secondAttribute="bottom" constant="8" id="PMC-Yl-whI"/>
                         <constraint firstItem="lFL-jL-5Ra" firstAttribute="leading" secondItem="cwc-uH-uBp" secondAttribute="leading" constant="17" id="Qfv-zU-nQb"/>
                         <constraint firstItem="bHT-IN-TYj" firstAttribute="leading" secondItem="cwc-uH-uBp" secondAttribute="leading" constant="17" id="Tx1-At-VHo"/>
@@ -104,7 +104,6 @@
                         <constraint firstAttribute="trailing" secondItem="lFL-jL-5Ra" secondAttribute="trailing" constant="17" id="mOe-Kh-dGu"/>
                         <constraint firstItem="qpI-Ga-ovV" firstAttribute="top" secondItem="8UP-af-faq" secondAttribute="bottom" constant="20" id="sfc-Jp-aEl"/>
                         <constraint firstItem="hOD-jL-hDe" firstAttribute="leading" secondItem="cwc-uH-uBp" secondAttribute="leading" constant="17" id="u98-vO-dax"/>
-                        <constraint firstItem="X8u-US-c1e" firstAttribute="top" secondItem="6ub-Gw-cUW" secondAttribute="bottom" constant="-31" id="xo0-0p-BBc"/>
                         <constraint firstItem="o73-LG-Ahr" firstAttribute="leading" secondItem="hOD-jL-hDe" secondAttribute="leading" id="z4m-qa-eyG"/>
                         <constraint firstAttribute="trailing" secondItem="bHT-IN-TYj" secondAttribute="trailing" constant="17" id="zx0-bu-zPI"/>
                     </constraints>

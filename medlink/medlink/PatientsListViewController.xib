@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PatientsListViewController" customModule="medlink" customModuleProvider="target">
             <connections>
+                <outlet property="img_add_patient" destination="bfu-tN-fy1" id="mZF-Ju-zN4"/>
                 <outlet property="label_my_patients" destination="bMv-S7-q1q" id="yPS-JD-F9b"/>
                 <outlet property="label_patients" destination="wc8-m3-HZW" id="tMV-N8-qOj"/>
                 <outlet property="tableview_list_patients" destination="TJ5-iB-faG" id="bi1-yF-qPd"/>
@@ -24,7 +25,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wc8-m3-HZW">
-                            <rect key="frame" x="173" y="56" width="68" height="39"/>
+                            <rect key="frame" x="173" y="-56" width="68" height="39"/>
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
@@ -43,7 +44,10 @@
                             </constraints>
                         </tableView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hBd-gy-pq3">
-                            <rect key="frame" x="143.5" y="106" width="127" height="112"/>
+                            <rect key="frame" x="80" y="-6" width="254" height="224"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_add_patient_title" translatesAutoresizingMaskIntoConstraints="NO" id="bfu-tN-fy1">
+                            <rect key="frame" x="340" y="201" width="64" height="64"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.79796293220000003" green="0.87132878940000003" blue="0.91894416209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -53,7 +57,11 @@
                         <constraint firstItem="TJ5-iB-faG" firstAttribute="leading" secondItem="Qgx-0Q-qlH" secondAttribute="leading" id="EYM-Au-2I8"/>
                         <constraint firstItem="hBd-gy-pq3" firstAttribute="top" secondItem="wc8-m3-HZW" secondAttribute="bottom" constant="11" id="Qe8-bC-3cx"/>
                         <constraint firstItem="bMv-S7-q1q" firstAttribute="top" secondItem="hBd-gy-pq3" secondAttribute="bottom" constant="8" id="Sgt-gU-amP"/>
+                        <constraint firstItem="bfu-tN-fy1" firstAttribute="leading" secondItem="bMv-S7-q1q" secondAttribute="trailing" constant="192" id="TYl-d1-enp"/>
+                        <constraint firstItem="TJ5-iB-faG" firstAttribute="top" secondItem="bfu-tN-fy1" secondAttribute="bottom" id="Xrq-VB-W52"/>
+                        <constraint firstAttribute="trailing" secondItem="bfu-tN-fy1" secondAttribute="trailing" constant="10" id="bhe-g2-nky"/>
                         <constraint firstItem="TJ5-iB-faG" firstAttribute="top" secondItem="bMv-S7-q1q" secondAttribute="bottom" constant="8" id="flt-TL-t3v"/>
+                        <constraint firstItem="bfu-tN-fy1" firstAttribute="top" secondItem="Qgx-0Q-qlH" secondAttribute="top" constant="201" id="mYU-nQ-XAo"/>
                         <constraint firstItem="TJ5-iB-faG" firstAttribute="centerX" secondItem="Qgx-0Q-qlH" secondAttribute="centerX" id="new-9B-9sG"/>
                         <constraint firstItem="TJ5-iB-faG" firstAttribute="centerX" secondItem="bMv-S7-q1q" secondAttribute="centerX" constant="86" id="wCW-dd-43a"/>
                         <constraint firstItem="TJ5-iB-faG" firstAttribute="centerX" secondItem="wc8-m3-HZW" secondAttribute="centerX" id="xEQ-Rh-3hc"/>
@@ -68,10 +76,11 @@
                 <constraint firstItem="Qgx-0Q-qlH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ndi-me-HwB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+            <point key="canvasLocation" x="91" y="113"/>
         </view>
     </objects>
     <resources>
+        <image name="icon_add_patient_title" width="427" height="389"/>
         <image name="logo" width="127" height="112"/>
     </resources>
 </document>

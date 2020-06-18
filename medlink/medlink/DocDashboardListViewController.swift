@@ -14,6 +14,11 @@ import FirebaseAuth
 
 class DocDashboardListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var label_dashboard: UILabel!
+    @IBOutlet var label_consultations: UILabel!
+    @IBOutlet var img_add_patient: UIImageView!
+    
+    
     enum TableSection: Int {
         case future, past
     }
@@ -39,6 +44,17 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     
      override func viewDidLoad() {
          super.viewDidLoad()
+        
+        // create tap gesture recognizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.action_add_patient(gesture:)))
+
+        // add it to the image view;
+        img_add_patient.addGestureRecognizer(tapGesture)
+        // make sure imageView can be interacted with by user
+        img_add_patient.isUserInteractionEnabled = true
+        
+        label_dashboard.text = NSLocalizedString("dashboard", comment: "")
+        label_consultations.text = NSLocalizedString("list_consultations", comment: "")
         
         self.consultationsTableView.rowHeight = 120
         self.consultationsTableView.register(UINib(nibName: "ConsultationsTableViewCell", bundle: nil),
@@ -80,17 +96,18 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     // creation des sections
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
       let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: SectionHeaderHeight))
-      view.backgroundColor = UIColor(red: 26.0/255.0, green: 113.0/255.0, blue: 200.0/255.0, alpha: 1)
+      view.backgroundColor = UIColor(red: 0.81, green:0.93, blue:0.98, alpha: 1.00)
         
       let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width + 50, height: SectionHeaderHeight))
-        label.font  = UIFont(name:"FontAwesome", size:15)
+        label.font  = UIFont(name:"Avenir", size:15)
+        label.textColor = UIColor(red: 0.44, green: 0.51, blue:0.53, alpha: 1.00)
       if let tableSection = TableSection(rawValue: section) {
 
         switch tableSection {
         case .future:
-          label.text = "Futures"
+          label.text = NSLocalizedString("future", comment: "")
         case .past:
-          label.text = "pasts"
+          label.text = NSLocalizedString("past", comment: "")
        
         default:
           label.text = ""
@@ -132,10 +149,17 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
               return dateFormatter.string(from: dateObj!)
            }
           
-           
-    @IBOutlet var label_consultations: UILabel!
-    @IBOutlet var label_dashboard: UILabel!
     
+   
+    @objc func action_add_patient(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+            self.navigationController?.pushViewController(AddPatientViewController(),animated:true)
+            //Here you can initiate your new ViewController
+
+        }
+    }
+
     
     // API : https://medlinkapi.herokuapp.com/
     

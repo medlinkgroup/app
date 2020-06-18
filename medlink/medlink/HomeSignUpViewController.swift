@@ -31,6 +31,7 @@ class HomeSignUpViewController: UIViewController {
         super.viewDidLoad()
         //errorLabel.alpha = 0
         
+        
         label_sign_up_title.text = NSLocalizedString("sign_up_title", comment: "")
         label_last_name.text = NSLocalizedString("lastname", comment: "")
         label_first_name.text = NSLocalizedString("firstname", comment: "")

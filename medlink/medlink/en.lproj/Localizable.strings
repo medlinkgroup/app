@@ -26,4 +26,12 @@
 "add_patient" = "Add Patient";
 "add" = "Add";
 "birthdate" = "Date of Birth";
-"objectid" = "Object ID";
+"objectid" = "Device ID";
+"future" = "Upcoming Consultations";
+"past" = "Past Consultations";
+"home" = "Home";
+"patients" = "My Patients";
+"my_account" = "My Account";
+"phone_number" = "Phone Number";
+"field" = "Field";
+"save" = "Save";

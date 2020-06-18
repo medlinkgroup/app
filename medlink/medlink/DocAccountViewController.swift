@@ -22,10 +22,27 @@ class DocAccountViewController: UIViewController {
     
     @IBOutlet weak var specialityTextField: UITextField!
     
+    @IBOutlet var label_my_account: UILabel!
+    @IBOutlet var label_first_name: UILabel!
+    @IBOutlet var label_last_name: UILabel!
+    @IBOutlet var label_email: UILabel!
+    @IBOutlet var label_phone_number: UILabel!
+    @IBOutlet var label_specialty: UILabel!
+    @IBOutlet var btn_save: UIButton!
+    @IBOutlet var btn_sign_out: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        label_my_account.text = NSLocalizedString("my_account", comment: "")
+        label_first_name.text = NSLocalizedString("firstname", comment: "")
+        label_last_name.text = NSLocalizedString("lastname", comment: "")
+        label_email.text = NSLocalizedString("email", comment: "")
+        label_phone_number.text = NSLocalizedString("phone_number", comment: "")
+        label_specialty.text = NSLocalizedString("field", comment: "")
+        btn_save.setTitle(NSLocalizedString("save", comment: ""), for: .normal)
+        btn_sign_out.setTitle(NSLocalizedString("logout", comment: ""), for: .normal)
+        
         let db = Firestore.firestore()
           
               if let user = Auth.auth().currentUser {

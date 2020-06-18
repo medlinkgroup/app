@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocDashboardListViewController" customModule="medlink" customModuleProvider="target">
             <connections>
                 <outlet property="consultationsTableView" destination="C4q-50-NNi" id="DHF-jC-TNz"/>
-                <outlet property="label_consultations" destination="iGs-Y3-C8M" id="coK-zW-gp0"/>
-                <outlet property="label_dashboard" destination="KPa-Ts-H6i" id="0xM-zp-YyF"/>
+                <outlet property="img_add_patient" destination="qfr-zM-DF4" id="MAY-4P-EY3"/>
+                <outlet property="label_consultations" destination="iGs-Y3-C8M" id="Ax7-Tq-qMN"/>
+                <outlet property="label_dashboard" destination="KPa-Ts-H6i" id="krY-hT-DZ5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,20 +30,27 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGs-Y3-C8M">
-                            <rect key="frame" x="28" y="270" width="358" height="31"/>
+                            <rect key="frame" x="28" y="382" width="358" height="31"/>
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C4q-50-NNi">
-                            <rect key="frame" x="0.0" y="309" width="414" height="523"/>
+                            <rect key="frame" x="0.0" y="421" width="414" height="523"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="523" id="0bv-79-MXl"/>
                             </constraints>
                         </tableView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="H7T-eQ-VhX">
-                            <rect key="frame" x="132" y="150" width="150" height="112"/>
+                            <rect key="frame" x="132" y="150" width="150" height="224"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_add_patient_title" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-zM-DF4">
+                            <rect key="frame" x="364" y="373" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="1hQ-IC-s8M"/>
+                                <constraint firstAttribute="width" constant="40" id="OXl-mV-oac"/>
+                            </constraints>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.79796293220000003" green="0.87132878940000003" blue="0.91894416209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -56,9 +64,11 @@
                         <constraint firstItem="C4q-50-NNi" firstAttribute="leading" secondItem="cu3-es-XQg" secondAttribute="leading" id="ERb-gk-pjP"/>
                         <constraint firstItem="KPa-Ts-H6i" firstAttribute="leading" secondItem="cu3-es-XQg" secondAttribute="leading" constant="28" id="bzJ-Xm-DIf"/>
                         <constraint firstItem="iGs-Y3-C8M" firstAttribute="top" secondItem="H7T-eQ-VhX" secondAttribute="bottom" constant="8" id="dyq-Jo-laK"/>
+                        <constraint firstAttribute="trailing" secondItem="qfr-zM-DF4" secondAttribute="trailing" constant="10" id="eLF-dI-42i"/>
                         <constraint firstItem="H7T-eQ-VhX" firstAttribute="leading" secondItem="cu3-es-XQg" secondAttribute="leading" constant="132" id="hDk-b3-G55"/>
                         <constraint firstItem="KPa-Ts-H6i" firstAttribute="centerX" secondItem="cu3-es-XQg" secondAttribute="centerX" id="hng-Kr-ozW"/>
                         <constraint firstAttribute="trailing" secondItem="iGs-Y3-C8M" secondAttribute="trailing" constant="28" id="nA8-gW-ZHw"/>
+                        <constraint firstItem="C4q-50-NNi" firstAttribute="top" secondItem="qfr-zM-DF4" secondAttribute="bottom" constant="8.0000000000001137" id="tiy-hM-hvY"/>
                         <constraint firstAttribute="trailing" secondItem="C4q-50-NNi" secondAttribute="trailing" id="vhe-hJ-3KO"/>
                         <constraint firstAttribute="trailing" secondItem="KPa-Ts-H6i" secondAttribute="trailing" constant="28" id="x4r-FM-69v"/>
                     </constraints>
@@ -75,6 +85,7 @@
         </view>
     </objects>
     <resources>
+        <image name="icon_add_patient_title" width="427" height="389"/>
         <image name="logo" width="127" height="112"/>
     </resources>
 </document>
