@@ -10,6 +10,7 @@ target 'medlink' do
      pod 'Firebase/Storage'
      pod 'FirebaseDatabase'
      pod 'Alamofire'
+     pod 'Charts'
    
   # Pods for medlink
 

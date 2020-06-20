@@ -28,7 +28,11 @@ var window: UIWindow?
         //DocDashboardListViewController())
         //DocProfileListViewController())
         //PatientDetailViewController())
+<<<<<<< HEAD
 
+=======
+        LineGraphViewController())
+>>>>>>> line graph for temperature and scattered graph for accelerometer
             
         
         //root.setNavigationBarHidden(YES , animated: YES)
