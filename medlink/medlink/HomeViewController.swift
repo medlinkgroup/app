@@ -32,7 +32,7 @@ class HomeViewController: UIViewController {
         label_password.text = NSLocalizedString("password", comment: "")
         
         //AuthCheck()
-        //errorLabel.alpha = 0
+        errorLabel.alpha = 0
 
         // Do any additional setup after loading the view.
     }

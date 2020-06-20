@@ -18,6 +18,11 @@ class PatientDetailViewController: UIViewController {
     @IBOutlet var label_adress: UILabel!
     @IBOutlet var label_location: UILabel!
     @IBOutlet var img_photo_patient: UIImageView!
+    @IBOutlet var label_birthdate_val: UILabel!
+    @IBOutlet var label_phone_val: UILabel!
+    @IBOutlet var label_email_val: UILabel!
+    @IBOutlet var label_adress_val: UILabel!
+    @IBOutlet var label_location_val: UILabel!
     
     var patientDetail: Patient!
     
@@ -35,7 +40,7 @@ class PatientDetailViewController: UIViewController {
         label_adress.text = NSLocalizedString("adress", comment: "")
         label_location.text = NSLocalizedString("location", comment: "")
         
-        
+        loadDataDetails()
         
         
         // Do any additional setup after loading the view.
@@ -48,6 +53,32 @@ class PatientDetailViewController: UIViewController {
         return view
         
     }
+    
+    
+    func loadDataDetails( ){
+        // let db = Firestore.firestore()
+        // let docRef = db.collection("users").document(eventDetail.creatorUid)
+        /* docRef.getDocument { (document, error) in
+             if let document = document, document.exists {
+                 self.nameLabel.text = document["username"] as? String
+             }
+         }*/
+        label_patient_name.text = patientDetail.lastName
+        
+         label_patient_firstname.text = patientDetail.firstName
+         label_birthdate_val.text = patientDetail.birthDate
+         label_phone_val.text = patientDetail.phone
+         label_email_val.text = patientDetail.email
+         label_adress_val.text = patientDetail.place
+        
+        // label_location_val.text = patientDetail.location
+        if let pictureURL = patientDetail.photo {
+             DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: pictureURL) {DispatchQueue.main.sync {self.img_photo_patient.image = UIImage(data: data)}}
+                print(self.patientDetail)
+             }
+         }
+     }
     /*
     // MARK: - Navigation
 

@@ -43,7 +43,7 @@ class PatientMockService: PatientService {
             firstName: "Madeleine",
             lastName: "Dupont",
             phone: "0652468349",
-            photo: URL(string: ""),
+            photo: URL(string: "http://restaurant-legrey.fr/wp-content/uploads/elementor/thumbs/salle-2-grey-resto-5-nrnp7vsw82tzrpkdb6zrpyu7f9pplh7f9u1qbr6tpc.jpg"),
             email: "madeleine@mail.com",
             doctorUid: "ZTN6IL7T9nZLVcyh1Jkxzhhk73O2",
             place: "10 rue Lafayette 75009 Paris",

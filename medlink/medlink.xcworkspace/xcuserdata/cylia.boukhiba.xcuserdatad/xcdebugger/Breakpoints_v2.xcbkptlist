@@ -624,5 +624,133 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBA1BC5E-3162-4ECD-8B74-CCF4191AD161"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/PatientDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "loadDataDetails()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EBA1BC5E-3162-4ECD-8B74-CCF4191AD161 - 535b10aef6c3b6bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.PatientDetailViewController.loadDataDetails() -&gt; ()"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/PatientDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "3885">
+               </Location>
+               <Location
+                  uuid = "EBA1BC5E-3162-4ECD-8B74-CCF4191AD161 - 2f636b6bec0bbca9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in medlink.PatientDetailViewController.loadDataDetails() -&gt; ()"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/PatientDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C330015-8476-44D0-9D79-CFFADD1A938F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/PatientDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "loadDataDetails()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2C330015-8476-44D0-9D79-CFFADD1A938F - 2f636b6bec0bbca9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in medlink.PatientDetailViewController.loadDataDetails() -&gt; ()"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/PatientDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  uuid = "2C330015-8476-44D0-9D79-CFFADD1A938F - 62992b78a8ecab3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in medlink.PatientDetailViewController.loadDataDetails() -&gt; ()"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/PatientDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52CC89C1-AC3D-43B2-B62E-B40100E604F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/PatientDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "loadDataDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F67AF126-2B10-44FA-B0BD-9A9FDBDDA7E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/PatientDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "loadDataDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
