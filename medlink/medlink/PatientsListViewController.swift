@@ -23,8 +23,8 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
     public static let patientsTableViewCellId = "ptvc"
     
     var patientService: PatientService{
-           return PatientMockService()
-       // return PatientAPIService()
+           //return PatientMockService()
+        return PatientAPIService()
        }
    
     var patientDetail: Patient!
@@ -103,7 +103,7 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
         self.patientService.getAll { (patients) in
             print(patients)
              
-            self.patients = patients.filter({$0.doctorUid == self.DoctorUID})
+            self.patients = patients/*.filter({$0.doctorUid == self.DoctorUID})*/
             // filter just doctorId
             
             print(self.patients)

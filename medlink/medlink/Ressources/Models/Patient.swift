@@ -11,7 +11,7 @@ import CoreLocation
 
 struct Patient {
     
-    var id: String
+    var _id: String
     var firstName: String
     var lastName: String
     var phone: String

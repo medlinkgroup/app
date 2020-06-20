@@ -15,7 +15,7 @@ class PatientMockService: PatientService {
 
     
     
-    func create(id: String, firstName: String, lastName: String, phone: String, photo: URL, email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
+    func create(firstName: String, lastName: String, phone: String, photo: URL, email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
          completion(false)
     }
     
@@ -30,16 +30,16 @@ class PatientMockService: PatientService {
     
      func delete(id: String, completion: @escaping (Bool) -> Void) {
         completion(false)
-      self.patients.removeAll(where: { (r) -> Bool in
+      /*self.patients.removeAll(where: { (r) -> Bool in
           
-              return r.id == id
-          print(r.id)
-          })
+              return r._id == _id
+          print(r._id)
+          })*/
     }
     
     private var patients: [Patient] = [
        Patient(
-            id: "1",
+            _id: "1",
             firstName: "Madeleine",
             lastName: "Dupont",
             phone: "0652468349",
@@ -52,7 +52,7 @@ class PatientMockService: PatientService {
         ),
         
         Patient(
-            id: "2",
+            _id: "2",
             firstName: "Martin",
             lastName: "Petit",
             phone: "0652468622",
@@ -65,7 +65,7 @@ class PatientMockService: PatientService {
         ),
         
         Patient(
-            id: "3",
+            _id: "3",
             firstName: "Liliane",
             lastName: "Garnier",
             phone: "0653568347",
@@ -78,7 +78,7 @@ class PatientMockService: PatientService {
         ),
         
         Patient(
-            id: "4",
+            _id: "4",
             firstName: "Bernard",
             lastName: "Duval",
             phone: "0754644634",

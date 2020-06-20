@@ -39,7 +39,8 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
     var consultationService: ConsultationService{
-        return ConsultationMockService()
+      //  return ConsultationMockService()
+        return ConsultationAPIService()
     }
     
     
