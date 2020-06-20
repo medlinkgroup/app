@@ -58,7 +58,7 @@ class DocAccountViewController: UIViewController {
                   
                  docRef.getDocument { (document, error) in
                  if let document = document, document.exists {
-                      self.firstNameTextField.text = document["firstname"] as? String
+                      self.firstNameTextField.text = document["fistname"] as? String
                       self.lastNameTextField.text = document["lastname"] as? String
                       self.emailTextField.text = document["email"] as? String
                       self.phoneNumberTextField.text = document["phone"] as? String
