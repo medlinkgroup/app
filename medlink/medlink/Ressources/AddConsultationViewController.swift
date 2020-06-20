@@ -12,6 +12,7 @@ import FirebaseFirestore
 
 class AddConsultationViewController: UIViewController, UITextFieldDelegate {
 
+    
     @IBOutlet var label_add_consultation: UILabel!
     @IBOutlet var label_title_consultation: UILabel!
     @IBOutlet var label_patient_name_lastname: UILabel!
@@ -55,8 +56,8 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
                    fatalError(" Erreur : aucun user connect")
                }
         
-        self.label_title_consultation.delegate = self
-        self.label_patient_name_lastname_val.delegate = self
+      //  self.label_title_consultation.delegate = self
+      //  self.label_patient_name_lastname_val.delegate = self
              
         btn_add_consultation.setTitle(NSLocalizedString("add", comment: ""), for: .normal)
         label_add_consultation.text = NSLocalizedString("add_consultation", comment: "")

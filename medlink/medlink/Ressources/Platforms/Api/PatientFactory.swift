@@ -15,20 +15,21 @@ class PatientFactory {
 //        print(dictionary["dates"])
        
         guard
-            let _id = dictionary["_id"] as? String,
-            let firstName = dictionary["firstName"] as? String,
-            let lastName = dictionary["lastName"] as? String,
-            let phone = dictionary["phone"] as? String,
-            let email = dictionary["email"] as? String,
-            let place = dictionary["place"] as? String,
-            let doctorUid = dictionary["doctorUid"] as? String,
-            let location = dictionary["location"] as? [String: CLLocationDegrees],
-            let lat = location["latitude"],
-            let lon = location["longitude"],
-            let birthDate = dictionary["birthDate"] as? String
-            else{
-                         return nil
-                 }
+        let _id = dictionary["_id"] as? String,
+        let firstName = dictionary["firstName"] as? String,
+        let lastName = dictionary["lastName"] as? String,
+        let phone = dictionary["phone"] as? String,
+        let email = dictionary["email"] as? String,
+        let place = dictionary["place"] as? String,
+        let doctorUid = dictionary["doctorUid"] as? String,
+        let location = dictionary["location"] as? [String: CLLocationDegrees],
+        let lat = location["latitude"],
+        let lon = location["longitude"],
+        let birthDate = dictionary["Date"] as? String else {
+            return nil
+        }
+            
+           
          
         let photo = dictionary["photo"] as? String
 
