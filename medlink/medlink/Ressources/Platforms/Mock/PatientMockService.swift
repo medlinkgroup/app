@@ -10,6 +10,8 @@ import Foundation
 import CoreLocation
 
 class PatientMockService: PatientService {
+  
+    
 
     
     
@@ -28,15 +30,15 @@ class PatientMockService: PatientService {
     
      func delete(id: String, completion: @escaping (Bool) -> Void) {
         completion(false)
-      /*self.events.removeAll(where: { (r) -> Bool in
+      self.patients.removeAll(where: { (r) -> Bool in
           
-              return r._id == _id
-          print(r._id)
-          })*/
+              return r.id == id
+          print(r.id)
+          })
     }
     
     private var patients: [Patient] = [
-        Patient(
+       Patient(
             id: "1",
             firstName: "Madeleine",
             lastName: "Dupont",

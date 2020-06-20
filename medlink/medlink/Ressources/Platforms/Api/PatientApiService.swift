@@ -34,7 +34,7 @@ class PatientAPIService: PatientService {
         task.resume()
     }
    
-    func create(id: String, firstName: String, lastName: String, phone: String, photo: URL, email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
+    func create(id: String, firstName: String, lastName: String, phone: String, photo: URL,email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
         let location = [
               "latitude": location.coordinate.latitude,
               "longitude": location.coordinate.longitude
