@@ -11,32 +11,23 @@ import Charts
 
 class LineGraphViewController: UIViewController {
 
+    @IBOutlet var textField_observations: UITextField!
+    @IBOutlet var btn_save: UIButton!
     
     var consultationDetail: Consultation!
+    var consultationAccDetail: Consultation!
+    
     // CHART TEMPERATURE
     @IBOutlet var chtChart: LineChartView!
     @IBOutlet var btnbutton: UIButton!
     @IBOutlet var txtTextBox: UITextField!
     
-    // CHART ACCELEROMETRE
-    @IBOutlet var chartView: ScatterChartView!
-    @IBOutlet var sliderX: UISlider!
-    @IBOutlet var sliderY: UISlider!
-    @IBOutlet var sliderTextX: UITextField!
-    @IBOutlet var sliderTextY: UITextField!
-    
-    
-    /*
-    @IBAction func btnbutton(_ sender: Any) {
-        let input  = Double(txtTextBox.text!) //gets input from the textbox - expects input as double/int
-        numbers.append(input!) //here we add the data to the array.
-        updateGraph()
-    }
-    */
+    // CHART ACC
+    @IBOutlet var chtChartAcc: LineChartView!
     
     
     // CHART TEMPERATURE
-    var numbersTemp : [Double] = [35.4, 40.42, 43.14, 35.82, 37.3, 30.62, 35.99, 35.24, 37.83, 40.44, 38.49] //This is where we are going to store all the numbers. This can be a set of numbers that come from a Realm database, Core data, External API's or where ever else
+    var numbersTemp : [Double] = [30.32258,30.32258,30.32258,30.32258,30.32258,30.32258,30.96774,30.32258,30.96774,30.96774] //This is where we are going to store all the numbers. This can be a set of numbers that come from a Realm database, Core data, External API's or where ever else
 
     func newInstance(detail: Consultation) -> LineGraphViewController {
         let view = LineGraphViewController()
@@ -44,26 +35,79 @@ class LineGraphViewController: UIViewController {
         return view
         
     }
+    
+    // CHART ACC
+              // 1    2    3    4    5    6    7    8    9    10   seconds
+    var tabX : [Double] = [10.39505,11.0619,11.21881,9.375157,11.0619,10.66964,10.43428,10.12046,9.728197,10.15969]
+    var tabY : [Double] = [-0.274586,-0.706079,-4.118793,-0.196133,-0.274586,-0.353039,-1.490611,0.353039,-0.549172,-0.313813]
+    var tabZ : [Double] = [-1.96133,-0.470719,1.569064,0.156906,-0.627626,-0.588399,-0.392266,-1.294478,-0.196133,-0.941438]
+
+    func newInstanceAcc(detail: Consultation) -> LineGraphViewController {
+        let view = LineGraphViewController()
+        view.consultationAccDetail = detail
+        return view
+    }
+    
     // CHART TEMPERATURE
     func updateGraphTemp(){
         var lineChartEntry  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
         
-        
-        //here is the for loop
         for i in 0..<numbersTemp.count {
-
             let value = ChartDataEntry(x: Double(i), y: numbersTemp[i]) // here we set the X and Y status in a data chart entry
             lineChartEntry.append(value) // here we add it to the data set
         }
 
         let line1 = LineChartDataSet(entries: lineChartEntry, label: "Temperature") //Here we convert lineChartEntry to a LineChartDataSet
+        line1.setCircleColors(.blue)
+        line1.circleRadius = 4
         line1.colors = [NSUIColor.blue] //Sets the colour to blue
+        let data = LineChartData() //This is the object that will be added to the chart
+        data.addDataSet(line1) //Adds the line to the dataSet
+        chtChart.data = data //finally - it adds the chart data to the chart and causes an update
+    }
+    
+    // CHART ACC
+    func updateGraphAcc(){
+        var lineChartEntryX  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
+        var lineChartEntryY  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
+        var lineChartEntryZ  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
+        
+        //here is the for loop
+        for i in 0..<tabX.count {
+            let value = ChartDataEntry(x: Double(i), y: tabX[i]) // here we set the X and Y status in a data chart entry
+            lineChartEntryX.append(value) // here we add it to the data set
+        }
+        //here is the for loop
+        for i in 0..<tabY.count {
+            let value = ChartDataEntry(x: Double(i), y: tabY[i]) // here we set the X and Y status in a data chart entry
+            lineChartEntryY.append(value) // here we add it to the data set
+        }
+        //here is the for loop
+        for i in 0..<tabZ.count {
+            let value = ChartDataEntry(x: Double(i), y: tabZ[i]) // here we set the X and Y status in a data chart entry
+            lineChartEntryZ.append(value) // here we add it to the data set
+        }
+
+        let line1 = LineChartDataSet(entries: lineChartEntryX, label: "X") //Here we convert lineChartEntry to a LineChartDataSet
+        line1.setCircleColors(.blue)
+        line1.circleRadius = 4
+        line1.colors = [NSUIColor.blue] //Sets the colour to blue
+        let line2 = LineChartDataSet(entries: lineChartEntryY, label: "Y") //Here we convert lineChartEntry to a LineChartDataSet
+        line2.setCircleColors(.green)
+        line2.circleRadius = 4
+        line2.colors = [NSUIColor.green] //Sets the colour to green
+        let line3 = LineChartDataSet(entries: lineChartEntryZ, label: "Z") //Here we convert lineChartEntry to a LineChartDataSet
+        line3.setCircleColors(.red)
+        line3.circleRadius = 4
+        line3.colors = [NSUIColor.red] //Sets the colour to red
 
         let data = LineChartData() //This is the object that will be added to the chart
         data.addDataSet(line1) //Adds the line to the dataSet
+        data.addDataSet(line2) //Adds the line to the dataSet
+        data.addDataSet(line3) //Adds the line to the dataSet
         
 
-        chtChart.data = data //finally - it adds the chart data to the chart and causes an update
+        chtChartAcc.data = data //finally - it adds the chart data to the chart and causes an update
         //chtChart.chartDescription?.text = "Temperature" // Here we set the description for the graph
     }
     
@@ -78,131 +122,15 @@ class LineGraphViewController: UIViewController {
         
         // CHART TEMPERATURE
         updateGraphTemp()
-        
-        // CHART ACCELEROMETRE
-        //self.title = "Scatter Chart"
-        /*self.options = [.toggleValues,
-                        .toggleHighlight,
-                        .animateX,
-                        .animateY,
-                        .animateXY,
-                        .saveToGallery,
-                        .togglePinchZoom,
-                        .toggleAutoScaleMinMax,
-                        .toggleData]
-        
-        chartView.delegate = self
-        */
-        chartView.chartDescription?.enabled = false
-        
-        //chartView.dragEnabled = true
-        //chartView.setScaleEnabled(true)
-        //chartView.maxVisibleCount = 200
-        //chartView.pinchZoomEnabled = true
-        
-        let l = chartView.legend
-        l.horizontalAlignment = .right
-        l.verticalAlignment = .top
-        l.orientation = .vertical
-        l.drawInside = false
-        l.font = .systemFont(ofSize: 10, weight: .light)
-        //l.xOffset = 5
-        
-        let leftAxis = chartView.leftAxis
-        leftAxis.labelFont = .systemFont(ofSize: 10, weight: .light)
-        leftAxis.axisMinimum = -10
-        leftAxis.axisMaximum = 10
-        
-        let rightAxis = chartView.rightAxis
-        rightAxis.labelFont = .systemFont(ofSize: 10, weight: .light)
-        rightAxis.axisMinimum = -10
-        rightAxis.axisMaximum = 10
-        
-        //chartView.rightAxis.enabled = false
-        
-        
-        let xAxis = chartView.xAxis
-        xAxis.labelFont = .systemFont(ofSize: 10, weight: .light)
-        xAxis.axisMinimum = -1
-        xAxis.axisMaximum = 11
-        
-        sliderX.value = 45
-        sliderY.value = 100
-        slidersValueChanged(nil)
-        
-        
+        updateGraphAcc()
         
         // Do any additional setup after loading the view.
     }
     
-     func updateChartData() {
-        /*if self.shouldHideData {
-            chartView.data = nil
-            return
-        }
-        */
+    @IBAction func btn_save(_ sender: Any) {
         
-        // int(5) = 5 données
-        // range  =
-        self.setDataCount(Int(10), range: 0)
     }
     
-              // 1    2    3    4    5    6    7    8    9    10   seconds
-    var tabX = [2.0, 4.3, 6.5, 7.2, 3.8, 1.2, 2.0, 3.7, 7.5, 8.7]
-    var tabY = [3.7, 7.5, 8.7, 3.8, 1.2, 2.0, 2.0, 4.3, 6.5, 4.3]
-    var tabZ = [2.0, 7.2, 3.8, 1.2, 4.3, 6.5, 8.7, 7.5, 8.7, 1.2]
-    
-    // CHART ACCELEROMETRE-
-    func setDataCount(_ count: Int, range: Double) {
-        
-        let values1 = (0..<tabX.count).map { (i) -> ChartDataEntry in
-            //let val = Double(range)
-            return ChartDataEntry(x: Double(i)+1, y: Double(tabX[i]))
-        }
-        let values2 = (0..<tabY.count).map { (i) -> ChartDataEntry in
-            //let val = Double(range)
-            return ChartDataEntry(x: Double(i)+1, y: Double(tabY[i]))
-        }
-        let values3 = (0..<tabZ.count).map { (i) -> ChartDataEntry in
-            //let val = Double(range)
-            return ChartDataEntry(x: Double(i)+1, y: Double(tabZ[i]))
-        }
-
-        
-        let set1 = ScatterChartDataSet(entries: values1, label: "DS 1")
-        set1.setScatterShape(.circle)
-        set1.setColor(ChartColorTemplates.colorful()[0])
-        set1.scatterShapeSize = 6
-        
-        let set2 = ScatterChartDataSet(entries: values2, label: "DS 2")
-        set2.setScatterShape(.circle)
-        //set2.scatterShapeHoleColor = ChartColorTemplates.colorful()[2]
-        set2.setColor(ChartColorTemplates.colorful()[1])
-        set2.scatterShapeSize = 6
-        
-        let set3 = ScatterChartDataSet(entries: values3, label: "DS 3")
-        set3.setScatterShape(.circle)
-        set3.setColor(ChartColorTemplates.colorful()[2])
-        set3.scatterShapeSize = 6
-        
-        let data = ScatterChartData(dataSets: [set1, set2, set3])
-        data.setValueFont(.systemFont(ofSize: 7, weight: .light))
-
-        chartView.data = data
-    }
-    /*
-    override func optionTapped(_ option: Option) {
-        super.handleOption(option, forChartView: chartView)
-    }
-    */
-    
-    // CHART ACCELEROMETRE
-    @IBAction func slidersValueChanged(_ sender: Any?) {
-        sliderTextX.text = "\(Int(sliderX.value))"
-        sliderTextY.text = "\(Int(sliderY.value))"
-        
-        updateChartData()
-    }
 
 
     /*

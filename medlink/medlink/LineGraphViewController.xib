@@ -9,13 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LineGraphViewController" customModule="medlink" customModuleProvider="target">
             <connections>
+                <outlet property="btn_save" destination="nJj-fJ-86y" id="nWx-1Z-1gl"/>
                 <outlet property="btnbutton" destination="Ou2-Nz-nO8" id="v1Y-FN-cAL"/>
-                <outlet property="chartView" destination="9eC-Xr-mYh" id="loX-Cv-CKd"/>
                 <outlet property="chtChart" destination="nmH-by-7IY" id="9Ob-Xz-H1q"/>
-                <outlet property="sliderTextX" destination="gS9-JS-Xms" id="3tx-4d-4V1"/>
-                <outlet property="sliderTextY" destination="9W1-5B-3u1" id="vgh-Ct-SBA"/>
-                <outlet property="sliderX" destination="e0m-GR-ZGD" id="nil-Zg-hDB"/>
-                <outlet property="sliderY" destination="zQU-g0-Cno" id="j8u-Lj-LWx"/>
+                <outlet property="chtChartAcc" destination="43Y-2w-8ED" id="a2D-bs-aMb"/>
+                <outlet property="textField_observations" destination="ksT-Cb-gx5" id="FLQ-Au-gLK"/>
                 <outlet property="txtTextBox" destination="Nd6-EV-RGD" id="fDZ-e4-YFP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -39,41 +37,47 @@
                         <action selector="btnbutton:" destination="-1" eventType="touchUpInside" id="1aZ-OE-tlX"/>
                     </connections>
                 </button>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="e0m-GR-ZGD">
-                    <rect key="frame" x="148" y="433" width="118" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </slider>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zQU-g0-Cno">
-                    <rect key="frame" x="148" y="433" width="118" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </slider>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gS9-JS-Xms">
-                    <rect key="frame" x="158" y="431" width="97" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9W1-5B-3u1">
-                    <rect key="frame" x="158" y="431" width="97" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyS-Ze-lQa">
                     <rect key="frame" x="0.0" y="69" width="414" height="793"/>
                     <subviews>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nmH-by-7IY" customClass="LineChartView" customModule="Charts">
-                            <rect key="frame" x="0.0" y="144" width="414" height="230"/>
+                            <rect key="frame" x="0.0" y="94" width="414" height="230"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9eC-Xr-mYh" customClass="ScatterChartView" customModule="Charts">
-                            <rect key="frame" x="0.0" y="426" width="414" height="230"/>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43Y-2w-8ED" customClass="LineChartView" customModule="Charts">
+                            <rect key="frame" x="0.0" y="365" width="414" height="230"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
+                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ksT-Cb-gx5">
+                            <rect key="frame" x="8" y="640" width="398" height="56"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.86274509799999999" green="0.90196078430000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textColor" red="0.069964683220000004" green="0.068653681509999995" blue="0.1058823529" alpha="0.66168129279999999" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Observations :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6of-yc-SDG">
+                            <rect key="frame" x="9" y="608" width="263" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJj-fJ-86y">
+                            <rect key="frame" x="349" y="608" width="54" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" red="0.1916592456" green="0.311585222" blue="0.5" alpha="0.50767872430000005" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="btn_save:" destination="-1" eventType="touchUpInside" id="beP-Jx-vbp"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" red="0.79796293220000003" green="0.87132878940000003" blue="0.91894416209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.79796293220000003" green="0.87132878940000003" blue="0.91894416209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
