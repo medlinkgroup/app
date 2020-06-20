@@ -23,7 +23,8 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
     public static let patientsTableViewCellId = "ptvc"
     
     var patientService: PatientService{
-           return PatientMockService()
+           //return PatientMockService()
+        return PatientAPIService()
        }
    
    
