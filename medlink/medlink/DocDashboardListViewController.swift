@@ -151,6 +151,15 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
               }
        
            
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          if let tableSection = TableSection(rawValue: indexPath.section) {
+              let consultation = data[tableSection]?[indexPath.row]
+              self.consultationDetail = consultation
+              let next = LineGraphViewController().newInstance(detail: consultationDetail)
+              self.navigationController?.pushViewController(next, animated: true)
+    
+          }
+      }
 
           func formatDate(date: String) -> String {
               let dateFormatterGet = DateFormatter()

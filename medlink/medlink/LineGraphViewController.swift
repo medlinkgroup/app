@@ -11,6 +11,8 @@ import Charts
 
 class LineGraphViewController: UIViewController {
 
+    
+    var consultationDetail: Consultation!
     // CHART TEMPERATURE
     @IBOutlet var chtChart: LineChartView!
     @IBOutlet var btnbutton: UIButton!
@@ -32,9 +34,16 @@ class LineGraphViewController: UIViewController {
     }
     */
     
+    
     // CHART TEMPERATURE
     var numbersTemp : [Double] = [35.4, 40.42, 43.14, 35.82, 37.3, 30.62, 35.99, 35.24, 37.83, 40.44, 38.49] //This is where we are going to store all the numbers. This can be a set of numbers that come from a Realm database, Core data, External API's or where ever else
 
+    func newInstance(detail: Consultation) -> LineGraphViewController {
+        let view = LineGraphViewController()
+        view.consultationDetail = detail
+        return view
+        
+    }
     // CHART TEMPERATURE
     func updateGraphTemp(){
         var lineChartEntry  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
