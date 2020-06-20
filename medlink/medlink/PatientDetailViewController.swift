@@ -19,7 +19,7 @@ class PatientDetailViewController: UIViewController {
     @IBOutlet var label_location: UILabel!
     @IBOutlet var img_photo_patient: UIImageView!
     
-    
+    var patientDetail: Patient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,12 @@ class PatientDetailViewController: UIViewController {
     }
 
 
+    func newInstance(detail: Patient) -> PatientDetailViewController {
+        let view = PatientDetailViewController()
+        view.patientDetail = detail
+        return view
+        
+    }
     /*
     // MARK: - Navigation
 

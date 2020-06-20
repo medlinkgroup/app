@@ -27,7 +27,7 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
        // return PatientAPIService()
        }
    
-   
+    var patientDetail: Patient!
     var DoctorUID: String?
     
     var patients: [Patient] = [] {
@@ -124,6 +124,15 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
            print("You tapped cell number \(indexPath.row).")
        }
    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          
+              let patient = patients[indexPath.row]
+              self.patientDetail = patient
+              let next = PatientDetailViewController().newInstance(detail: patientDetail)
+              self.navigationController?.pushViewController(next, animated: true)
+    
+          
+      }
     
     
     @objc func action_add_patient(gesture: UIGestureRecognizer) {

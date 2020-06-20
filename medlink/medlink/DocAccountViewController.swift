@@ -103,7 +103,7 @@ class DocAccountViewController: UIViewController {
             // Set the "capital" field of the city 'DC'
             userRef.updateData([
                 "email": email,
-                "firstname": firstname,
+                "fistname": firstname,
                 "lastname": lastname,
                 "phone": phone,
                 "speciality": speciality,
@@ -112,13 +112,18 @@ class DocAccountViewController: UIViewController {
                     print("Error updating document: \(err)")
                 } else {
                     print("Document successfully updated")
+                    let alertController = UIAlertController(title: nil, message: "User was sucessfully updated", preferredStyle: .alert)
+                     alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
                 }
             }
 
     }
         
+   
 
 
 }
+    
     
 
