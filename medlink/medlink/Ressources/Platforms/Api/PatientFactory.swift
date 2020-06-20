@@ -26,10 +26,10 @@ class PatientFactory {
             let lat = location["latitude"],
             let lon = location["longitude"],
             let birthDate = dictionary["birthDate"] as? String
-            
             else{
-                return nil
-        }
+                         return nil
+                 }
+         
         let photo = dictionary["photo"] as? String
 
         return Patient(_id: _id,
