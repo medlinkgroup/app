@@ -12,10 +12,15 @@
                 <outlet property="btn_add_consultation" destination="fzr-N6-rXk" id="MVI-gK-l2l"/>
                 <outlet property="label_add_consultation" destination="iXQ-Zi-jmG" id="NMf-ih-0si"/>
                 <outlet property="label_date" destination="WUJ-QD-QFW" id="h52-17-Qxp"/>
+                <outlet property="label_date_val" destination="x6Y-lP-PdW" id="6ED-Ib-fEz"/>
                 <outlet property="label_patient_name_lastname" destination="xCe-Xd-3X3" id="4wO-eM-00q"/>
+                <outlet property="label_patient_name_lastname_val" destination="6Kt-Ei-J3u" id="R5O-wB-57H"/>
                 <outlet property="label_time_end" destination="AsU-vG-e7O" id="FHM-Oj-lct"/>
+                <outlet property="label_time_end_val" destination="54y-yl-WcL" id="oLJ-zm-vqZ"/>
                 <outlet property="label_time_start" destination="s82-sM-qcs" id="caw-f4-NZI"/>
+                <outlet property="label_time_start_val" destination="TN1-Nm-uAI" id="wwo-6k-rs2"/>
                 <outlet property="label_title_consultation" destination="1Gq-92-HGv" id="Cq9-lI-ECn"/>
+                <outlet property="label_title_consultation_val" destination="F1w-Ro-4la" id="Rmb-kG-5oD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

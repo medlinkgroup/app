@@ -17,6 +17,11 @@ class AddPatientViewController: UIViewController {
     @IBOutlet var label_object_id: UILabel!
     @IBOutlet var btn_add_patient: UIButton!
     
+    @IBOutlet var label_name_val: UILabel!
+    @IBOutlet var label_lastname_val: UILabel!
+    @IBOutlet var label_birthdate_val: UILabel!
+    @IBOutlet var label_object_id_val: UILabel!
+    
     
     
     

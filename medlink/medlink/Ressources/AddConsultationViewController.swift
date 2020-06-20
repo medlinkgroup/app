@@ -18,6 +18,12 @@ class AddConsultationViewController: UIViewController {
     @IBOutlet var label_time_end: UILabel!
     @IBOutlet var btn_add_consultation: UIButton!
     
+    @IBOutlet var label_title_consultation_val: UILabel!
+    @IBOutlet var label_patient_name_lastname_val: UILabel!
+    @IBOutlet var label_date_val: UITextField!
+    @IBOutlet var label_time_start_val: UILabel!
+    @IBOutlet var label_time_end_val: UILabel!
+    
     
     
     override func viewDidLoad() {

@@ -12,9 +12,13 @@
                 <outlet property="btn_add_patient" destination="hH2-qg-SGX" id="Ciy-Xy-WRu"/>
                 <outlet property="label_add_patient" destination="iaP-fl-aMR" id="QRY-Ye-tIl"/>
                 <outlet property="label_birthdate" destination="wbg-Pn-hku" id="xqI-sy-Kh8"/>
+                <outlet property="label_birthdate_val" destination="xVY-Xs-72w" id="ASB-n1-4lL"/>
                 <outlet property="label_lastname" destination="UMX-XM-xrF" id="4Eh-4N-foU"/>
+                <outlet property="label_lastname_val" destination="7s7-wm-sU8" id="SAq-QU-GtZ"/>
                 <outlet property="label_name" destination="9BY-iK-kra" id="8z7-24-d5b"/>
+                <outlet property="label_name_val" destination="ze1-2w-zTH" id="WO8-6T-b15"/>
                 <outlet property="label_object_id" destination="0g7-FA-wKj" id="A5C-Fb-qmi"/>
+                <outlet property="label_object_id_val" destination="JL5-XL-NSu" id="ycv-Th-jaj"/>
                 <outlet property="view" destination="NgM-06-Mej" id="k5U-xO-gv7"/>
             </connections>
         </placeholder>
