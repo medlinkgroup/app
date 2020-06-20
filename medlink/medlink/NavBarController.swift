@@ -53,7 +53,7 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         let optionC = UINavigationController(rootViewController: PatientsListViewController())
         //optionC.isNavigationBarHidden = true
         optionC.tabBarItem.title = NSLocalizedString("patients", comment: "")
-        let image3 = UIImage(named: "list_patients")
+        let image3 = UIImage(named: "")
         optionC.tabBarItem.image = image3
         
     

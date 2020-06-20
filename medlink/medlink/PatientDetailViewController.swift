@@ -24,6 +24,7 @@ class PatientDetailViewController: UIViewController {
     @IBOutlet var label_adress_val: UILabel!
     @IBOutlet var label_location_val: UILabel!
     
+    
     var patientDetail: Patient!
     
     override func viewDidLoad() {
@@ -39,6 +40,12 @@ class PatientDetailViewController: UIViewController {
         label_email.text = NSLocalizedString("email", comment: "")
         label_adress.text = NSLocalizedString("adress", comment: "")
         label_location.text = NSLocalizedString("location", comment: "")
+        
+        label_birthdate_val.textAlignment = .natural
+        label_phone_val.textAlignment = .natural
+        label_email_val.textAlignment = .natural
+        label_adress_val.textAlignment = .natural
+        label_location_val.textAlignment = .natural
         
         loadDataDetails()
         
@@ -67,6 +74,8 @@ class PatientDetailViewController: UIViewController {
         
          label_patient_firstname.text = patientDetail.firstName
          label_birthdate_val.text = patientDetail.birthDate
+         let first10 = String((label_birthdate_val.text?.prefix(10))!)
+         label_birthdate_val.text = first10
          label_phone_val.text = patientDetail.phone
          label_email_val.text = patientDetail.email
          label_adress_val.text = patientDetail.place
@@ -75,7 +84,7 @@ class PatientDetailViewController: UIViewController {
         if let pictureURL = patientDetail.photo {
              DispatchQueue.global().async {
                 if let data = try? Data(contentsOf: pictureURL) {DispatchQueue.main.sync {self.img_photo_patient.image = UIImage(data: data)}}
-                print(self.patientDetail)
+                print(self.patientDetail!)
              }
          }
      }

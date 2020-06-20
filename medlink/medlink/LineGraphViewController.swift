@@ -80,7 +80,7 @@ class LineGraphViewController: UIViewController {
         updateGraphTemp()
         
         // CHART ACCELEROMETRE
-        self.title = "Scatter Chart"
+        //self.title = "Scatter Chart"
         /*self.options = [.toggleValues,
                         .toggleHighlight,
                         .animateX,
@@ -141,24 +141,31 @@ class LineGraphViewController: UIViewController {
             return
         }
         */
+        
         // int(5) = 5 données
         // range  =
-        self.setDataCount(Int(5), range: 0)
+        self.setDataCount(Int(10), range: 0)
     }
+    
+              // 1    2    3    4    5    6    7    8    9    10   seconds
+    var tabX = [2.0, 4.3, 6.5, 7.2, 3.8, 1.2, 2.0, 3.7, 7.5, 8.7]
+    var tabY = [3.7, 7.5, 8.7, 3.8, 1.2, 2.0, 2.0, 4.3, 6.5, 4.3]
+    var tabZ = [2.0, 7.2, 3.8, 1.2, 4.3, 6.5, 8.7, 7.5, 8.7, 1.2]
     
     // CHART ACCELEROMETRE-
     func setDataCount(_ count: Int, range: Double) {
-        let values1 = (0..<count).map { (i) -> ChartDataEntry in
+        
+        let values1 = (0..<tabX.count).map { (i) -> ChartDataEntry in
             //let val = Double(range)
-            return ChartDataEntry(x: Double(i), y: Double(count))
+            return ChartDataEntry(x: Double(i)+1, y: Double(tabX[i]))
         }
-        let values2 = (0..<count).map { (i) -> ChartDataEntry in
+        let values2 = (0..<tabY.count).map { (i) -> ChartDataEntry in
             //let val = Double(range)
-            return ChartDataEntry(x: Double(i) + 0.33, y: Double(count))
+            return ChartDataEntry(x: Double(i)+1, y: Double(tabY[i]))
         }
-        let values3 = (0..<count).map { (i) -> ChartDataEntry in
+        let values3 = (0..<tabZ.count).map { (i) -> ChartDataEntry in
             //let val = Double(range)
-            return ChartDataEntry(x: Double(i) + 0.66, y: Double(count))
+            return ChartDataEntry(x: Double(i)+1, y: Double(tabZ[i]))
         }
 
         
@@ -169,8 +176,7 @@ class LineGraphViewController: UIViewController {
         
         let set2 = ScatterChartDataSet(entries: values2, label: "DS 2")
         set2.setScatterShape(.circle)
-        set2.scatterShapeHoleColor = ChartColorTemplates.colorful()[3]
-        set2.scatterShapeHoleRadius = 3.5
+        //set2.scatterShapeHoleColor = ChartColorTemplates.colorful()[2]
         set2.setColor(ChartColorTemplates.colorful()[1])
         set2.scatterShapeSize = 6
         

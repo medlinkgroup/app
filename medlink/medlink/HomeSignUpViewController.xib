@@ -9,8 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeSignUpViewController" customModule="medlink" customModuleProvider="target">
             <connections>
+                <outlet property="btn_sign_in" destination="cac-kY-OXa" id="f6E-K9-Yao"/>
                 <outlet property="btn_sign_up" destination="cJD-51-57d" id="I33-IH-JXt"/>
                 <outlet property="emailTextField" destination="pRl-7m-cIE" id="9J3-ll-qVo"/>
+                <outlet property="errorLabel" destination="moM-yk-WBg" id="5OC-VC-9EY"/>
                 <outlet property="firstNameTextField" destination="HSK-5B-v01" id="g2C-JL-f5h"/>
                 <outlet property="label_email" destination="V4q-JZ-nzG" id="Ymr-qk-a07"/>
                 <outlet property="label_first_name" destination="UJB-cf-hBg" id="GeD-Bv-emQ"/>
@@ -29,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDZ-6D-MmR">
-                    <rect key="frame" x="69" y="174" width="276" height="602"/>
+                    <rect key="frame" x="69" y="144" width="276" height="632"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pRl-7m-cIE">
                             <rect key="frame" x="17" y="195" width="242" height="34"/>
@@ -88,7 +90,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJD-51-57d">
-                            <rect key="frame" x="17" y="522" width="242" height="40"/>
+                            <rect key="frame" x="17" y="503" width="242" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                             <state key="normal" title="Button">
@@ -96,6 +98,23 @@
                             </state>
                             <connections>
                                 <action selector="sign_up:" destination="-1" eventType="touchUpInside" id="3oJ-eX-UDE"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moM-yk-WBg">
+                            <rect key="frame" x="17" y="602" width="242" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                            <color key="textColor" red="0.9192116857" green="0.46245743950000001" blue="0.39252710000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cac-kY-OXa">
+                            <rect key="frame" x="17" y="564" width="242" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="sign Up">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="go_to_login:" destination="-1" eventType="touchUpInside" id="CSQ-X1-SYL"/>
                             </connections>
                         </button>
                     </subviews>
@@ -139,7 +158,7 @@
                 <constraint firstItem="DDZ-6D-MmR" firstAttribute="leading" secondItem="REJ-VI-gtA" secondAttribute="leading" constant="69" id="emv-Ik-9OD"/>
                 <constraint firstItem="REJ-VI-gtA" firstAttribute="bottom" secondItem="DDZ-6D-MmR" secondAttribute="bottom" constant="86" id="kB4-HA-6aY"/>
                 <constraint firstItem="REJ-VI-gtA" firstAttribute="trailing" secondItem="DDZ-6D-MmR" secondAttribute="trailing" constant="69" id="ujP-U0-bbv"/>
-                <constraint firstItem="DDZ-6D-MmR" firstAttribute="top" secondItem="REJ-VI-gtA" secondAttribute="top" constant="130" id="zJX-v8-qjo"/>
+                <constraint firstItem="DDZ-6D-MmR" firstAttribute="top" secondItem="REJ-VI-gtA" secondAttribute="top" constant="100" id="zJX-v8-qjo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="REJ-VI-gtA"/>
             <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>

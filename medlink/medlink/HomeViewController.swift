@@ -13,11 +13,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var login_Btn: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet var label_login_title: UILabel!
     @IBOutlet var label_username: UILabel!
     @IBOutlet var label_password: UILabel!
+    @IBOutlet var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
