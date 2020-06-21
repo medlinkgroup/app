@@ -8,35 +8,34 @@
 
 import Foundation
 import CoreLocation
+import Alamofire
 
 class ConsultationAPIService: ConsultationService {
- 
-      
-       
-      
-       //  all reservation by id user
+
+    //  all reservation by id user
       
     
     func edit( id: String ,title: String, description: String, doctorUid: String, patientUid: String, date: String, appointmentTime: String,timeEnd: String, completion: @escaping (Bool) -> Void) {
             
-          let body: [String: Any] = [
-                  "title": title,
-                  "description": description,
-                  "doctorUid": doctorUid,
-                  "patientUid": patientUid,
-                  "date": date,
-                  "appointmentTime": appointmentTime,
-                  "timeEnd": timeEnd
-              ]
+      let body: [String: Any] = [
+            "title": title,
+            "description": description,
+            "doctorUid": doctorUid,
+            "patientUid": patientUid,
+            "date": date,
+            "appointmentTime": appointmentTime,
+            "timeEnd": timeEnd
+        ]
         var request = URLRequest(url: URL(string: "https://medlinkapi.herokuapp.com/consultations/\(id)")!)
-               request.httpMethod = "PUT"
-               request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
-               
-               request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-               let task = URLSession.shared.dataTask(with: request) { (data, res, err) in
-                   completion(err == nil)
-               }
-               task.resume()
+        request.httpMethod = "PUT"
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let task = URLSession.shared.dataTask(with: request) { (data, res, err) in
+            completion(err == nil)
+            
+        }
+        task.resume()
     }
     
     func delete( id: String, completion: @escaping (Bool) -> Void) {
@@ -86,6 +85,7 @@ class ConsultationAPIService: ConsultationService {
                 print(json)
             }
         }.resume()
+        
     }
     
    

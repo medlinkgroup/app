@@ -74,7 +74,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         label_dashboard.text = NSLocalizedString("dashboard", comment: "")
         label_consultations.text = NSLocalizedString("list_consultations", comment: "")
         
-        self.consultationsTableView.rowHeight = 120
+        self.consultationsTableView.rowHeight = 100
         self.consultationsTableView.register(UINib(nibName: "ConsultationsTableViewCell", bundle: nil),
                                              forCellReuseIdentifier: DocDashboardListViewController.consultationsTableViewCellId)
         consultationsTableView.dataSource = self

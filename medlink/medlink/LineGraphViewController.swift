@@ -8,6 +8,9 @@
 
 import UIKit
 import Charts
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class LineGraphViewController: UIViewController {
 
@@ -25,6 +28,11 @@ class LineGraphViewController: UIViewController {
     // CHART ACC
     @IBOutlet var chtChartAcc: LineChartView!
     
+    
+    var temperatureService: TemperatureService{
+           //return PatientMockService()
+        return TemperatureAPIService()
+    }
     
     // CHART TEMPERATURE
     var numbersTemp : [Double] = [30.32258,30.32258,30.32258,30.32258,30.32258,30.32258,30.96774,30.32258,30.96774,30.96774] //This is where we are going to store all the numbers. This can be a set of numbers that come from a Realm database, Core data, External API's or where ever else
@@ -128,7 +136,29 @@ class LineGraphViewController: UIViewController {
     }
     
     @IBAction func btn_save(_ sender: Any) {
+        let observations = textField_observations.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        textField_observations.text = consultationDetail.description
         
+        // A FAIRE
+        /*guard let userID = Auth.auth().currentUser?.uid else { return }
+        let db = Firestore.firestore()
+        let userRef = db.collection("consultations").document(userID)
+        
+        // Set the "capital" field of the city 'DC'
+        userRef.updateData([
+            "description": observations
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+                let alertController = UIAlertController(title: nil, message: "Observation was sucessfully updated", preferredStyle: .alert)
+                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+         */
     }
     
 

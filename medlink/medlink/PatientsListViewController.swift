@@ -25,10 +25,10 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
     var patientService: PatientService{
            //return PatientMockService()
         return PatientAPIService()
-       }
+    }
    
     var patientDetail: Patient!
-    var DoctorUID: String?
+    var DoctorUID: String = ""
     
     var patients: [Patient] = [] {
            didSet {
@@ -83,9 +83,9 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
               if let document = document, document.exists {
               
                    print(document.data()!)
-                   self.DoctorUID = document["uid"] as? String
+                self.DoctorUID = document["uid"]! as! String
                    } else {
-                       print("Document does not exist")
+                       print("DOCTOR UID NOT FOUND : Document does not exist")
                    }
                }
             } else {
@@ -102,8 +102,8 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
     override func viewDidAppear(_ animated: Bool) {
         self.patientService.getAll { (patients) in
             print(patients)
-             
-            self.patients = patients/*.filter({$0.doctorUid == self.DoctorUID})*/
+            print(". . . . . . . . \(self.DoctorUID)")
+            self.patients = patients.filter({$0.doctorUid == self.DoctorUID})
             // filter just doctorId
             
             print(self.patients)
@@ -121,7 +121,7 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
         patients.count
     }
     private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-           print("You tapped cell number \(indexPath.row).")
+           print("***************You tapped cell number \(indexPath.row).")
        }
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

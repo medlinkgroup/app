@@ -10,10 +10,11 @@ import UIKit
 
 class ConsultationsTableViewCell: UITableViewCell {
 
+    
     @IBOutlet var label_patient: UILabel!
     @IBOutlet var label_date: UILabel!
     @IBOutlet var img_patient: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

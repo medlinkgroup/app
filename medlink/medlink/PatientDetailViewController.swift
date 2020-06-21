@@ -71,7 +71,7 @@ class PatientDetailViewController: UIViewController {
              }
          }*/
         label_patient_name.text = patientDetail.lastName
-        
+        label_patient_name.text = label_patient_name.text?.uppercased()
          label_patient_firstname.text = patientDetail.firstName
          label_birthdate_val.text = patientDetail.birthDate
          let first10 = String((label_birthdate_val.text?.prefix(10))!)
@@ -88,6 +88,8 @@ class PatientDetailViewController: UIViewController {
              }
          }
      }
+    
+
     /*
     // MARK: - Navigation
 

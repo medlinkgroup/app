@@ -36,29 +36,30 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         
         navBarCont.delegate = self
 
-        let optionD = UINavigationController(rootViewController: DocDashboardListViewController())
+        let optionA = UINavigationController(rootViewController: DocDashboardListViewController())
         //optionD.isNavigationBarHidden = false
-        optionD.tabBarItem.title = NSLocalizedString("home", comment: "")
+        optionA.tabBarItem.title = NSLocalizedString("home", comment: "")
         let image4 = UIImage(named: "Home")
-        optionD.tabBarItem.image = image4
+        optionA.tabBarItem.image = image4
         
-        let optionA = UINavigationController(rootViewController: DocAccountViewController())
-        optionA.setNavigationBarHidden(true, animated: true)
+        let optionB = UINavigationController(rootViewController: PatientsListViewController())
+        //optionD.isNavigationBarHidden = false
+        optionB.tabBarItem.title = NSLocalizedString("list_patients", comment: "")
+        let image2 = UIImage(named: "list_patients")
+        optionB.tabBarItem.image = image2
+        
+        let optionC = UINavigationController(rootViewController: DocAccountViewController())
+        optionC.setNavigationBarHidden(true, animated: true)
         //optionA.isNavigationBarHidden = true
-        optionA.tabBarItem.title = NSLocalizedString("view_profile", comment: "")
+        optionC.tabBarItem.title = NSLocalizedString("view_profile", comment: "")
         let image1 = UIImage(named: "Account")
-        optionA.tabBarItem.image  = image1
+        optionC.tabBarItem.image  = image1
         
-
-        let optionC = UINavigationController(rootViewController: PatientsListViewController())
-        //optionC.isNavigationBarHidden = true
-        optionC.tabBarItem.title = NSLocalizedString("patients", comment: "")
-        let image3 = UIImage(named: "")
-        optionC.tabBarItem.image = image3
+        
         
     
      
-        navBarCont.viewControllers = [optionD, optionC, optionA]
+        navBarCont.viewControllers = [optionA, optionB, optionC]
         self.view.addSubview(navBarCont.view)
     }
 }
