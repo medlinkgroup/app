@@ -35,9 +35,9 @@ class DocAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        /*self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.isTranslucent = true*/
         self.navigationController?.view.backgroundColor = .clear
         
         
@@ -112,7 +112,7 @@ class DocAccountViewController: UIViewController {
                     print("Error updating document: \(err)")
                 } else {
                     print("Document successfully updated")
-                    let alertController = UIAlertController(title: nil, message: "User was sucessfully updated", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: nil, message: NSLocalizedString("user_updated", comment: ""), preferredStyle: .alert)
                      alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
                 }

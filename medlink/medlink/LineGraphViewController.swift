@@ -16,6 +16,7 @@ class LineGraphViewController: UIViewController {
 
     @IBOutlet var textField_observations: UITextField!
     @IBOutlet var btn_save: UIButton!
+    @IBOutlet var label_patient_lastname: UILabel!
     
     var consultationDetail: Consultation!
     var consultationAccDetail: Consultation!
@@ -138,7 +139,9 @@ class LineGraphViewController: UIViewController {
     @IBAction func btn_save(_ sender: Any) {
         let observations = textField_observations.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
-        textField_observations.text = consultationDetail.description
+        // two next lines must be fixed
+        textField_observations.text = consultationDetail.description // bien faire appel api
+        label_patient_lastname.text = consultationDetail.patientUid // faire patient.uid->lastname
         
         // A FAIRE
         /*guard let userID = Auth.auth().currentUser?.uid else { return }
