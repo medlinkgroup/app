@@ -11,6 +11,7 @@ import FirebaseFirestore
 import FirebaseAuth
 import FirebaseStorage
 import MobileCoreServices
+import CoreLocation
 
 class AddPatientViewController: UIViewController,UITextFieldDelegate {
 
@@ -70,12 +71,12 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
                    self.PlaceText.delegate = self
                    self.DateText.delegate = self
                    self.ImageURLText.delegate = self
-                  
+                   self.imagePicker.delegate = self
                  
-                  // createDatePicker()
+                   createDatePicker()
               
                   
-                   imagePicker.delegate = self
+                   
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -85,6 +86,56 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
                                 imagePicker.mediaTypes = [kUTTypeImage as String]
                                 imagePicker.delegate = self
                                 present(imagePicker, animated: true, completion: nil)
+    }
+    @IBAction func add_patient_btn(_ sender: Any) {
+        guard let place = PlaceText.text,
+              let firstName = FirstNameText.text,
+              let lastName = LastNameText.text,
+              let email = EmailText.text,
+              let date = DateText.text,
+             // let date = "2020-06-18'T'00:00:00.000'Z'",
+              let phone = PhoneText.text,
+              let doctorUid = UidDoc ,
+              let imageURL = ImageURLText.text,
+            
+              firstName.count > 0,
+              lastName.count > 0,
+              email.count > 0,
+              place.count > 0,
+              //date.count > 0,
+              phone.count > 0,
+              doctorUid.count > 0
+             else {
+                self.displayError(message: "Missing required field")
+            return
+        }
+
+          let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(place) { (placemarks, err) in
+            guard err == nil,
+                  let allPlacemarks = placemarks,
+                  let placeloc = allPlacemarks.first,
+                  let loc = placeloc.location else {
+                    self.displayError(message: "Address not found")
+                    return
+            }
+          self.patientService.create(firstName: firstName, lastName: lastName, phone: phone,
+                                   photo: imageURL,email: email, doctorUid: doctorUid,
+                                   place: place, location: loc, birthDate: date
+                                   )
+          { (success) in
+              print (loc)
+              print(success)
+             
+                                 
+          }
+          let confirmationAlert = UIAlertController(title: "Succes", message: " creation succes.", preferredStyle: UIAlertController.Style.alert)
+                             confirmationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:nil ))
+                              
+                           
+                             self.present(confirmationAlert, animated: true, completion: nil)
+            
+          }
     }
     func displayError(message: String) {
               let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
