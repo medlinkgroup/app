@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class AddPatientViewController: UIViewController {
 
@@ -26,11 +28,35 @@ class AddPatientViewController: UIViewController {
     
     
     
-    
+    let datePicker = UIDatePicker()
+       let timeStartPicker = UIDatePicker()
+       let timeEndPicker = UIDatePicker()
+       var UidDoc : String?
+       let db = Firestore.firestore()
+       
+       var consultationService: ConsultationService{
+           return ConsultationAPIService()
+       }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let user = Auth.auth().currentUser {
+                         // user connect
+                         let docRef = db.collection("users").document(user.uid)
+                         
+                        docRef.getDocument { (document, error) in
+                        if let document = document, document.exists {
+                            //print(document.data()!)
+                         self.UidDoc = document["uid"] as? String
+                             
+                            } else {
+                                print("Document does not exist")
+                            }
+                        }
+                     } else {
+                         fatalError(" Erreur : aucun user connect")
+                     }
 
         //self.navigationController?.setNavigationBarHidden(true, animated: true)
         
