@@ -226,14 +226,14 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
           editedImage.jpegData(compressionQuality: 0.5)
       {
           self.photoView.image = editedImage
-          //uploadPatientImage(imageData: optimizedImageData)
+          uploadPatientImage(imageData: optimizedImageData)
       }
       
       if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage ,let optimizedImageData =
          originalImage.jpegData(compressionQuality: 0.5)
           {
               self.photoView.image = originalImage
-             // uploadPatientImage(imageData: optimizedImageData)
+              uploadPatientImage(imageData: optimizedImageData)
           }
       dismiss(animated: true, completion: nil)
   }
