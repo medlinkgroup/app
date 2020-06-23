@@ -22,6 +22,7 @@
                 <outlet property="label_lastname" destination="ogJ-mN-ia8" id="O1V-jG-sYR"/>
                 <outlet property="label_name" destination="9BY-iK-kra" id="8z7-24-d5b"/>
                 <outlet property="label_object_id" destination="0g7-FA-wKj" id="A5C-Fb-qmi"/>
+                <outlet property="photoView" destination="OXH-Qf-P8s" id="6al-zv-2Ev"/>
                 <outlet property="view" destination="NgM-06-Mej" id="k5U-xO-gv7"/>
             </connections>
         </placeholder>
