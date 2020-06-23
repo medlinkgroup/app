@@ -15,11 +15,11 @@ class PatientMockService: PatientService {
 
     
     
-    func create(firstName: String, lastName: String, phone: String, photo: URL, email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
+    func create(firstName: String, lastName: String, phone: String, photo: String, email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
          completion(false)
     }
     
-    func edit(id: String, firstName: String, lastName: String, phone: String, photo: URL, email: String,doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
+    func edit(id: String, firstName: String, lastName: String, phone: String, photo: String, email: String,doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
         completion(false)
     }
     
