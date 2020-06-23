@@ -10,6 +10,7 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 import FirebaseStorage
+import MobileCoreServices
 
 class AddPatientViewController: UIViewController,UITextFieldDelegate {
 
@@ -71,13 +72,42 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
                    self.ImageURLText.delegate = self
                   
                  
-                 //  createDatePicker()
+                  // createDatePicker()
               
                   
-                 //  imagePicker.delegate = self
-                  
+                   imagePicker.delegate = self
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    @IBAction func upload_image_btn(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
+                                imagePicker.mediaTypes = [kUTTypeImage as String]
+                                imagePicker.delegate = self
+                                present(imagePicker, animated: true, completion: nil)
+    }
+    func displayError(message: String) {
+              let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+              self.present(alert, animated: true)
+          }
+    func createDatePicker(){
+        datePicker.datePickerMode = .date
+        let toolbar = UIToolbar()
+         toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddPatientViewController.donedatePicker ))
+        toolbar.setItems([doneButton], animated: false)
+        toolbar.isUserInteractionEnabled = true
+    DateText.inputAccessoryView = toolbar
+    DateText.inputView = DateText
+        
+    }
+    @objc func donedatePicker(){
 
-       
+      let formatter = DateFormatter()
+      formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        DateText.text = formatter.string(from: datePicker.date)
+      self.view.endEditing(true)
     }
     
     func uploadPatientImage(imageData: Data)  {
