@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/Platforms/Api/PatientFactory.swift">
-   </FileRef>
-   <FileRef
       location = "group:medlink.xcodeproj">
    </FileRef>
    <FileRef
