@@ -19,6 +19,9 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var label_name: UILabel!
     @IBOutlet weak var label_lastname: UILabel!
     @IBOutlet var label_birthdate: UILabel!
+    @IBOutlet var label_phone: UILabel!
+    @IBOutlet var label_img: UILabel!
+    @IBOutlet var label_adress: UILabel!
     @IBOutlet var label_object_id: UILabel!
     @IBOutlet var btn_add_patient: UIButton!
     @IBOutlet weak var btn_upload_image: UIButton!
@@ -48,6 +51,20 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        label_add_patient.text = NSLocalizedString("add_patient", comment: "")
+        label_name.text = NSLocalizedString("firstname", comment: "")
+        label_lastname.text = NSLocalizedString("lastname", comment: "")
+        label_birthdate.text = NSLocalizedString("birthdate", comment: "")
+        label_object_id.text = NSLocalizedString("objectid", comment: "")
+        btn_add_patient.setTitle(NSLocalizedString("add", comment: ""), for: .normal)
+        btn_upload_image.setTitle(NSLocalizedString("upload", comment: ""), for: .normal)
+        
+        label_birthdate.text = NSLocalizedString("birthdate", comment: "")
+        label_phone.text = NSLocalizedString("phone_number", comment: "")
+        label_img.text = NSLocalizedString("image", comment: "")
+        label_adress.text = NSLocalizedString("adress", comment: "")
+        
         if let user = Auth.auth().currentUser {
                          // user connect
                          let docRef = db.collection("users").document(user.uid)
