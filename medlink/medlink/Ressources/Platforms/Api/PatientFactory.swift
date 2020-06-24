@@ -32,7 +32,7 @@ class PatientFactory {
                 return nil
         }
 
-        return Patient(id: id,
+        return Patient(_id: id,
                      firstName: firstName,
                      lastName: lastName,
                      phone: phone,
