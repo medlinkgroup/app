@@ -24,7 +24,7 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var btn_add_consultation: UIButton!
     
    
-    
+    let patientPicker = UIPickerView()
     let datePicker = UIDatePicker()
     let timeStartPicker = UIDatePicker()
     let timeEndPicker = UIDatePicker()
@@ -32,7 +32,9 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
            return PatientAPIService()
        }
     var patients = [Patient] ()
+     var patientsName = [String] ()
     var UidDoc : String?
+    var selectedPatient: String?
     let db = Firestore.firestore()
     
     var consultationService: ConsultationService{
@@ -44,6 +46,7 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
         if let user = Auth.auth().currentUser {
                    // user connect
                    let docRef = db.collection("users").document(user.uid)
+            self.UidDoc = user.uid
                    
                   docRef.getDocument { (document, error) in
                   if let document = document, document.exists {
@@ -57,16 +60,128 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
                } else {
                    fatalError(" Erreur : aucun user connect")
                }
+        
+        self.TitleText.delegate = self
+        self.DescriptionText.delegate = self
+        self.PatientText.delegate = self
+        self.DateText.delegate = self
+        self.TimeStartText.delegate = self
+        self.TimeEndText.delegate = self
+        createPatientPicker()
+        createDatePicker()
+        createTimeStartPicker()
+        createTimeEndPicker()
         GetPatients()
     }
+    
 
+    func createPatientPicker(){
+        //categoryPicker.tag = 1
+                PatientText.inputView = patientPicker
+                patientPicker.delegate = self
+                let toolBar = UIToolbar()
+                toolBar.sizeToFit()
+                let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self,
+                action: #selector(AddConsultationViewController.donePatientPicker))
+                toolBar.setItems([doneButton], animated: false)
+                toolBar.isUserInteractionEnabled = true
+                PatientText.inputAccessoryView = toolBar
+    }
+    @objc func donePatientPicker() {
+                  view.endEditing(true)
+    }
+    func createDatePicker(){
+         // datePicker.datePickerMode = .date
+          let toolbar = UIToolbar()
+           toolbar.sizeToFit()
+          let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddPatientViewController.donedatePicker ))
+          toolbar.setItems([doneButton], animated: true)
+          toolbar.isUserInteractionEnabled = true
+      DateText.inputAccessoryView = toolbar
+      DateText.inputView = datePicker
+          
+      }
+      @objc func donedatePicker(){
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+          DateText.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+      }
+    
+    func createTimeStartPicker(){
+           timeStartPicker.datePickerMode = .time
+           let toolbar = UIToolbar()
+            toolbar.sizeToFit()
+           let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddConsultationViewController.doneTimeStartPicker ))
+           toolbar.setItems([doneButton], animated: false)
+           toolbar.isUserInteractionEnabled = true
+           TimeStartText.inputAccessoryView = toolbar
+           TimeStartText.inputView = timeStartPicker
+           
+       }
+       @objc func doneTimeStartPicker(){
+
+         let formatter = DateFormatter()
+         formatter.dateFormat = "hh:mm:ss"
+           TimeStartText.text = formatter.string(from: timeStartPicker.date)
+         self.view.endEditing(true)
+       }
+    
+    func createTimeEndPicker(){
+           timeEndPicker.datePickerMode = .time
+           let toolbar = UIToolbar()
+            toolbar.sizeToFit()
+           let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddConsultationViewController.doneTimeStartPicker ))
+           toolbar.setItems([doneButton], animated: false)
+           toolbar.isUserInteractionEnabled = true
+           TimeEndText.inputAccessoryView = toolbar
+           TimeEndText.inputView = timeEndPicker
+           
+       }
+       @objc func doneTimeEndPicker(){
+
+         let formatter = DateFormatter()
+         formatter.dateFormat = "hh:mm:ss"
+           TimeEndText.text = formatter.string(from: timeStartPicker.date)
+         self.view.endEditing(true)
+       }
     func GetPatients()  {
         self.patientService.getAll{(patients)in
-            self.patients = patients.filter({$0.doctorUid == self.UidDoc})
+            self.patients = patients//.filter({$0.doctorUid == self.UidDoc})
+            
                         }
+        patients.forEach { patient in
+            self.patientsName.append(patient.firstName)
+        }
+        print(patientsName)
         print(self.patients)
+        print(self.UidDoc)
     }
 
  
 
 }
+extension AddConsultationViewController: UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate {
+    
+   
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+           return 1
+    }
+       
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return patientsName.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return patientsName[row]
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        selectedPatient = patientsName[row]
+        PatientText.text = selectedPatient
+    }
+   
+}
+
