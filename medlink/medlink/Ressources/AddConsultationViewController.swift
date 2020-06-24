@@ -28,6 +28,10 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
     let datePicker = UIDatePicker()
     let timeStartPicker = UIDatePicker()
     let timeEndPicker = UIDatePicker()
+    var patientService: PatientService{
+           return PatientAPIService()
+       }
+    var patients = [Patient] ()
     var UidDoc : String?
     let db = Firestore.firestore()
     
@@ -53,13 +57,15 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
                } else {
                    fatalError(" Erreur : aucun user connect")
                }
-        
-      
-       
-
-        
+        GetPatients()
     }
 
+    func GetPatients()  {
+        self.patientService.getAll{(patients)in
+            self.patients = patients.filter({$0.doctorUid == self.UidDoc})
+                        }
+        print(self.patients)
+    }
 
  
 

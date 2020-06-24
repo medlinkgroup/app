@@ -976,5 +976,193 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9086E12-CD90-4814-B9CD-EFEFA5007F55"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/Ressources/AddConsultationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "AddConsultationViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "B9086E12-CD90-4814-B9CD-EFEFA5007F55 - 6589c00fbaf19089"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.AddConsultationViewController.patients.getter : Swift.Array&lt;medlink.Patient&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/AddConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "B9086E12-CD90-4814-B9CD-EFEFA5007F55 - d9071ed1e94840bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.AddConsultationViewController.patients.setter : Swift.Array&lt;medlink.Patient&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/AddConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "B9086E12-CD90-4814-B9CD-EFEFA5007F55 - a0b8829ca0b94c8e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.AddConsultationViewController.patients.modify : Swift.Array&lt;medlink.Patient&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/AddConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "B9086E12-CD90-4814-B9CD-EFEFA5007F55 - 938e2b367fbce676"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.AddConsultationViewController.patients.modify : Swift.Array&lt;medlink.Patient&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/AddConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "B9086E12-CD90-4814-B9CD-EFEFA5007F55 - 8ac613cf8be3bb16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.AddConsultationViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; medlink.AddConsultationViewController"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/AddConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1535">
+               </Location>
+               <Location
+                  uuid = "B9086E12-CD90-4814-B9CD-EFEFA5007F55 - 76d7b518b9318f22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.AddConsultationViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;medlink.AddConsultationViewController&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/AddConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1470">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D46474CD-6238-43EB-B089-F8E297D0CDE5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/Ressources/AddConsultationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5291BAEA-4A97-4329-86AB-61A98CA53763"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/Ressources/AddConsultationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "GetPatients()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5291BAEA-4A97-4329-86AB-61A98CA53763 - 5bb6d6030a592ce5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.AddConsultationViewController.GetPatients() -&gt; ()"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/AddConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "5291BAEA-4A97-4329-86AB-61A98CA53763 - ef7070fe0ebb78fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;medlink.Patient&gt;) -&gt; () in medlink.AddConsultationViewController.GetPatients() -&gt; ()"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/AddConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E70F2C2C-8F39-4B21-B3F4-6E3BBD47942E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/Ressources/AddConsultationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "GetPatients()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
