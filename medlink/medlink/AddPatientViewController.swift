@@ -102,7 +102,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
               lastName.count > 0,
               email.count > 0,
               place.count > 0,
-              //date.count > 0,
+              date.count > 0,
               phone.count > 0,
               doctorUid.count > 0
              else {
@@ -143,20 +143,20 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
               self.present(alert, animated: true)
           }
     func createDatePicker(){
-        datePicker.datePickerMode = .date
+       // datePicker.datePickerMode = .date
         let toolbar = UIToolbar()
          toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddPatientViewController.donedatePicker ))
-        toolbar.setItems([doneButton], animated: false)
+        toolbar.setItems([doneButton], animated: true)
         toolbar.isUserInteractionEnabled = true
     DateText.inputAccessoryView = toolbar
-    DateText.inputView = DateText
+    DateText.inputView = datePicker
         
     }
     @objc func donedatePicker(){
 
       let formatter = DateFormatter()
-      formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+      formatter.dateFormat = "yyyy-MM-dd"
         DateText.text = formatter.string(from: datePicker.date)
       self.view.endEditing(true)
     }

@@ -16,7 +16,7 @@ class PatientFactory {
 //        print(dictionary["dates"])
        
         guard
-            let id = dictionary["id"] as? String,
+            let _id = dictionary["_id"] as? String,
             let firstName = dictionary["firstName"] as? String,
             let lastName = dictionary["lastName"] as? String,
             let phone = dictionary["phone"] as? String,
@@ -32,7 +32,7 @@ class PatientFactory {
                 return nil
         }
 
-        return Patient(_id: id,
+        return Patient(_id: _id,
                      firstName: firstName,
                      lastName: lastName,
                      phone: phone,
