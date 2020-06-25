@@ -22,6 +22,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var label_phone: UILabel!
     @IBOutlet var label_img: UILabel!
     @IBOutlet var label_adress: UILabel!
+    @IBOutlet var label_email: UILabel!
     @IBOutlet var label_object_id: UILabel!
     @IBOutlet var btn_add_patient: UIButton!
     @IBOutlet weak var btn_upload_image: UIButton!
@@ -64,6 +65,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
         label_phone.text = NSLocalizedString("phone_number", comment: "")
         label_img.text = NSLocalizedString("image", comment: "")
         label_adress.text = NSLocalizedString("adress", comment: "")
+        label_email.text = NSLocalizedString("email", comment: "")
         
         if let user = Auth.auth().currentUser {
                          // user connect
