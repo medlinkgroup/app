@@ -23,7 +23,6 @@
 "add_consultation" = "Ajouter RDV";
 "add_patient" = "Ajouter Patient";
 "dashboard" = "Tableau de Bord";
-"add_patient" = "Ajouter Patient";
 "add" = "Ajouter";
 "birthdate" = "Date de Naissance";
 "objectid" = "ID de l'appareil";
@@ -40,10 +39,11 @@
 "date" = "Date";
 "time_start" = "Heure de début";
 "time_end" = "Heure de fin";
-"patients" = "Patients";
 "adress" = "Adresse";
 "location" = "Coordonnées";
 "sign_in_here" = "Connectez-vous en cliquant ici !";
 "user_updated" = "Vos données ont été mises à jour";
 "upload" = "Télécharger";
 "image" = "Image";
+"patient" = "Patient";
+"description" = "Description";

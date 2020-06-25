@@ -13,7 +13,6 @@ import FirebaseFirestore
 class AddConsultationViewController: UIViewController, UITextFieldDelegate {
 
     
-    @IBOutlet var label_add_consultation: UILabel!
     @IBOutlet weak var TitleText: UITextField!
     @IBOutlet weak var PatientText: UITextField!
     @IBOutlet weak var DescriptionText: UITextField!
@@ -21,9 +20,15 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var TimeStartText: UITextField!
     @IBOutlet weak var TimeEndText: UITextField!
     
+    @IBOutlet var label_add_consultation: UILabel!
+    @IBOutlet var label_title: UILabel!
+    @IBOutlet var label_patient: UILabel!
+    @IBOutlet var label_description: UILabel!
+    @IBOutlet var label_date: UILabel!
+    @IBOutlet var label_time_start: UILabel!
+    @IBOutlet var label_time_end: UILabel!
     @IBOutlet var btn_add_consultation: UIButton!
-    
-   
+
     let patientPicker = UIPickerView()
     let datePicker = UIDatePicker()
     let timeStartPicker = UIDatePicker()
@@ -43,6 +48,16 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        label_add_consultation.text = NSLocalizedString("add_consultation", comment: "")
+        label_title.text = NSLocalizedString("title_consultation", comment: "")
+        label_patient.text = NSLocalizedString("patient", comment: "")
+        label_description.text = NSLocalizedString("description", comment: "")
+        label_date.text = NSLocalizedString("date", comment: "")
+        label_time_start.text = NSLocalizedString("time_start", comment: "")
+        label_time_end.text = NSLocalizedString("time_end", comment: "")
+        btn_add_consultation.setTitle(NSLocalizedString("add", comment: ""), for: .normal)
+        
+        
         if let user = Auth.auth().currentUser {
                    // user connect
                    let docRef = db.collection("users").document(user.uid)
