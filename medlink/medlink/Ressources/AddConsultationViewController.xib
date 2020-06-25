@@ -35,6 +35,9 @@
                             <state key="normal" title="Button">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
+                            <connections>
+                                <action selector="add_patient_btn:" destination="-1" eventType="touchUpInside" id="U8h-5b-0mo"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXQ-Zi-jmG">
                             <rect key="frame" x="75" y="146" width="264" height="39"/>
