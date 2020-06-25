@@ -23,6 +23,7 @@
 "add_consultation" = "Add Consultation";
 "add_patient" = "Add Patient";
 "dashboard" = "Dashboard";
+"add_patient" = "Add Patient";
 "add" = "Add";
 "birthdate" = "Date of Birth";
 "objectid" = "Device ID";
@@ -39,11 +40,10 @@
 "date" = "Date";
 "time_start" = "Time Start";
 "time_end" = "Time End";
+"patients" = "Patients";
 "adress" = "Adress";
 "location" = "Location";
 "sign_in_here" = "Click here to login !";
 "user_updated" = "User was successfully updated";
 "upload" = "Upload";
 "image" = "Image";
-"patient" = "Patient";
-"description" = "Description";
