@@ -34,7 +34,7 @@ class PatientAPIService: PatientService {
         task.resume()
     }
    
-    func create( firstName: String, lastName: String, phone: String, photo: String,email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
+    func create( firstName: String, lastName: String, phone: String, photo: String,email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, objetUid:String, completion: @escaping (Bool) -> Void) {
         let location = [
               "latitude": location.coordinate.latitude,
               "longitude": location.coordinate.longitude
@@ -48,7 +48,8 @@ class PatientAPIService: PatientService {
               "doctorUid": doctorUid,
               "place": place,
               "location": location,
-              "birthDate": birthDate
+              "birthDate": birthDate,
+              "objetUid": objetUid
           ]
         var request = URLRequest(url: URL(string: "https://medlinkapi.herokuapp.com/patients/")!)
         request.httpMethod = "POST"
@@ -62,7 +63,7 @@ class PatientAPIService: PatientService {
         
     }
     
-    func edit(id: String, firstName: String, lastName: String, phone: String, photo: String, email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, completion: @escaping (Bool) -> Void) {
+    func edit(id: String, firstName: String, lastName: String, phone: String, photo: String, email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, objetUid:String, completion: @escaping (Bool) -> Void) {
         let location = [
             "latitude": location.coordinate.latitude,
             "longitude": location.coordinate.longitude
@@ -76,7 +77,8 @@ class PatientAPIService: PatientService {
                          "doctorUid": doctorUid,
                          "place": place,
                          "location": location,
-                         "birthDate": birthDate
+                         "birthDate": birthDate,
+                         "objetUid": objetUid
                      ]
         var request = URLRequest(url: URL(string: "https://medlinkapi.herokuapp.com/patients/\(id)")!)
                       request.httpMethod = "PUT"

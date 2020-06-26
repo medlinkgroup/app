@@ -13,7 +13,7 @@ import FirebaseStorage
 import MobileCoreServices
 import CoreLocation
 
-class AddPatientViewController: UIViewController,UITextFieldDelegate {
+class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerViewDelegate {
 
     @IBOutlet var label_add_patient: UILabel!
     @IBOutlet var label_name: UILabel!
@@ -34,22 +34,36 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var ImageURLText: UITextField!
     @IBOutlet weak var DateText: UITextField!
     @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var ObjectText: UITextField!
     
-    
-    
+    //let objectPicker = UIPickerView()
     let imagePicker = UIImagePickerController()
     let datePicker = UIDatePicker()
     var UidDoc : String?
     
-      
+     var objects = [Objet] ()
+    var selectedObjectId: String?
+    var selectedObjectName: String?
 
       let db = Firestore.firestore()
       
      var patientService: PatientService{
-          return PatientAPIService()
+        return PatientAPIService()
+        //return PatientMockService()
       }
-    
-    
+  /*  var objetService: ObjetService{
+              return ObjetApiService()
+          }
+    */
+   /* override func viewDidAppear(_ animated: Bool) {
+           self.objetService.getAll { (objects) in
+               print(objects)
+               self.objects = objects
+               // filter just doctorId
+               
+               print(self.objects)
+           }
+       }*/
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,8 +105,10 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
                    self.DateText.delegate = self
                    self.ImageURLText.delegate = self
                    self.imagePicker.delegate = self
+                  // self.ObjectText.delegate = self
                  
                    createDatePicker()
+                
               
                   
                    
@@ -115,7 +131,10 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
              // let date = "2020-06-18'T'00:00:00.000'Z'",
               let phone = PhoneText.text,
               let doctorUid = UidDoc ,
+              
+        
               let imageURL = ImageURLText.text,
+                       // let  objetUid: "",
             
               firstName.count > 0,
               lastName.count > 0,
@@ -124,11 +143,12 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
               date.count > 0,
               phone.count > 0,
               doctorUid.count > 0
+            //objetUid.count > 0
              else {
                 self.displayError(message: "Missing required field")
             return
         }
-
+          
           let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(place) { (placemarks, err) in
             guard err == nil,
@@ -140,7 +160,8 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
             }
           self.patientService.create(firstName: firstName, lastName: lastName, phone: phone,
                                    photo: imageURL,email: email, doctorUid: doctorUid,
-                                   place: place, location: loc, birthDate: date
+                                   place: place, location: loc, birthDate: date, objetUid:
+            ""//self.selectedObjectId ?? ""
                                    )
           { (success) in
               print (loc)
@@ -161,6 +182,23 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
               alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
               self.present(alert, animated: true)
           }
+    /*func createObjetPicker(){
+        //categoryPicker.tag = 1
+                ObjectText.inputView = objectPicker
+                objectPicker.delegate = self
+                let toolBar = UIToolbar()
+                toolBar.sizeToFit()
+                let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self,
+                action: #selector(AddPatientViewController.doneObjetPicker))
+                toolBar.setItems([doneButton], animated: false)
+                toolBar.isUserInteractionEnabled = true
+                ObjectText.inputAccessoryView = toolBar
+    }
+    @objc func doneObjetPicker() {
+        
+        view.endEditing(true)
+                
+    }*/
     func createDatePicker(){
        // datePicker.datePickerMode = .date
         let toolbar = UIToolbar()
@@ -237,8 +275,30 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate {
     
 
 }
-extension AddPatientViewController:  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AddPatientViewController:  UIImagePickerControllerDelegate,
+/*UIPickerViewDataSource, */UINavigationControllerDelegate {
+   /* func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return objects.count
+    }
+    
 
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+           //return patientsName[row]
+           return objects[row].name
+       }
+       
+       
+       func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+           
+           //selectedPatient = patientsName[row]
+           selectedObjectId = objects[row]._id
+           selectedObjectName = objects[row].name
+           ObjectText.text = selectedObjectName
+       }*/
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
       
       if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage, let optimizedImageData =

@@ -27,6 +27,7 @@ class PatientFactory {
             let lat = location["latitude"],
             let lon = location["longitude"],
             let birthDate = dictionary["birthDate"] as? String,
+            let objetUid = dictionary["objetUid"] as? String,
             let photo = dictionary["photo"] as? String
             else{
                 return nil
@@ -41,8 +42,8 @@ class PatientFactory {
                      doctorUid: doctorUid,
                      place: place,
                      location: CLLocation(latitude: lat, longitude: lon),
-                     birthDate: birthDate
-                    
+                     birthDate: birthDate,
+                     objetUid: objetUid
         );
     }
 }

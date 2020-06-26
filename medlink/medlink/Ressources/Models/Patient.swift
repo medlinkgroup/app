@@ -21,5 +21,6 @@ struct Patient {
     var place: String
     var location: CLLocation
     var birthDate: String
+    var objetUid : String
     
 }
