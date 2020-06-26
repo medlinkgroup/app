@@ -47,3 +47,5 @@
 "user_updated" = "User was successfully updated";
 "upload" = "Upload";
 "image" = "Image";
+"patient" = "Patient";
+"description" = "Description";

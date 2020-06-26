@@ -17,6 +17,12 @@
                 <outlet property="TitleText" destination="R2N-Ed-zjS" id="lBX-0M-vSd"/>
                 <outlet property="btn_add_consultation" destination="fzr-N6-rXk" id="MVI-gK-l2l"/>
                 <outlet property="label_add_consultation" destination="iXQ-Zi-jmG" id="NMf-ih-0si"/>
+                <outlet property="label_date" destination="P7u-h8-5vO" id="Td9-BN-mdr"/>
+                <outlet property="label_description" destination="NHx-Yt-J1L" id="Dmb-o6-dQt"/>
+                <outlet property="label_patient" destination="7ZC-gL-6je" id="0fM-hp-PEG"/>
+                <outlet property="label_time_end" destination="Fwz-sq-3H2" id="EsD-M8-nkF"/>
+                <outlet property="label_time_start" destination="CzO-bM-okT" id="nKr-fg-hWe"/>
+                <outlet property="label_title" destination="I9h-W5-ThR" id="Efy-At-Dcd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,7 +35,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzr-N6-rXk">
-                            <rect key="frame" x="175" y="672" width="64" height="40"/>
+                            <rect key="frame" x="31" y="658" width="353" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                             <state key="normal" title="Button">
