@@ -14,6 +14,7 @@
                 <outlet property="FirstNameText" destination="lnJ-MF-G3H" id="5Wi-xO-qX6"/>
                 <outlet property="ImageURLText" destination="rUZ-oF-Ao1" id="GN8-gz-n99"/>
                 <outlet property="LastNameText" destination="BFF-F6-ft0" id="yqc-Zd-NCn"/>
+                <outlet property="ObjectText" destination="03S-F8-t6D" id="h2R-tO-eML"/>
                 <outlet property="PhoneText" destination="rfW-y9-PEF" id="wY1-hn-rMA"/>
                 <outlet property="PlaceText" destination="qr7-OU-Vb0" id="LY2-86-Go2"/>
                 <outlet property="btn_add_patient" destination="FD2-fK-Jcf" id="d9M-K9-Eae"/>

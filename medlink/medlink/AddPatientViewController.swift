@@ -36,7 +36,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var ObjectText: UITextField!
     
-    //let objectPicker = UIPickerView()
+    let objectPicker = UIPickerView()
     let imagePicker = UIImagePickerController()
     let datePicker = UIDatePicker()
     var UidDoc : String?
@@ -51,11 +51,11 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
         return PatientAPIService()
         //return PatientMockService()
       }
-  /*  var objetService: ObjetService{
+    var objetService: ObjetService{
               return ObjetApiService()
           }
-    */
-   /* override func viewDidAppear(_ animated: Bool) {
+    
+    override func viewDidAppear(_ animated: Bool) {
            self.objetService.getAll { (objects) in
                print(objects)
                self.objects = objects
@@ -63,7 +63,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
                
                print(self.objects)
            }
-       }*/
+       }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -105,10 +105,10 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
                    self.DateText.delegate = self
                    self.ImageURLText.delegate = self
                    self.imagePicker.delegate = self
-                  // self.ObjectText.delegate = self
+                   self.ObjectText.delegate = self
                  
                    createDatePicker()
-                
+                   createObjetPicker()
               
                   
                    
@@ -128,13 +128,13 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
               let lastName = LastNameText.text,
               let email = EmailText.text,
               let date = DateText.text,
-             // let date = "2020-06-18'T'00:00:00.000'Z'",
               let phone = PhoneText.text,
               let doctorUid = UidDoc ,
               
         
               let imageURL = ImageURLText.text,
-                       // let  objetUid: "",
+            
+            let  patient =  ObjectText.text,
             
               firstName.count > 0,
               lastName.count > 0,
@@ -160,8 +160,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
             }
           self.patientService.create(firstName: firstName, lastName: lastName, phone: phone,
                                    photo: imageURL,email: email, doctorUid: doctorUid,
-                                   place: place, location: loc, birthDate: date, objetUid:
-            ""//self.selectedObjectId ?? ""
+                                   place: place, location: loc, birthDate: date, objetUid: self.selectedObjectId ?? ""
                                    )
           { (success) in
               print (loc)
@@ -182,7 +181,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
               alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
               self.present(alert, animated: true)
           }
-    /*func createObjetPicker(){
+    func createObjetPicker(){
         //categoryPicker.tag = 1
                 ObjectText.inputView = objectPicker
                 objectPicker.delegate = self
@@ -196,9 +195,9 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
     }
     @objc func doneObjetPicker() {
         
-        view.endEditing(true)
+        self.view.endEditing(true)
                 
-    }*/
+    }
     func createDatePicker(){
        // datePicker.datePickerMode = .date
         let toolbar = UIToolbar()
@@ -276,13 +275,14 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
 
 }
 extension AddPatientViewController:  UIImagePickerControllerDelegate,
-/*UIPickerViewDataSource, */UINavigationControllerDelegate {
-   /* func numberOfComponents(in pickerView: UIPickerView) -> Int {
+UIPickerViewDataSource, UINavigationControllerDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return objects.count
+        print(objects.count)
     }
     
 
@@ -297,8 +297,10 @@ extension AddPatientViewController:  UIImagePickerControllerDelegate,
            //selectedPatient = patientsName[row]
            selectedObjectId = objects[row]._id
            selectedObjectName = objects[row].name
+        print(selectedObjectName)
            ObjectText.text = selectedObjectName
-       }*/
+        print(ObjectText)
+       }
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
       
       if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage, let optimizedImageData =
