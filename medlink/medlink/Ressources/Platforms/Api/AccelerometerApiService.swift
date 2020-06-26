@@ -7,10 +7,50 @@
 //
 
 import Foundation
+import Alamofire
+
 class AccelerometerAPIService: AccelerometerService {
     
-    func getAll(completion: @escaping ([Temperature]) -> Void) {
-        /*URLSession.shared.dataTask(with: URL(string: "https://medlinkapi.herokuapp.com/patients/")!) { (data, res, err) in
+    private let headers: HTTPHeaders = [
+        "Content-Type": "application/json"
+    ]
+    
+    func getAll(completion: @escaping ([Accelerometer]) -> Void) {
+        
+        var accelerometerResponse:[Accelerometer] = []
+        
+         AF.request("https://medlinkapi.herokuapp.com/accelerometres/", method: .get, encoding: JSONEncoding.default, headers: headers).responseJSON{ response in
+             
+             guard let json_response = response.value as? [String: Any],
+                     let accelerometers = json_response["accelerometres"] as? [[String: Any]] else{
+                         return
+                     }
+             
+             for t in accelerometers {
+                 guard let _id = t["_id"] as? String,
+                    let deviceID = t["deviceID"] as? String,
+                    let date = t["date"] as? String,
+                    let accelerometerXValues = t["accelerometerXValues"] as? [Double],
+                    let accelerometerYValues = t["accelerometerYValues"] as? [Double],
+                    let accelerometerZValues = t["accelerometerZValues"] as? [Double]
+                    else {
+                        print("error on /accelerometers")
+                        return
+                 }
+                accelerometerResponse.append(Accelerometer(_id: _id,
+                                     deviceID : deviceID,
+                                     date : date,
+                                     accelerometerXValues : accelerometerXValues,
+                                     accelerometerYValues : accelerometerYValues,
+                                     accelerometerZValues : accelerometerZValues
+                ))
+                 
+             }
+             
+             completion(accelerometerResponse)
+         }
+        
+        /*URLSession.shared.dataTask(with: URL(string: "https://medlinkapi.herokuapp.com/temperatures/")!) { (data, res, err) in
             DispatchQueue.main.sync {
                 guard let d = data,
                     let json = try? JSONSerialization.jsonObject(with: d, options: .allowFragments) as? [[String: Any]] else {
@@ -90,6 +130,6 @@ class AccelerometerAPIService: AccelerometerService {
                       task.resume()
     }*/
    
-}
+    }
 
 }

@@ -11,7 +11,7 @@ import CoreLocation
 
 protocol AccelerometerService{
     
-    func getAll(completion: @escaping ([Temperature]) -> Void)
+    func getAll(completion: @escaping ([Accelerometer]) -> Void)
 
     func create(_id: String, deviceID: String, date: String, accelerometerXValues: [Double], accelerometerYValues: [Double], accelerometerZValues: [Double], completion: @escaping (Bool) -> Void)
     
