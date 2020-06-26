@@ -36,10 +36,8 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
     let timeEndPicker = UIDatePicker()
     var patientService: PatientService{
            return PatientAPIService()
-        //return PatientMockService()
        }
     var patients = [Patient] ()
-     var patientsName = [String] ()
     var UidDoc : String?
     var selectedPatientId : String?
     var selectedPatientName: String?
@@ -99,7 +97,6 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
         createDatePicker()
         createTimeStartPicker()
         createTimeEndPicker()
-        GetPatients()
     }
     
     @IBAction func add_patient_btn(_ sender: Any) {
@@ -110,7 +107,6 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
               let timeStart = TimeStartText.text,
               let timeEnd = TimeEndText.text,
               let creatorUid = UidDoc,
-              //let email = emailTextField.text,
             
               title.count > 0,
               description.count > 0,
@@ -223,18 +219,6 @@ func displayError(message: String) {
            TimeEndText.text = formatter.string(from: timeEndPicker.date)
          self.view.endEditing(true)
        }
-    func GetPatients()  {
-        self.patientService.getAll{(patients)in
-            self.patients = patients//.filter({$0.doctorUid == self.UidDoc})
-            
-                        }
-        print(patients.count)
-        print(self.patients)
-        print(self.UidDoc)
-    }
-
- 
-
 }
 extension AddConsultationViewController: UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate {
   
@@ -245,18 +229,15 @@ extension AddConsultationViewController: UIPickerViewDataSource, UIPickerViewDel
     }
        
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        //return patientsName.count
         return patients.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        //return patientsName[row]
         return patients[row].firstName
     }
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        //selectedPatient = patientsName[row]
         selectedPatientId = patients[row]._id
         selectedPatientName = patients[row].firstName
         PatientText.text = selectedPatientName
