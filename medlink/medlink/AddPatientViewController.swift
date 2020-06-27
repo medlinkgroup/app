@@ -102,7 +102,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
                    self.EmailText.delegate = self
                    self.PhoneText.delegate = self
                    self.PlaceText.delegate = self
-                   self.DateText.delegate = self
+                 //  self.DateText.delegate = self
                    self.ImageURLText.delegate = self
                    self.imagePicker.delegate = self
                    self.ObjectText.delegate = self

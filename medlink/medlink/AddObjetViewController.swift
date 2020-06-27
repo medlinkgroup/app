@@ -1,19 +1,15 @@
 //
-//  ConsultationDetailViewController.swift
+//  AddObjetViewController.swift
 //  medlink
 //
-//  Created by Fabiana Montiel on 18/06/2020.
+//  Created by cylia boukhiba on 27/06/2020.
 //  Copyright © 2020 Fabiana Montiel. All rights reserved.
 //
 
 import UIKit
 
-class ConsultationDetailViewController: UIViewController {
+class AddObjetViewController: UIViewController {
 
-    @IBOutlet var label_name_patient: UILabel!
-    @IBOutlet var label_consultation_history: UILabel!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
