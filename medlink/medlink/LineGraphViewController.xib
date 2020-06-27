@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LineGraphViewController" customModule="medlink" customModuleProvider="target">
             <connections>
-                <outlet property="btn_save" destination="nJj-fJ-86y" id="nWx-1Z-1gl"/>
+                <outlet property="btn_save" destination="nJj-fJ-86y" id="fZS-ti-aSD"/>
                 <outlet property="btnbutton" destination="Ou2-Nz-nO8" id="v1Y-FN-cAL"/>
                 <outlet property="chtChart" destination="nmH-by-7IY" id="9Ob-Xz-H1q"/>
                 <outlet property="chtChartAcc" destination="43Y-2w-8ED" id="a2D-bs-aMb"/>
-                <outlet property="label_patient_lastname" destination="gJg-dO-TGM" id="kqs-ce-7by"/>
+                <outlet property="label_diagnostics" destination="gJg-dO-TGM" id="FIv-uM-cAn"/>
                 <outlet property="textField_observations" destination="ksT-Cb-gx5" id="FLQ-Au-gLK"/>
                 <outlet property="txtTextBox" destination="Nd6-EV-RGD" id="fDZ-e4-YFP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -67,7 +67,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJj-fJ-86y">
-                            <rect key="frame" x="349" y="608" width="54" height="37"/>
+                            <rect key="frame" x="191" y="608" width="212" height="37"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                             <state key="normal" title="Button">

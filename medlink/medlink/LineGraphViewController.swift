@@ -15,8 +15,8 @@ import FirebaseFirestore
 class LineGraphViewController: UIViewController {
 
     @IBOutlet var textField_observations: UITextField!
+    @IBOutlet var label_diagnostics: UILabel!
     @IBOutlet var btn_save: UIButton!
-    @IBOutlet var label_patient_lastname: UILabel!
     
     var consultationDetail: Consultation!
     var consultationAccDetail: Consultation!
@@ -67,6 +67,9 @@ class LineGraphViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        label_diagnostics.text = NSLocalizedString("diagnostics", comment: "")
+        btn_save.setTitle(NSLocalizedString("save", comment: ""), for: .normal)
+        btn_save.contentHorizontalAlignment = .right
         // CHART TEMPERATURE
        // updateGraphTemp()
        // updateGraphAcc()
@@ -250,9 +253,7 @@ class LineGraphViewController: UIViewController {
         let observations = textField_observations.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
         // two next lines must be fixed
-        textField_observations.text = consultationDetail.description // bien faire appel api
-        label_patient_lastname.text = consultationDetail.patientUid // faire patient.uid->lastname
-        
+        //textField_observations.text = consultationDetail.description // bien faire appel api
         
         
         // A FAIRE

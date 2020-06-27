@@ -65,3 +65,4 @@
 "observations" = "Observations";
 "attributed_on" = "Cet appareil est lié à un patient.";
 "attributed_off" = "Cet appareil n'est pas lié à un patient.";
+"add_object" = "Ajouter Appareil";
