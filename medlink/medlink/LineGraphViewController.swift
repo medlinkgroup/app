@@ -20,7 +20,12 @@ class LineGraphViewController: UIViewController {
     
     var consultationDetail: Consultation!
     var consultationAccDetail: Consultation!
-    
+    var tabX = [Double] ()
+    var tabY = [Double] ()
+    var tabZ = [Double] ()
+    var numbersTemp = [Double] ()
+       
+      
     var temperatureService: TemperatureService{
               //return PatientMockService()
            return TemperatureAPIService()
@@ -44,20 +49,27 @@ class LineGraphViewController: UIViewController {
     // CHART ACC
     @IBOutlet var chtChartAcc: LineChartView!
      var accelerometres = [Accelerometer] ()
+    var temperatures = [Temperature] ()
      var patients = [Patient] ()
     var patient : Patient!
     var accelerometre : Accelerometer!
-    
+    var temperature : Temperature!
     override func didReceiveMemoryWarning() {
           super.didReceiveMemoryWarning()
           // Dispose of any resources that can be recreated.
       }
+    func newInstance(detail: Consultation) -> LineGraphViewController {
+           let view = LineGraphViewController()
+           view.consultationDetail = detail
+           return view
+           
+       }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // CHART TEMPERATURE
-        updateGraphTemp()
-        updateGraphAcc()
+       // updateGraphTemp()
+       // updateGraphAcc()
         
         // Do any additional setup after loading the view.
     }
@@ -65,18 +77,54 @@ class LineGraphViewController: UIViewController {
         
         self.patientService.getAll { (patients) in
             print(patients)
-            //self.patient = patients.filter({$0._id == self.consultationDetail.patientUid}).first(where: (Patient) throws -> Bool)
             
-            self.patient = patients.first(where: { (patient) -> Bool in
-                patient._id == self.consultationDetail.patientUid
-            })
-            // filter just doctorId
+                self.patient = patients.first(where: { (patient) -> Bool in
+                        patient._id == self.consultationDetail.patientUid
+                    })
+                    // filter just doctorId
+                    print("PATIENT")
+                    print (self.patient._id)
+                }
             
-            print("PATIENT")
-            print (self.patient._id)
-        }
-             
-              self.accelerometerService.getAll { (accelerometres) in
+            
+            self.temperatureService.getAll { (temperatures) in
+                        print(temperatures)
+                if(self.patient != nil){
+                    self.temperatures = temperatures.filter({$0.deviceID == self.patient.objetUid})
+                                 // filter just doctorId
+                    print(self.patient.objetUid)
+                             print("TEMPERATURE")
+
+                             print (self.temperatures.count)
+                                 print(self.temperatures)
+                             self.temperature = self.temperatures.last(where: { (temperature) -> Bool in
+                                 temperature.date == self.consultationDetail.date
+                                 
+                             })
+                   // print(self.temperature)
+                             print("DATE CONS")
+                             print(self.consultationDetail.date)
+                             print("DATE TEMP")
+                            // print(self.temperature.date)
+                             
+                             if (self.temperature != nil){
+                                 
+                                 for i in 0..<self.temperature.tempValues.count {
+                                     let value = self.temperature.tempValues[i]
+                                     print(i)
+                                     self.numbersTemp.append(value)
+                                 }
+                                print(self.numbersTemp)
+                                  self.updateGraphTemp()
+                                 
+                                 
+                             }
+                    
+                             
+                             }
+                }
+                
+               self.accelerometerService.getAll { (accelerometres) in
                   print(accelerometres)
                 self.accelerometres = accelerometres.filter({$0.deviceID == self.patient.objetUid})
                   // filter just doctorId
@@ -88,62 +136,46 @@ class LineGraphViewController: UIViewController {
                     accelerometre.date == self.consultationDetail.date
                 })
                 
-                print("DATE CONS")
-                print(self.consultationDetail.date)
-                print("DATE ACC")
+               // print("DATE CONS")
+               // print(self.consultationDetail.date)
+               // print("DATE ACC")
                 //print(self.accelerometre.date)
              
+                if (self.accelerometre != nil){
+                    
+                    for i in 0..<self.accelerometre.accelerometerXValues.count {
+                        let value = self.accelerometre.accelerometerXValues[i]
+                        //print(i)
+                        self.tabX.append(value)
+                    }
+                   for i in 0..<self.accelerometre.accelerometerYValues.count {
+                       let value = self.accelerometre.accelerometerYValues[i]
+                       self.tabY.append(value)
+                   }
+                    for i in 0..<self.accelerometre.accelerometerZValues.count {
+                        let value = self.accelerometre.accelerometerZValues[i]
+                        self.tabZ.append(value)
+                    }
+                   self.updateGraphAcc()
+                   
+                }
+               
                 
               }
+               
         
+                
+                 
                
           }
-    func newInstance(detail: Consultation) -> LineGraphViewController {
-          let view = LineGraphViewController()
-          view.consultationDetail = detail
-          return view
-          
-      }
-      /*func newInstanceAcc(detail: Consultation) -> LineGraphViewController {
-            let view = LineGraphViewController()
-            view.consultationAccDetail = detail
-            return view
-        }*/
-    
-    func attribute ()  {
-        if (accelerometre != nil){
-            for word in accelerometre.accelerometerXValues {
-                                print(word)
-                            }
-        }
-      
-    }
-    
-    // CHART TEMPERATURE
-    var numbersTemp : [Double] = [30.32258,30.32258,30.32258,30.32258,30.32258,30.32258,30.96774,30.32258,30.96774,30.96774] //This is where we are going to store all the numbers. This can be a set of numbers that come from a Realm database, Core data, External API's or where ever else
-    
+ 
 
-  
-    
-    // CHART ACC
-              // 1    2    3    4    5    6    7    8    9    10   seconds
-    let personne = ["Nom": "Durand", "Prénom": "Maxime", "Adresse": "94 rue machin", "Ville": "Lille"]
-    
-    
-
-   
-   
-    
-    
-    
-       // [10.39505,11.0619,11.21881,9.375157,11.0619,10.66964,10.43428,10.12046,9.728197,10.15969]
-    var tabY : [Double] = []
-    //[-0.274586,-0.706079,-4.118793,-0.196133,-0.274586,-0.353039,-1.490611,0.353039,-0.549172,-0.313813]
-    var tabZ : [Double] = [] //[-1.96133,-0.470719,1.569064,0.156906,-0.627626,-0.588399,-0.392266,-1.294478,-0.196133,-0.941438]
 
     
     // CHART TEMPERATURE
     func updateGraphTemp(){
+        print("tmps values")
+        print(numbersTemp)
         var lineChartEntry  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
         
         for i in 0..<numbersTemp.count {
@@ -162,26 +194,28 @@ class LineGraphViewController: UIViewController {
     
     // CHART ACC
     func updateGraphAcc(){
-        attribute()
+        //viewDidAppear(true)
+       // print("tabx")
+      //  print(tabX)
         var lineChartEntryX  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
         var lineChartEntryY  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
         var lineChartEntryZ  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
-        if (self.accelerometre != nil){
-            for i in 0..<accelerometre.accelerometerXValues.count {
-                let value = ChartDataEntry(x: Double(i), y:accelerometre.accelerometerXValues [i]) // here we set the X and Y status in a data chart entry
+        
+            for i in 0..<tabX.count {
+                let value = ChartDataEntry(x: Double(i), y:tabX[i]) // here we set the X and Y status in a data chart entry
                 lineChartEntryX.append(value) // here we add it to the data set
             }
             //here is the for loop
-            for i in 0..<accelerometre.accelerometerYValues.count {
-                let value = ChartDataEntry(x: Double(i), y: accelerometre.accelerometerYValues[i]) // here we set the X and Y status in a data chart entry
+            for i in 0..<tabY.count {
+                let value = ChartDataEntry(x: Double(i), y: tabY[i]) // here we set the X and Y status in a data chart entry
                 lineChartEntryY.append(value) // here we add it to the data set
             }
             //here is the for loop
-            for i in 0..<accelerometre.accelerometerZValues.count {
-                let value = ChartDataEntry(x: Double(i), y: accelerometre.accelerometerZValues[i]) // here we set the X and Y status in a data chart entry
+            for i in 0..<tabZ.count {
+                let value = ChartDataEntry(x: Double(i), y: tabZ[i]) // here we set the X and Y status in a data chart entry
                 lineChartEntryZ.append(value) // here we add it to the data set
             }
-        }
+        
         //here is the for loop
         
 
