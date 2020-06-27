@@ -29,7 +29,7 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
    
     var patientDetail: Patient!
     var DoctorUID: String = ""
-    
+    var patientEdit: Patient!
     var patients: [Patient] = [] {
            didSet {
                self.tableview_list_patients.reloadData()
@@ -133,7 +133,46 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
     
           
       }
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+              let patient = self.patients[indexPath.row]
+              if editingStyle == UITableViewCell.EditingStyle.delete {
+            
+              let refreshAlert = UIAlertController(title: "Confirmation", message: " Click OK to confirme your deletion.", preferredStyle: UIAlertController.Style.alert)
+              refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in do {
+                       
+                       self.patientService.delete( id: patient._id){
+                                                    (success) in print(success)
+                                                      //self.events.remove(at: indexPath.row)
+                                                      //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                          self.viewDidAppear(true)
+                                                }
+                       }
+                       
+                      }))
+             
+              refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil ))
+                   self.present(refreshAlert, animated: true, completion: nil)
+             }
+    }
+
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+     {
+            let closeAction = UIContextualAction(style: .normal, title:  "Modifier", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            let patient = self.patients[indexPath.row]
+            self.patientEdit = patient
+                
+            let next = EditPatientViewController().newInstance(detail: self.patientEdit)
+                // self.navigationController?.pushViewController(next, animated: true)
+                 //let editEventViewController = EventsEditViewController()
+                self.navigationController?.pushViewController(next, animated: true)
+             })
+             closeAction.image = UIImage(named: "update")
+             closeAction.backgroundColor = .purple
+     
+             return UISwipeActionsConfiguration(actions: [closeAction])
+     
+    }
+
     
     @objc func action_add_patient(gesture: UIGestureRecognizer) {
         // if the tapped view is a UIImageView then set it to imageview
@@ -154,15 +193,7 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
     }
     
     
-    // when cell is selected
-    /*
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let patientDetail = PatientDetailViewController()
-        //patientDetail.patientSelected = self.patients[indexPath.row]
-        //self.navigationController?.pushViewController(patientDetail, animated: true)
-        self.navigationController?.pushViewController(PatientDetailViewController(),animated:true)
-    }
- */
+   
     
 
 }

@@ -24,7 +24,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         case future, past
     }
     let SectionHeaderHeight: CGFloat = 30
-    
+    var consultationEdit: Consultation!
     var data = [TableSection: [Consultation]]()
     
     var consultationDetail: Consultation!
@@ -42,7 +42,6 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
       //  return ConsultationMockService()
         return ConsultationAPIService()
     }
-    
     
      override func viewDidLoad() {
          super.viewDidLoad()
@@ -161,7 +160,46 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     
           }
       }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+              let consultation = self.consultations[indexPath.row]
+              if editingStyle == UITableViewCell.EditingStyle.delete {
+            
+              let refreshAlert = UIAlertController(title: "Confirmation", message: " Click OK to confirme your deletion.", preferredStyle: UIAlertController.Style.alert)
+              refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in do {
+                       
+                       self.consultationService.delete( id: consultation._id){
+                                                    (success) in print(success)
+                                                      //self.events.remove(at: indexPath.row)
+                                                      //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                          self.viewWillAppear(true)
+                                                }
+                       }
+                       
+                      }))
+             
+              refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil ))
+                   self.present(refreshAlert, animated: true, completion: nil)
+             }
+    }
 
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+     {
+            let closeAction = UIContextualAction(style: .normal, title:  "Modifier", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            let consultation = self.consultations[indexPath.row]
+                print(indexPath.row)
+            self.consultationEdit = consultation
+                
+            let next = EditConsultationViewController().newInstance(detail: self.consultationEdit)
+                // self.navigationController?.pushViewController(next, animated: true)
+                 //let editEventViewController = EventsEditViewController()
+                self.navigationController?.pushViewController(next, animated: true)
+             })
+             closeAction.image = UIImage(named: "update")
+             closeAction.backgroundColor = .purple
+     
+             return UISwipeActionsConfiguration(actions: [closeAction])
+     
+    }
           func formatDate(date: String) -> String {
               let dateFormatterGet = DateFormatter()
               dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"

@@ -42,6 +42,10 @@
 		7AB47B7E24A641F100A352BE /* ObjetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B7D24A641F100A352BE /* ObjetService.swift */; };
 		7AB47B8024A6428900A352BE /* ObjetApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B7F24A6428900A352BE /* ObjetApiService.swift */; };
 		7AB47B8224A642BC00A352BE /* ObjetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B8124A642BC00A352BE /* ObjetFactory.swift */; };
+		7AB47B8524A6BED500A352BE /* EditConsultationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B8324A6BED500A352BE /* EditConsultationViewController.swift */; };
+		7AB47B8624A6BED500A352BE /* EditConsultationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B8424A6BED500A352BE /* EditConsultationViewController.xib */; };
+		7AB47B8924A6C24700A352BE /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B8724A6C24700A352BE /* EditPatientViewController.swift */; };
+		7AB47B8A24A6C24700A352BE /* EditPatientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B8824A6C24700A352BE /* EditPatientViewController.xib */; };
 		7AD00CB3249E5E4C00A5AAC9 /* PatientApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD00CB2249E5E4C00A5AAC9 /* PatientApiService.swift */; };
 		7AD00CB5249E5EEB00A5AAC9 /* PatientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD00CB4249E5EEB00A5AAC9 /* PatientFactory.swift */; };
 		CE02178B24619A9A00D36114 /* DocDashboardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02178924619A9A00D36114 /* DocDashboardListViewController.swift */; };
@@ -118,6 +122,10 @@
 		7AB47B7D24A641F100A352BE /* ObjetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetService.swift; sourceTree = "<group>"; };
 		7AB47B7F24A6428900A352BE /* ObjetApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetApiService.swift; sourceTree = "<group>"; };
 		7AB47B8124A642BC00A352BE /* ObjetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetFactory.swift; sourceTree = "<group>"; };
+		7AB47B8324A6BED500A352BE /* EditConsultationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditConsultationViewController.swift; sourceTree = "<group>"; };
+		7AB47B8424A6BED500A352BE /* EditConsultationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditConsultationViewController.xib; sourceTree = "<group>"; };
+		7AB47B8724A6C24700A352BE /* EditPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
+		7AB47B8824A6C24700A352BE /* EditPatientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPatientViewController.xib; sourceTree = "<group>"; };
 		7AD00CB2249E5E4C00A5AAC9 /* PatientApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientApiService.swift; sourceTree = "<group>"; };
 		7AD00CB4249E5EEB00A5AAC9 /* PatientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PatientFactory.swift; path = /Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/Platforms/Api/PatientFactory.swift; sourceTree = "<absolute>"; };
 		8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,6 +319,10 @@
 				CECC40C7249B6A1600FFE3E8 /* ConsultationDetailViewController.xib */,
 				CEE47BE6249E47E30051D3C8 /* LineGraphViewController.swift */,
 				CEE47BE7249E47E30051D3C8 /* LineGraphViewController.xib */,
+				7AB47B8324A6BED500A352BE /* EditConsultationViewController.swift */,
+				7AB47B8424A6BED500A352BE /* EditConsultationViewController.xib */,
+				7AB47B8724A6C24700A352BE /* EditPatientViewController.swift */,
+				7AB47B8824A6C24700A352BE /* EditPatientViewController.xib */,
 			);
 			path = medlink;
 			sourceTree = "<group>";
@@ -435,6 +447,7 @@
 				7A6D180524532F56002E4FB2 /* GoogleService-Info.plist in Resources */,
 				7A628BAA2456FD5500C3FAFE /* NavBarController.xib in Resources */,
 				CE02178C24619A9A00D36114 /* DocDashboardListViewController.xib in Resources */,
+				7AB47B8A24A6C24700A352BE /* EditPatientViewController.xib in Resources */,
 				CE4295332498C1740002DB9A /* PatientsTableViewCell.xib in Resources */,
 				CEE47BE9249E47E30051D3C8 /* LineGraphViewController.xib in Resources */,
 				7A628BB224571D9000C3FAFE /* DocAccountViewController.xib in Resources */,
@@ -443,6 +456,7 @@
 				CE1AEDA324212C96009A86D2 /* LaunchScreen.storyboard in Resources */,
 				7A628BBA245733C200C3FAFE /* AddPatientViewController.xib in Resources */,
 				CE42952F2498BF330002DB9A /* ConsultationsTableViewCell.xib in Resources */,
+				7AB47B8624A6BED500A352BE /* EditConsultationViewController.xib in Resources */,
 				CEF1250124607CAE00534FA5 /* Assets.xcassets in Resources */,
 				7A6F8F872499121C00281048 /* AddConsultationViewController.xib in Resources */,
 			);
@@ -549,6 +563,7 @@
 				CECC40C8249B6A1600FFE3E8 /* ConsultationDetailViewController.swift in Sources */,
 				7A08D36524A2A6B4004D7E8B /* Temperature.swift in Sources */,
 				7A08D36724A2A6B4004D7E8B /* AccelerometerService.swift in Sources */,
+				7AB47B8524A6BED500A352BE /* EditConsultationViewController.swift in Sources */,
 				CEE47BE8249E47E30051D3C8 /* LineGraphViewController.swift in Sources */,
 				7A6F8F922499338D00281048 /* DoctorMockService.swift in Sources */,
 				7A6F8F94249933AD00281048 /* DoctorService.swift in Sources */,
@@ -558,6 +573,7 @@
 				CE42952B249772510002DB9A /* UserUtils.swift in Sources */,
 				CE6B29D9249A700E001F3732 /* PatientMockService.swift in Sources */,
 				7A628BB124571D9000C3FAFE /* DocAccountViewController.swift in Sources */,
+				7AB47B8924A6C24700A352BE /* EditPatientViewController.swift in Sources */,
 				7A6F8F96249934D800281048 /* DoctorFactory.swift in Sources */,
 				CE4295322498C1740002DB9A /* PatientsTableViewCell.swift in Sources */,
 				7A08D36624A2A6B4004D7E8B /* TemperatureService.swift in Sources */,
