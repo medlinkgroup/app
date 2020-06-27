@@ -15,7 +15,12 @@ class EditObjetViewController: UIViewController {
     @IBOutlet var btn_edit: UIButton!
     @IBOutlet var btn_is_attributed: UISwitch!
     
+    @IBOutlet weak var NameText: UITextField!
+    var id : String?
     var editObjet : Objet!
+    var objetService: ObjetService{
+        return ObjetApiService()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +33,8 @@ class EditObjetViewController: UIViewController {
         label_object_name.text = NSLocalizedString("object_name", comment: "")
         label_is_attributed.text = NSLocalizedString("is_attributed", comment: "")
         btn_edit.setTitle(NSLocalizedString("save", comment: ""), for: .normal)
+        self.id = editObjet._id
+        loadData()
 
         
     }
@@ -49,6 +56,48 @@ class EditObjetViewController: UIViewController {
 
     }
 
-    
+    func loadData() {
+           if (editObjet != nil){
+               
+                
+            self.NameText.text = editObjet.name
+            self.btn_is_attributed.isOn = editObjet.isAttributed
+           }
+       }
+    @IBAction func save_btn(_ sender: Any) {
+        guard
+                     let id = id,
+                     let name = NameText.text,
+            
+                     
+                     
+                         id.count > 0,
+                         name.count > 0
+                       
+                         
+                     else {
+                         
+                         self.displayError(message: NSLocalizedString("missing_field", comment: ""))
+                         return
+                     }
+                      let isAttributed = btn_is_attributed.isOn
+                           //let email = emailTextField.text,
+        self.objetService.edit(id: id, name: name, isAttributed:btn_is_attributed.isOn){
+                  (success) in
+                  
+              }
+                    
+                         let confirmationAlert = UIAlertController(title: NSLocalizedString("success", comment: ""), message: NSLocalizedString("modif_success", comment: ""), preferredStyle: UIAlertController.Style.alert)
+                                                   confirmationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:nil ))
+                                                    
+                                                 
+                                                   self.present(confirmationAlert, animated: true, completion: nil)
+                
+    }
+    func displayError(message: String) {
+        let alert = UIAlertController(title: NSLocalizedString("error", comment: ""), message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel))
+        self.present(alert, animated: true)
+    }
 
 }
