@@ -1804,7 +1804,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0FB77458-9DCC-4776-8A1D-4CB520C48150"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/EditConsultationViewController.swift"
@@ -1812,8 +1812,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
             endingLineNumber = "14"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "EditConsultationViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "0FB77458-9DCC-4776-8A1D-4CB520C48150 - f837ae5d9a6677dd"
@@ -1920,8 +1920,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
-            landmarkName = "newInstance(detail:)"
-            landmarkType = "7">
+            landmarkName = "EditConsultationViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "D0F5B0C7-73FD-4789-8621-FF9B869C72B6 - 6fc02bb3c5c3daea"
@@ -1996,7 +1996,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "1078">
+                  offsetFromSymbolStart = "1155">
                </Location>
                <Location
                   uuid = "D0F5B0C7-73FD-4789-8621-FF9B869C72B6 - c22779a12e8de78c"
@@ -2011,7 +2011,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "1019">
+                  offsetFromSymbolStart = "1090">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2188,7 +2188,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "newInstance(detail:)"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

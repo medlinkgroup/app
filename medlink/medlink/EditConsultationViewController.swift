@@ -23,7 +23,13 @@ class EditConsultationViewController: UIViewController {
     @IBOutlet var label_date: UILabel!
     @IBOutlet var label_time_start: UILabel!
 
+    var id : String?
     var editConsultation: Consultation!
+    let datePicker = UIDatePicker()
+    let timeStartPicker = UIDatePicker()
+    var consultationService: ConsultationService{
+        return ConsultationAPIService()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +44,10 @@ class EditConsultationViewController: UIViewController {
         label_date.text = NSLocalizedString("date", comment: "")
         label_time_start.text = NSLocalizedString("time_start", comment: "")
         btn_edit_consultation.setTitle(NSLocalizedString("modify", comment: ""), for: .normal)
+        id = editConsultation._id
+        loadData()
+        createDatePicker()
+        createTimeStartPicker()
     }
 
     func newInstance(detail: Consultation) -> EditConsultationViewController {
@@ -48,7 +58,99 @@ class EditConsultationViewController: UIViewController {
        }
     
     
+    func loadData() {
+         if (editConsultation != nil){
+             
+              
+             self.TitleText.text = editConsultation.title
+             self.ObservationText.text = editConsultation.description
+             self.DateText.text = editConsultation.date
+            self.TimeStartText.text = editConsultation.appointmentTime
+           
+         }
+         
+     }
+    @IBAction func save_btn(_ sender: Any) {
+        guard
+               let id = id,
+               let title = TitleText.text,
+               let description = ObservationText.text,
+               let date = DateText.text,
+               let timeStart = TimeStartText.text,
+            
+               
+                   id.count > 0,
+                   title.count > 0,
+                   description.count > 0,
+                   date.count > 0,
+                   timeStart.count > 0,
+                   date.count > 0,
+                   timeStart.count > 0
+                   
+               else {
+                   
+                   self.displayError(message: "Missing required field")
+                   return
+               }
+                  
+                     //let email = emailTextField.text,
+        self.consultationService.edit(id: id, title: title, description: description, doctorUid: editConsultation.doctorUid, patientUid: editConsultation.patientUid, date: date, appointmentTime: timeStart, timeEnd: editConsultation.timeEnd){
+            (success) in
+            
+        }
+              
+                   let confirmationAlert = UIAlertController(title: "Succes", message: " edition succes.", preferredStyle: UIAlertController.Style.alert)
+                                             confirmationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:nil ))
+                                              
+                                           
+                                             self.present(confirmationAlert, animated: true, completion: nil)
+               }
+    func displayError(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        self.present(alert, animated: true)
+    }
+    
+    func createTimeStartPicker(){
+            timeStartPicker.datePickerMode = .time
+            let toolbar = UIToolbar()
+             toolbar.sizeToFit()
+            let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(EditConsultationViewController.doneTimeStartPicker ))
+            toolbar.setItems([doneButton], animated: false)
+            toolbar.isUserInteractionEnabled = true
+            TimeStartText.inputAccessoryView = toolbar
+            TimeStartText.inputView = timeStartPicker
+            
+        }
+        @objc func doneTimeStartPicker(){
 
+          let formatter = DateFormatter()
+          formatter.dateFormat = "hh:mm:ss"
+            TimeStartText.text = formatter.string(from: timeStartPicker.date)
+          self.view.endEditing(true)
+        }
+    
+      //// date
+      func createDatePicker(){
+          datePicker.datePickerMode = .date
+          let toolbar = UIToolbar()
+           toolbar.sizeToFit()
+          let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(EditConsultationViewController.donedatePicker ))
+          toolbar.setItems([doneButton], animated: false)
+          toolbar.isUserInteractionEnabled = true
+          DateText.inputAccessoryView = toolbar
+          DateText.inputView = datePicker
+          
+      }
+      @objc func donedatePicker(){
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+          DateText.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+      }
+    }
+    
    
 
-}
+
