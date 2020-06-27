@@ -56,10 +56,14 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         optionC.tabBarItem.image  = image1
         
         
-        
+        let optionD = UINavigationController(rootViewController: ObjetsListViewController())
+        //optionD.isNavigationBarHidden = false
+        optionD.tabBarItem.title = NSLocalizedString("list_objets", comment: "")
+        let image3 = UIImage(named: "list_patients")
+        optionD.tabBarItem.image = image2
     
      
-        navBarCont.viewControllers = [optionA, optionB, optionC]
+        navBarCont.viewControllers = [optionA, optionB, optionC, optionD]
         self.view.addSubview(navBarCont.view)
     }
 }

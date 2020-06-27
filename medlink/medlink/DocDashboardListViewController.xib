@@ -62,12 +62,17 @@
                             <rect key="frame" x="142.5" y="186" width="127" height="50"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghN-8y-wDs">
-                            <rect key="frame" x="245" y="291" width="46" height="30"/>
+                            <rect key="frame" x="253" y="291" width="30" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="Map"/>
                             <connections>
                                 <action selector="map_view:" destination="-1" eventType="touchUpInside" id="tTy-t9-kx1"/>
                             </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-gz-F36">
+                            <rect key="frame" x="190" y="291" width="35" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="objet"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.79796293220000003" green="0.87132878940000003" blue="0.91894416209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
