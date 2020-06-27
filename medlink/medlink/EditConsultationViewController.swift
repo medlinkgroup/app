@@ -27,6 +27,10 @@ class EditConsultationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
         
         label_edit_consultation.text = NSLocalizedString("edit_consultation", comment: "")
         label_title.text = NSLocalizedString("title_consultation", comment: "")

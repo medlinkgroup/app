@@ -266,6 +266,10 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
 
+    @IBAction func btn_add_object(_ sender: Any) {
+        self.navigationController?.pushViewController(AddObjetViewController(),animated:true)
+        //Here you can initiate your new ViewController
+    }
     
     // API : https://medlinkapi.herokuapp.com/
     

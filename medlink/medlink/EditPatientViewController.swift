@@ -40,6 +40,11 @@ class EditPatientViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
 
         label_modify_patient.text = NSLocalizedString("modify_patient", comment: "")
         label_name.text = NSLocalizedString("firstname", comment: "")

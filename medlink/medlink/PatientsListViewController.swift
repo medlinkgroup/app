@@ -200,6 +200,9 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
         self.navigationController?.pushViewController(next, animated: true)
     }
 
+    @IBAction func btn_add_object(_ sender: Any) {
+        self.navigationController?.pushViewController(AddObjetViewController(),animated:true)
+    }
     
    
     

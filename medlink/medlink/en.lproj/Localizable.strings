@@ -63,3 +63,5 @@
 "is_attributed" = "Linked already to patient ?";
 "edit_consultation" = "Edit Consultation";
 "observations" = "Observations";
+"attributed_on" = "This device is linked to a patient.";
+"attributed_off" = "This device is not linked to a patient.";

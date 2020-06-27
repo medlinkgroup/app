@@ -84,6 +84,9 @@
                                 <constraint firstAttribute="width" constant="33" id="tB2-Ny-do2"/>
                             </constraints>
                             <state key="normal" title="Button" image="icon_add_object"/>
+                            <connections>
+                                <action selector="btn_add_object:" destination="-1" eventType="touchUpInside" id="Etr-0A-qMp"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.79796293220000003" green="0.87132878940000003" blue="0.91894416209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

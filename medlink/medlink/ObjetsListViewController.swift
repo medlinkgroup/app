@@ -37,6 +37,11 @@ class ObjetsListViewController: UIViewController, UITableViewDataSource, UITable
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
 
         self.tableview_list_objects.rowHeight = 120
         self.tableview_list_objects.register(UINib(nibName: "ObjetsTableViewCell", bundle: nil), forCellReuseIdentifier: ObjetsListViewController.objetcsTableViewCellId)

@@ -63,3 +63,5 @@
 "is_attributed" = "Est-il déjà attribué à un patient ?";
 "edit_consultation" = "Modifier Consultation";
 "observations" = "Observations";
+"attributed_on" = "Cet appareil est lié à un patient.";
+"attributed_off" = "Cet appareil n'est pas lié à un patient.";

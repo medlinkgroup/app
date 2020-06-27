@@ -42,6 +42,11 @@ class PatientsMapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         self.patientMapView.delegate = self
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
         let db = Firestore.firestore()
         if let user = Auth.auth().currentUser{
             let docRef = db.collection("users").document(user.uid)
