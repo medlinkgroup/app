@@ -117,7 +117,21 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: PatientsListViewController.patientsTableViewCellId, for: indexPath) as! PatientsTableViewCell
            let patient = self.patients[indexPath.row]
-           cell.label_patient_name.text = patient.lastName
+        cell.label_patient_name.text = patient.lastName + " " + patient.firstName
+        cell.label_patient_first_name.text = patient.place
+        cell.img_patient.image = nil // restore default image
+                     if let pictureURL = patient.photo {
+                            DispatchQueue.global().async {
+                                if let data = try? Data(contentsOf: pictureURL) {
+                                    DispatchQueue.main.sync {
+                                        cell.img_patient.image = UIImage(data: data)
+                                    }
+                                }
+                            }
+                        }
+                       
+                   
+                   
            return cell
        }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
