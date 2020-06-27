@@ -46,6 +46,8 @@
 		7AB47B8624A6BED500A352BE /* EditConsultationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B8424A6BED500A352BE /* EditConsultationViewController.xib */; };
 		7AB47B8924A6C24700A352BE /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B8724A6C24700A352BE /* EditPatientViewController.swift */; };
 		7AB47B8A24A6C24700A352BE /* EditPatientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B8824A6C24700A352BE /* EditPatientViewController.xib */; };
+		7AB47B8D24A7219C00A352BE /* PatientsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B8B24A7219B00A352BE /* PatientsMapViewController.swift */; };
+		7AB47B8E24A7219C00A352BE /* PatientsMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B8C24A7219B00A352BE /* PatientsMapViewController.xib */; };
 		7AD00CB3249E5E4C00A5AAC9 /* PatientApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD00CB2249E5E4C00A5AAC9 /* PatientApiService.swift */; };
 		7AD00CB5249E5EEB00A5AAC9 /* PatientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD00CB4249E5EEB00A5AAC9 /* PatientFactory.swift */; };
 		CE02178B24619A9A00D36114 /* DocDashboardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02178924619A9A00D36114 /* DocDashboardListViewController.swift */; };
@@ -126,6 +128,8 @@
 		7AB47B8424A6BED500A352BE /* EditConsultationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditConsultationViewController.xib; sourceTree = "<group>"; };
 		7AB47B8724A6C24700A352BE /* EditPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
 		7AB47B8824A6C24700A352BE /* EditPatientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPatientViewController.xib; sourceTree = "<group>"; };
+		7AB47B8B24A7219B00A352BE /* PatientsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsMapViewController.swift; sourceTree = "<group>"; };
+		7AB47B8C24A7219B00A352BE /* PatientsMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientsMapViewController.xib; sourceTree = "<group>"; };
 		7AD00CB2249E5E4C00A5AAC9 /* PatientApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientApiService.swift; sourceTree = "<group>"; };
 		7AD00CB4249E5EEB00A5AAC9 /* PatientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PatientFactory.swift; path = /Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/Platforms/Api/PatientFactory.swift; sourceTree = "<absolute>"; };
 		8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,6 +327,8 @@
 				7AB47B8424A6BED500A352BE /* EditConsultationViewController.xib */,
 				7AB47B8724A6C24700A352BE /* EditPatientViewController.swift */,
 				7AB47B8824A6C24700A352BE /* EditPatientViewController.xib */,
+				7AB47B8B24A7219B00A352BE /* PatientsMapViewController.swift */,
+				7AB47B8C24A7219B00A352BE /* PatientsMapViewController.xib */,
 			);
 			path = medlink;
 			sourceTree = "<group>";
@@ -459,6 +465,7 @@
 				7AB47B8624A6BED500A352BE /* EditConsultationViewController.xib in Resources */,
 				CEF1250124607CAE00534FA5 /* Assets.xcassets in Resources */,
 				7A6F8F872499121C00281048 /* AddConsultationViewController.xib in Resources */,
+				7AB47B8E24A7219C00A352BE /* PatientsMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +584,7 @@
 				7A6F8F96249934D800281048 /* DoctorFactory.swift in Sources */,
 				CE4295322498C1740002DB9A /* PatientsTableViewCell.swift in Sources */,
 				7A08D36624A2A6B4004D7E8B /* TemperatureService.swift in Sources */,
+				7AB47B8D24A7219C00A352BE /* PatientsMapViewController.swift in Sources */,
 				7AB47B8024A6428900A352BE /* ObjetApiService.swift in Sources */,
 				7A6F8F862499121C00281048 /* AddConsultationViewController.swift in Sources */,
 				7A628BA92456FD5500C3FAFE /* NavBarController.swift in Sources */,

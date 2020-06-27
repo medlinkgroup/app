@@ -18,9 +18,8 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet var label_consultations: UILabel!
     @IBOutlet var img_add_patient: UIImageView!
     @IBOutlet var img_add_consultation: UIImageView!
-    @IBOutlet weak var mapView: UIButton!
     
-    var DoctorUID: String = ""
+    
     enum TableSection: Int {
         case future, past
     }
@@ -80,37 +79,13 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         consultationsTableView.dataSource = self
         consultationsTableView.delegate = self
         //self.navigationController?.setNavigationBarHidden(false, animated: true)
-        
-        let db = Firestore.firestore()
-               if let user = Auth.auth().currentUser{
-                   let docRef = db.collection("users").document(user.uid)
-                   self.DoctorUID = user.uid
-                   print(docRef)
-               
-                  docRef.getDocument { (document, error) in
-                       
-                   
-                     if let document = document, document.exists {
-                     
-                          print(document.data()!)
-                       self.DoctorUID = document["uid"]! as! String
-                          } else {
-                              print("DOCTOR UID NOT FOUND : Document does not exist")
-                          }
-                      }
-                   } else {
-                       //fatalError(" Erreur : aucun user connect")
-                       print("no user connected")
-                   }
-               
     }
          
        
          // Do any additional setup after loading the view.
     override func viewWillAppear(_ animated: Bool) {
         self.consultationService.getAll{(consultations)in
-            self.consultations = consultations.filter({$0.doctorUid == self.DoctorUID})
-            print (consultations.count)
+            self.consultations = consultations
             self.sortData()
             self.consultationsTableView.reloadData()
         }
@@ -250,10 +225,6 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
     
-    @IBAction func map_view(_ sender: Any) {
-        let next = PatientsMapViewController()
-        self.navigationController?.pushViewController(next, animated: true)
-    }
     @objc func action_add_consultation(gesture: UIGestureRecognizer) {
         // if the tapped view is a UIImageView then set it to imageview
         if (gesture.view as? UIImageView) != nil {

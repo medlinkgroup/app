@@ -58,7 +58,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
     override func viewDidAppear(_ animated: Bool) {
            self.objetService.getAll { (objects) in
                print(objects)
-               self.objects = objects
+               self.objects = objects.filter({$0.isAttributed == false})
                // filter just doctorId
                
                print(self.objects)
@@ -165,9 +165,14 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
           { (success) in
               print (loc)
               print(success)
-             
+           
+             }
                                  
           }
+        if(selectedObjectId != nil && selectedObjectName != nil ){
+                       self.objetService.edit( id: selectedObjectId! , name: selectedObjectName! , isAttributed: true){ (success) in
+                           print(success)
+                       }
           let confirmationAlert = UIAlertController(title: "Succes", message: " creation succes.", preferredStyle: UIAlertController.Style.alert)
                              confirmationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:nil ))
                               
@@ -175,6 +180,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
                              self.present(confirmationAlert, animated: true, completion: nil)
             
           }
+        
     }
     func displayError(message: String) {
               let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
