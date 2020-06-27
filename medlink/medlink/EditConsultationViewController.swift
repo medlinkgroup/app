@@ -89,7 +89,7 @@ class EditConsultationViewController: UIViewController {
                    
                else {
                    
-                   self.displayError(message: "Missing required field")
+                   self.displayError(message: NSLocalizedString("missing_field", comment: ""))
                    return
                }
                   
@@ -99,15 +99,15 @@ class EditConsultationViewController: UIViewController {
             
         }
               
-                   let confirmationAlert = UIAlertController(title: "Succes", message: " edition succes.", preferredStyle: UIAlertController.Style.alert)
+                   let confirmationAlert = UIAlertController(title: NSLocalizedString("success", comment: ""), message: NSLocalizedString("modif_success", comment: ""), preferredStyle: UIAlertController.Style.alert)
                                              confirmationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:nil ))
                                               
                                            
                                              self.present(confirmationAlert, animated: true, completion: nil)
                }
     func displayError(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        let alert = UIAlertController(title: NSLocalizedString("error", comment: ""), message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel))
         self.present(alert, animated: true)
     }
     
@@ -115,7 +115,7 @@ class EditConsultationViewController: UIViewController {
             timeStartPicker.datePickerMode = .time
             let toolbar = UIToolbar()
              toolbar.sizeToFit()
-            let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(EditConsultationViewController.doneTimeStartPicker ))
+            let doneButton = UIBarButtonItem(title: NSLocalizedString("done", comment: ""), style: .plain, target: self, action: #selector(EditConsultationViewController.doneTimeStartPicker ))
             toolbar.setItems([doneButton], animated: false)
             toolbar.isUserInteractionEnabled = true
             TimeStartText.inputAccessoryView = toolbar
@@ -135,7 +135,7 @@ class EditConsultationViewController: UIViewController {
           datePicker.datePickerMode = .date
           let toolbar = UIToolbar()
            toolbar.sizeToFit()
-          let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(EditConsultationViewController.donedatePicker ))
+          let doneButton = UIBarButtonItem(title: NSLocalizedString("done", comment: ""), style: .plain, target: self, action: #selector(EditConsultationViewController.donedatePicker ))
           toolbar.setItems([doneButton], animated: false)
           toolbar.isUserInteractionEnabled = true
           DateText.inputAccessoryView = toolbar

@@ -81,7 +81,7 @@ class HomeViewController: UIViewController {
                    // connection
                    Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                        if error != nil {
-                           self.showError("Mot de passe incorrect")
+                           self.showError(NSLocalizedString("incorrect_pass", comment: ""))
                        } else {
                            self.navigationController?.setViewControllers([NavBarController()], animated: true)
                        }

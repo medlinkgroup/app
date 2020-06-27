@@ -116,7 +116,7 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
               timeEnd.count > 0,
               creatorUid.count > 0
               else {
-                self.displayError(message: "Missing required field")
+                self.displayError(message: NSLocalizedString("missing_field", comment: ""))
             return
         }
          
@@ -133,7 +133,7 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
           
             }
             
-            let confirmationAlert = UIAlertController(title: "Succes", message: " creation succes.", preferredStyle: UIAlertController.Style.alert)
+            let confirmationAlert = UIAlertController(title: NSLocalizedString("done", comment: ""), message: NSLocalizedString("add_success", comment: ""), preferredStyle: UIAlertController.Style.alert)
                            confirmationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:nil ))
                             
                          
@@ -144,8 +144,8 @@ class AddConsultationViewController: UIViewController, UITextFieldDelegate {
     
 
 func displayError(message: String) {
-       let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-       alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+       let alert = UIAlertController(title: NSLocalizedString("error", comment: ""), message: message, preferredStyle: .alert)
+       alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel))
        self.present(alert, animated: true)
    }
     func createPatientPicker(){
@@ -154,7 +154,7 @@ func displayError(message: String) {
                 patientPicker.delegate = self
                 let toolBar = UIToolbar()
                 toolBar.sizeToFit()
-                let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self,
+                let doneButton = UIBarButtonItem(title: NSLocalizedString("done", comment: ""), style: .plain, target: self,
                 action: #selector(AddConsultationViewController.donePatientPicker))
                 toolBar.setItems([doneButton], animated: false)
                 toolBar.isUserInteractionEnabled = true
@@ -169,7 +169,7 @@ func displayError(message: String) {
          // datePicker.datePickerMode = .date
           let toolbar = UIToolbar()
            toolbar.sizeToFit()
-          let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddPatientViewController.donedatePicker ))
+          let doneButton = UIBarButtonItem(title: NSLocalizedString("done", comment: ""), style: .plain, target: self, action: #selector(AddPatientViewController.donedatePicker ))
           toolbar.setItems([doneButton], animated: true)
           toolbar.isUserInteractionEnabled = true
       DateText.inputAccessoryView = toolbar
@@ -187,7 +187,7 @@ func displayError(message: String) {
            timeStartPicker.datePickerMode = .time
            let toolbar = UIToolbar()
             toolbar.sizeToFit()
-           let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddConsultationViewController.doneTimeStartPicker ))
+           let doneButton = UIBarButtonItem(title: NSLocalizedString("done", comment: ""), style: .plain, target: self, action: #selector(AddConsultationViewController.doneTimeStartPicker ))
            toolbar.setItems([doneButton], animated: false)
            toolbar.isUserInteractionEnabled = true
            TimeStartText.inputAccessoryView = toolbar
@@ -205,7 +205,7 @@ func displayError(message: String) {
            timeEndPicker.datePickerMode = .time
            let toolbar = UIToolbar()
             toolbar.sizeToFit()
-           let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddConsultationViewController.doneTimeEndPicker ))
+           let doneButton = UIBarButtonItem(title: NSLocalizedString("done", comment: ""), style: .plain, target: self, action: #selector(AddConsultationViewController.doneTimeEndPicker ))
            toolbar.setItems([doneButton], animated: false)
            toolbar.isUserInteractionEnabled = true
            TimeEndText.inputAccessoryView = toolbar

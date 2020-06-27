@@ -44,6 +44,7 @@
 "adress" = "Adresse";
 "location" = "Coordonnées";
 "sign_in_here" = "Connectez-vous en cliquant ici !";
+"user_created" = "Votre compte a été créé avec succes !";
 "user_updated" = "Vos données ont été mises à jour";
 "upload" = "Télécharger";
 "image" = "Image";
@@ -66,3 +67,11 @@
 "attributed_on" = "Cet appareil est lié à un patient.";
 "attributed_off" = "Cet appareil n'est pas lié à un patient.";
 "add_object" = "Ajouter Appareil";
+"done" = "Finalisé";
+"error" = "Erreur";
+"success" = "Succès !";
+"modif_success" = "Modification effectuée";
+"missing_field" = "Champ obligatoire manquant";
+"incorrect_pass" = "Mot de passe incorrect ! Veuillez réessayer";
+"email_exists" = "Cet email existe déjà";
+"error_save_data" = "Erreur lors de la sauvegarde";

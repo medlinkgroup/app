@@ -44,6 +44,7 @@
 "adress" = "Adress";
 "location" = "Location";
 "sign_in_here" = "Click here to login!";
+"user_created" = "User was successfully created";
 "user_updated" = "User was successfully updated";
 "upload" = "Upload";
 "image" = "Image";
@@ -66,3 +67,11 @@
 "attributed_on" = "This device is linked to a patient.";
 "attributed_off" = "This device is not linked to a patient.";
 "add_object" = "Add Device";
+"done" = "Done";
+"error" = "Error";
+"success" = "Success !";
+"modif_success" = "Edit successful";
+"missing_field" = "Missing required field !";
+"incorrect_pass" = "Incorrect password !\nTry again...";
+"email_exists" = "Email already exists";
+"error_save_data" = "Error saving user data";

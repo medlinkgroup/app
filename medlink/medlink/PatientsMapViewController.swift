@@ -119,7 +119,7 @@ class PatientsMapViewController: UIViewController, MKMapViewDelegate {
               
                 
            
-                let confirmationAlert = UIAlertController(title: "adresse" , message: patient.place, preferredStyle: UIAlertController.Style.alert)
+                let confirmationAlert = UIAlertController(title: NSLocalizedString("adress", comment: "") , message: patient.place, preferredStyle: UIAlertController.Style.alert)
                                             confirmationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:nil ))
                                             self.present(confirmationAlert, animated: true, completion: nil)
                            

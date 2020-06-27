@@ -67,7 +67,7 @@ class HomeSignUpViewController: UIViewController {
       
              // go to home
              self.navigationController?.setViewControllers([HomeViewController()], animated: true)
-             let alertController = UIAlertController(title: nil, message: "User was sucessfully created", preferredStyle: .alert)
+             let alertController = UIAlertController(title: nil, message: NSLocalizedString("user_created", comment: ""), preferredStyle: .alert)
               alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
              self.present(alertController, animated: true, completion: nil)
     
@@ -89,7 +89,7 @@ class HomeSignUpViewController: UIViewController {
           
             Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
                 if error != nil {
-                    self.showError("Cette email existe")
+                    self.showError(NSLocalizedString("email_exists", comment: ""))
                     return
                 }
                 guard let userID = Auth.auth().currentUser?.uid else { return }
@@ -105,7 +105,7 @@ class HomeSignUpViewController: UIViewController {
                           
                 ]) { (err) in
                         if err != nil {
-                            self.showError("error saveing data user")
+                            self.showError(NSLocalizedString("error_save_data", comment: ""))
                         } else {
                            
                             print("Document added with ID: \(userID)")
