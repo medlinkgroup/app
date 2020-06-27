@@ -12,7 +12,7 @@ import CoreLocation
 protocol ObjetService{
     func getAll(completion: @escaping ([Objet]) -> Void)
     
-    func create(id: String,name: String, isAttributed: Bool, completion: @escaping (Bool) -> Void)
+    func create(name: String, isAttributed: Bool, completion: @escaping (Bool) -> Void)
      func delete(id: String, completion: @escaping (Bool) -> Void)
     
      func edit(id: String,name: String, isAttributed: Bool, completion: @escaping (Bool) -> Void)

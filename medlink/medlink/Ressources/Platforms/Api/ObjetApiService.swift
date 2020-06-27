@@ -40,7 +40,7 @@ class ObjetApiService: ObjetService {
         }.resume()
     }
     
-    func create(id: String, name: String, isAttributed: Bool, completion: @escaping (Bool) -> Void) {
+    func create(name: String, isAttributed: Bool, completion: @escaping (Bool) -> Void) {
          let body: [String: Any] = [
                           "name": name,
                           "isAttributed": isAttributed

@@ -8,14 +8,19 @@
 
 import UIKit
 
-class AddObjetViewController: UIViewController {
+class AddObjetViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var label_add_object: UILabel!
     @IBOutlet var label_object_name: UILabel!
     @IBOutlet var label_is_attributed: UILabel!
     @IBOutlet var btn_add: UIButton!
     @IBOutlet var btn_is_attributed: UISwitch!
-
+    @IBOutlet weak var NameText: UITextField!
+    
+    @IBOutlet weak var save_Btn: UIButton!
+    var objetService: ObjetService{
+        return ObjetApiService()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,8 +35,28 @@ class AddObjetViewController: UIViewController {
         label_is_attributed.text = NSLocalizedString("is_attributed", comment: "")
         btn_add.setTitle(NSLocalizedString("add", comment: ""), for: .normal)
         // Do any additional setup after loading the view.
+        
+        self.NameText.delegate = self
     }
     
+    @IBAction func save_object_btn(_ sender: Any) {
+        guard let name = NameText.text,
+            name.count > 0
+            else {
+            self.displayError(message: NSLocalizedString("missing_field", comment: ""))
+            return
+        }
+        self.objetService.create( name: name, isAttributed: false) { (success) in
+                           print(success)
+                       }
+        let confirmationAlert = UIAlertController(title: NSLocalizedString("done", comment: ""), message: NSLocalizedString("add_success", comment: ""), preferredStyle: UIAlertController.Style.alert)
+                                      confirmationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:nil ))
+                                       
+                                    
+                                      self.present(confirmationAlert, animated: true, completion: nil)
+                     
+                       
+    }
     @IBAction func btn_is_attributed(_ sender: AnyObject) {
         let onState = btn_is_attributed.isOn
         if onState {
@@ -42,6 +67,11 @@ class AddObjetViewController: UIViewController {
 
     }
 
+    func displayError(message: String) {
+           let alert = UIAlertController(title: NSLocalizedString("error", comment: ""), message: message, preferredStyle: .alert)
+           alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel))
+           self.present(alert, animated: true)
+       }
 
 
 }
