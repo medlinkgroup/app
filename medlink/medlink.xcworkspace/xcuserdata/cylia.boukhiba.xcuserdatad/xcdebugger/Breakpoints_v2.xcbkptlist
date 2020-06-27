@@ -1666,8 +1666,8 @@
                   urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/DocDashboardListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "195"
-                  endingLineNumber = "195"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
                   offsetFromSymbolStart = "49">
                </Location>
                <Location
@@ -1681,8 +1681,8 @@
                   urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/DocDashboardListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "196"
-                  endingLineNumber = "196"
+                  startingLineNumber = "197"
+                  endingLineNumber = "197"
                   offsetFromSymbolStart = "32">
                </Location>
             </Locations>
@@ -1702,6 +1702,38 @@
             endingLineNumber = "196"
             landmarkName = "tableView(_:commit:forRowAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "531A159F-4ED6-4D1B-97C0-F2ECF97F48F7 - 94203f711a624e4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in medlink.DocDashboardListViewController.tableView(_: __C.UITableView, commit: __C.UITableViewCellEditingStyle, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/DocDashboardListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "531A159F-4ED6-4D1B-97C0-F2ECF97F48F7 - 5986085a9f58b23b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in medlink.DocDashboardListViewController.tableView(_: __C.UITableView, commit: __C.UITableViewCellEditingStyle, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/DocDashboardListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "197"
+                  endingLineNumber = "197"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1782,6 +1814,98 @@
             endingLineNumber = "14"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0FB77458-9DCC-4776-8A1D-4CB520C48150 - f837ae5d9a6677dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.TitleText.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "0FB77458-9DCC-4776-8A1D-4CB520C48150 - 59cc11eaf4a44bc9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.TitleText.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "0FB77458-9DCC-4776-8A1D-4CB520C48150 - 2714226508b990d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.TitleText.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "0FB77458-9DCC-4776-8A1D-4CB520C48150 - fa1c2bdb3424fbd9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.TitleText.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "0FB77458-9DCC-4776-8A1D-4CB520C48150 - a185fd7a19c4d2f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; medlink.EditConsultationViewController"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  uuid = "0FB77458-9DCC-4776-8A1D-4CB520C48150 - c22779a12e8de78c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;medlink.EditConsultationViewController&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "453">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1798,6 +1922,98 @@
             endingLineNumber = "21"
             landmarkName = "newInstance(detail:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D0F5B0C7-73FD-4789-8621-FF9B869C72B6 - 6fc02bb3c5c3daea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.label_title.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "D0F5B0C7-73FD-4789-8621-FF9B869C72B6 - cb2531a8f7f97e96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.label_title.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "D0F5B0C7-73FD-4789-8621-FF9B869C72B6 - 9ba68e92d81d03e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.label_title.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "D0F5B0C7-73FD-4789-8621-FF9B869C72B6 - 6cf959c4d350bbb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.label_title.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "D0F5B0C7-73FD-4789-8621-FF9B869C72B6 - a185fd7a19c4d2f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; medlink.EditConsultationViewController"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1078">
+               </Location>
+               <Location
+                  uuid = "D0F5B0C7-73FD-4789-8621-FF9B869C72B6 - c22779a12e8de78c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.EditConsultationViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;medlink.EditConsultationViewController&gt;"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/EditConsultationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1019">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1986,8 +2202,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
             <Locations>
@@ -2034,8 +2250,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
             <Locations>
@@ -2130,8 +2346,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2146,8 +2362,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2162,8 +2378,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2178,8 +2394,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2194,8 +2410,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2210,8 +2426,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "updateGraphAcc()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2242,8 +2458,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2258,8 +2474,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "updateGraphAcc()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2274,8 +2490,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2290,8 +2506,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "updateGraphTemp()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2306,8 +2522,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2322,8 +2538,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
             <Locations>
@@ -2370,8 +2586,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
             <Locations>
@@ -2418,8 +2634,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2434,8 +2650,8 @@
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2444,6 +2660,54 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F74E42B7-3676-4AA8-AC37-DC910CD961BE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/LineGraphViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD9D707F-0D26-465A-99AC-E5414DB08E30"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/LineGraphViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6B9C5629-D57A-4D76-B9AB-57FCAB0B50D1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/LineGraphViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3677CEC-D5C8-4F22-BA22-88555963F881"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -2459,47 +2723,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CD9D707F-0D26-465A-99AC-E5414DB08E30"
+            uuid = "FA216994-C14B-4E8A-A007-6C9F4479663B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6B9C5629-D57A-4D76-B9AB-57FCAB0B50D1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "medlink/LineGraphViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A3677CEC-D5C8-4F22-BA22-88555963F881"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "medlink/LineGraphViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>

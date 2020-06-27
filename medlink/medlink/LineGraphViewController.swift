@@ -89,6 +89,7 @@ class LineGraphViewController: UIViewController {
             
             self.temperatureService.getAll { (temperatures) in
                         print(temperatures)
+                
                 if(self.patient != nil){
                     self.temperatures = temperatures.filter({$0.deviceID == self.patient.objetUid})
                                  // filter just doctorId
@@ -251,6 +252,8 @@ class LineGraphViewController: UIViewController {
         // two next lines must be fixed
         textField_observations.text = consultationDetail.description // bien faire appel api
         label_patient_lastname.text = consultationDetail.patientUid // faire patient.uid->lastname
+        
+        
         
         // A FAIRE
         /*guard let userID = Auth.auth().currentUser?.uid else { return }
