@@ -139,7 +139,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     // creation des sections
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
       let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: SectionHeaderHeight))
-      view.backgroundColor = UIColor(red: 0.55, green:0.89, blue:0.89, alpha: 1.00)
+      view.backgroundColor = UIColor(red: 0.70, green:0.77, blue:0.78, alpha: 1.00)
         
       let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width + 50, height: SectionHeaderHeight))
         label.font  = UIFont(name:"Avenir", size:15)
@@ -190,8 +190,8 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
               let consultation = self.consultations[indexPath.row]
               if editingStyle == UITableViewCell.EditingStyle.delete {
             
-              let refreshAlert = UIAlertController(title: "Confirmation", message: " Click OK to confirme your deletion.", preferredStyle: UIAlertController.Style.alert)
-              refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in do {
+              let refreshAlert = UIAlertController(title: NSLocalizedString("delete", comment: ""), message: NSLocalizedString("confirm_delete", comment: ""), preferredStyle: UIAlertController.Style.alert)
+              refreshAlert.addAction(UIAlertAction(title: NSLocalizedString("yes", comment: ""), style: .default, handler: { (action: UIAlertAction!) in do {
                        
                        self.consultationService.delete( id: consultation._id){
                                                     (success) in print(success)
@@ -203,14 +203,16 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
                        
                       }))
              
-              refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil ))
+              refreshAlert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler:nil ))
                    self.present(refreshAlert, animated: true, completion: nil)
              }
+                
     }
+    
 
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
      {
-            let closeAction = UIContextualAction(style: .normal, title:  "Modifier", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            let closeAction = UIContextualAction(style: .normal, title:  NSLocalizedString("modify", comment: ""), handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             let consultation = self.consultations[indexPath.row]
                 print(indexPath.row)
             self.consultationEdit = consultation
@@ -220,8 +222,8 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
                  //let editEventViewController = EventsEditViewController()
                 self.navigationController?.pushViewController(next, animated: true)
              })
-             closeAction.image = UIImage(named: "update")
-             closeAction.backgroundColor = .purple
+             closeAction.image = UIImage(named: NSLocalizedString("update", comment: ""))
+             closeAction.backgroundColor = .lightGray
      
              return UISwipeActionsConfiguration(actions: [closeAction])
      

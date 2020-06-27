@@ -10,10 +10,19 @@ import UIKit
 
 class EditObjetViewController: UIViewController {
 
-      var editObjet : Objet!
+    @IBOutlet var label_edit_object: UILabel!
+    @IBOutlet var label_object_name: UILabel!
+    @IBOutlet var label_is_attributed: UILabel!
+    @IBOutlet var btn_edit: UIButton!
+    
+    var editObjet : Objet!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        label_edit_object.text = NSLocalizedString("edit_object", comment: "")
+        label_object_name.text = NSLocalizedString("object_name", comment: "")
+        label_is_attributed.text = NSLocalizedString("is_attributed", comment: "")
+        btn_edit.setTitle(NSLocalizedString("save", comment: ""), for: .normal)
         // Do any additional setup after loading the view.
     }
     func newInstance(detail: Objet) -> EditObjetViewController {

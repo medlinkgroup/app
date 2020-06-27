@@ -50,3 +50,16 @@
 "patient" = "Patient";
 "description" = "Description";
 "list_objects" = "Appareils";
+"confirm_delete" = "Êtes-vous sur de vouloir effacer cet élément ?";
+"yes" = "Oui";
+"cancel" = "Annuler";
+"delete" = "Supression";
+"modify" = "Modifier";
+"update" = "Mettre à jour";
+"modify_patient" = "Modifier Patient";
+"diagnostics" = "Diagnostique";
+"edit_object" = "Modifier Appareil";
+"object_name" = "Appareil";
+"is_attributed" = "Est-il déjà attribué à un patient ?";
+"edit_consultation" = "Modifier Consultation";
+"observations" = "Observations";

@@ -29,7 +29,7 @@ var window: UIWindow?
         //DocProfileListViewController())
         //PatientDetailViewController())
 
-
+        //EditObjetViewController())
 
        // LineGraphViewController())
 
