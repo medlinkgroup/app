@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class EditPatientViewController: UIViewController {
 
@@ -35,8 +36,25 @@ class EditPatientViewController: UIViewController {
     
     
     
-    
+    var objet : Objet!
     var editPatient : Patient!
+    
+    var objetService: ObjetService{
+        return ObjetApiService()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+       
+               self.objetService.getAll { (objets) in
+                          print(objets)
+                   self.objet = objets.first(where: { (objet) -> Bool in
+                    objet._id == self.editPatient.objetUid
+                       })
+                if (self.objet != nil){
+                    self.ObjectText.text = self.objet.name
+                }
+                      
+            }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +78,7 @@ class EditPatientViewController: UIViewController {
         label_adress.text = NSLocalizedString("adress", comment: "")
         label_email.text = NSLocalizedString("email", comment: "")
         // Do any additional setup after loading the view.
+        loadData()
     }
 
 
@@ -70,6 +89,39 @@ class EditPatientViewController: UIViewController {
             
         }
      
+    func loadData() {
+           if (editPatient != nil){
+               
+                viewDidAppear(true)
+            self.FirstNameText.text = editPatient.firstName
+               self.LastNameText.text = editPatient.lastName
+               self.EmailText.text = editPatient.email
+               self.PhoneText.text = editPatient.phone
+               self.PlaceText.text = editPatient.place
+               self.DateText.text = editPatient.birthDate
+              //self.ObjectText.text = objet._id
+               
+            if let pictureURL = editPatient.photo {
+                      DispatchQueue.global().async {
+                          if let data = try? Data(contentsOf: pictureURL) {
+                              DispatchQueue.main.sync {
+                               self.PhotoView.image = UIImage(data: data)
+                              }
+                          }
+                      }
+                  }
+            
+         
+           
+               let url = editPatient.photo
+               let urlString = url?.absoluteString
+               self.ImageURLText.text = urlString
+              
+           }
+           
+        self.PlaceText.text = editPatient.place
+       }
+      
      
 
 }

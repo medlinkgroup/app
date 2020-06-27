@@ -31,7 +31,7 @@ class EditConsultationViewController: UIViewController {
         return ConsultationAPIService()
     }
     override func viewDidLoad() {
-        super.viewDidLoad()
+       super.viewDidLoad()
 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
