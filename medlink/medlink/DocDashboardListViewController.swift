@@ -19,6 +19,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet var img_add_patient: UIImageView!
     @IBOutlet var img_add_consultation: UIImageView!
     @IBOutlet weak var mapView: UIButton!
+    @IBOutlet weak var btn_add_object: UIButton!
     
     var DoctorUID: String = ""
     enum TableSection: Int {
@@ -138,11 +139,11 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     // creation des sections
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
       let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: SectionHeaderHeight))
-      view.backgroundColor = UIColor(red: 0.81, green:0.93, blue:0.98, alpha: 1.00)
+      view.backgroundColor = UIColor(red: 0.55, green:0.89, blue:0.89, alpha: 1.00)
         
       let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width + 50, height: SectionHeaderHeight))
         label.font  = UIFont(name:"Avenir", size:15)
-        label.textColor = UIColor(red: 0.44, green: 0.51, blue:0.53, alpha: 1.00)
+        label.textColor = UIColor(red: 0.44, green: 0.44, blue: 0.44, alpha: 1.00)
       if let tableSection = TableSection(rawValue: section) {
 
         switch tableSection {

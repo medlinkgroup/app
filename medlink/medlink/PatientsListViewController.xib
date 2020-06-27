@@ -9,10 +9,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PatientsListViewController" customModule="medlink" customModuleProvider="target">
             <connections>
+                <outlet property="btn_add_object" destination="dAZ-hw-cdV" id="LRz-R7-sko"/>
                 <outlet property="img_add_consultation" destination="BDq-EQ-wMY" id="aXX-gY-J3e"/>
                 <outlet property="img_add_patient" destination="a4M-Xj-o2Q" id="H1m-rJ-IJH"/>
                 <outlet property="label_my_patients" destination="NqN-BG-ivy" id="UJn-XH-dhK"/>
                 <outlet property="label_patients" destination="K3B-5b-dZz" id="Z8p-jE-VOx"/>
+                <outlet property="mapView" destination="T2l-dj-Jkc" id="2HG-Rw-4OX"/>
                 <outlet property="tableview_list_patients" destination="TJ5-iB-faG" id="bi1-yF-qPd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="pAG-PJ-Faa"/>
             </connections>
@@ -46,17 +48,20 @@
                                 <constraint firstAttribute="height" constant="33" id="qoo-OW-oKw"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3B-5b-dZz">
-                            <rect key="frame" x="27" y="1" width="362" height="39"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3B-5b-dZz">
+                            <rect key="frame" x="27" y="1" width="362" height="39.5"/>
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QJ6-DB-jbl">
-                            <rect key="frame" x="80" y="48" width="254" height="141"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QJ6-DB-jbl">
+                            <rect key="frame" x="-189" y="41.5" width="794" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="b6b-6M-mam"/>
+                            </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqN-BG-ivy">
-                            <rect key="frame" x="27" y="209" width="244" height="29"/>
+                            <rect key="frame" x="27" y="209" width="215" height="29"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="29" id="Xmh-6p-rVI"/>
                             </constraints>
@@ -64,23 +69,41 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2l-dj-Jkc">
+                            <rect key="frame" x="344" y="22" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Map" image="icon_map"/>
+                            <connections>
+                                <action selector="map_view:" destination="-1" eventType="touchUpInside" id="KTm-c1-aEL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAZ-hw-cdV">
+                            <rect key="frame" x="257" y="201.5" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="kjo-aj-sbE"/>
+                                <constraint firstAttribute="width" constant="33" id="tB2-Ny-do2"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="icon_add_object"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.79796293220000003" green="0.87132878940000003" blue="0.91894416209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="TJ5-iB-faG" secondAttribute="bottom" constant="49" id="0C9-jO-7DR"/>
-                        <constraint firstItem="BDq-EQ-wMY" firstAttribute="leading" secondItem="NqN-BG-ivy" secondAttribute="trailing" constant="41" id="5BI-4N-kCD"/>
+                        <constraint firstItem="QJ6-DB-jbl" firstAttribute="top" secondItem="K3B-5b-dZz" secondAttribute="bottom" constant="1" id="23a-cH-Ige"/>
+                        <constraint firstItem="QJ6-DB-jbl" firstAttribute="centerX" secondItem="K3B-5b-dZz" secondAttribute="centerX" id="28y-kU-mHK"/>
+                        <constraint firstItem="dAZ-hw-cdV" firstAttribute="leading" secondItem="NqN-BG-ivy" secondAttribute="trailing" constant="15" id="4F5-Oa-OaF"/>
+                        <constraint firstItem="BDq-EQ-wMY" firstAttribute="leading" secondItem="NqN-BG-ivy" secondAttribute="trailing" constant="70" id="5BI-4N-kCD"/>
                         <constraint firstItem="K3B-5b-dZz" firstAttribute="top" secondItem="Qgx-0Q-qlH" secondAttribute="top" constant="1" id="BJD-SK-982"/>
                         <constraint firstAttribute="trailing" secondItem="K3B-5b-dZz" secondAttribute="trailing" constant="25" id="CPZ-vN-l4L"/>
                         <constraint firstItem="TJ5-iB-faG" firstAttribute="leading" secondItem="Qgx-0Q-qlH" secondAttribute="leading" id="EYM-Au-2I8"/>
                         <constraint firstItem="TJ5-iB-faG" firstAttribute="top" secondItem="NqN-BG-ivy" secondAttribute="bottom" constant="8" symbolic="YES" id="Ma4-CJ-uEM"/>
-                        <constraint firstItem="NqN-BG-ivy" firstAttribute="top" secondItem="QJ6-DB-jbl" secondAttribute="bottom" constant="20" id="ShN-Z0-3jF"/>
                         <constraint firstItem="TJ5-iB-faG" firstAttribute="top" secondItem="BDq-EQ-wMY" secondAttribute="bottom" constant="10" id="UOE-bO-F4x"/>
                         <constraint firstItem="K3B-5b-dZz" firstAttribute="leading" secondItem="Qgx-0Q-qlH" secondAttribute="leading" constant="27" id="c6B-qY-R1M"/>
-                        <constraint firstItem="QJ6-DB-jbl" firstAttribute="centerX" secondItem="Qgx-0Q-qlH" secondAttribute="centerX" id="gIK-fO-pZH"/>
+                        <constraint firstItem="dAZ-hw-cdV" firstAttribute="top" secondItem="K3B-5b-dZz" secondAttribute="bottom" constant="161" id="hvH-L0-m11"/>
                         <constraint firstItem="a4M-Xj-o2Q" firstAttribute="trailing" secondItem="Qgx-0Q-qlH" secondAttribute="trailingMargin" id="krM-K3-LEw"/>
                         <constraint firstItem="TJ5-iB-faG" firstAttribute="centerX" secondItem="Qgx-0Q-qlH" secondAttribute="centerX" id="new-9B-9sG"/>
                         <constraint firstItem="a4M-Xj-o2Q" firstAttribute="leading" secondItem="BDq-EQ-wMY" secondAttribute="trailing" constant="21" id="sEb-SP-3xN"/>
-                        <constraint firstItem="QJ6-DB-jbl" firstAttribute="top" secondItem="K3B-5b-dZz" secondAttribute="bottom" constant="8" id="tUu-YZ-TUn"/>
+                        <constraint firstItem="dAZ-hw-cdV" firstAttribute="centerY" secondItem="a4M-Xj-o2Q" secondAttribute="centerY" id="wgI-j8-6ZQ"/>
                         <constraint firstItem="NqN-BG-ivy" firstAttribute="leading" secondItem="Qgx-0Q-qlH" secondAttribute="leading" constant="27" id="wpj-6g-ITj"/>
                         <constraint firstItem="TJ5-iB-faG" firstAttribute="top" secondItem="a4M-Xj-o2Q" secondAttribute="bottom" constant="8" id="xUH-xw-fWK"/>
                     </constraints>
@@ -99,7 +122,9 @@
     </objects>
     <resources>
         <image name="icon_add_consultation_black" width="512" height="512"/>
+        <image name="icon_add_object" width="512" height="512"/>
         <image name="icon_add_patient_title" width="427" height="389"/>
-        <image name="logo" width="127" height="112"/>
+        <image name="icon_map" width="512" height="512"/>
+        <image name="logo" width="397" height="356"/>
     </resources>
 </document>

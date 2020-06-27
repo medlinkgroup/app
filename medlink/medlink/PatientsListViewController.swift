@@ -20,6 +20,9 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
     @IBOutlet var img_add_patient: UIImageView!
     @IBOutlet var img_add_consultation: UIImageView!
     
+    @IBOutlet weak var mapView: UIButton!
+    @IBOutlet weak var btn_add_object: UIButton!
+    
     public static let patientsTableViewCellId = "ptvc"
     
     var patientService: PatientService{
@@ -192,6 +195,11 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
         }
     }
     
+    @IBAction func map_view(_ sender: Any) {
+        let next = PatientsMapViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+    }
+
     
    
     

@@ -9,32 +9,52 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ptvc" id="KGk-i7-Jjw" customClass="PatientsTableViewCell" customModule="medlink" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ptvc" rowHeight="72" id="KGk-i7-Jjw" customClass="PatientsTableViewCell" customModule="medlink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwP-4V-zHi">
-                        <rect key="frame" x="16" y="8" width="288" height="28"/>
-                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                        <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.15577942440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqk-x3-TWp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzo-e8-iwa">
+                                <rect key="frame" x="14" y="14" width="219" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.36299796039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrt-mi-hbx">
+                                <rect key="frame" x="14" y="36" width="219" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.36299796039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iw3-3s-gRs">
+                                <rect key="frame" x="241" y="2" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="wwP-4V-zHi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0Ke-8c-fiq"/>
-                    <constraint firstAttribute="trailing" secondItem="wwP-4V-zHi" secondAttribute="trailing" constant="16" id="9eD-cf-S1x"/>
-                    <constraint firstItem="wwP-4V-zHi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hzp-Qj-fHH"/>
-                    <constraint firstItem="wwP-4V-zHi" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lnd-M3-LOy"/>
+                    <constraint firstAttribute="bottom" secondItem="fqk-x3-TWp" secondAttribute="bottom" id="AAk-HQ-83s"/>
+                    <constraint firstItem="fqk-x3-TWp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JCa-2v-01q"/>
+                    <constraint firstItem="fqk-x3-TWp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="p5d-Vb-WuM"/>
+                    <constraint firstAttribute="trailing" secondItem="fqk-x3-TWp" secondAttribute="trailing" id="yXP-7Y-qnO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="label_patient_name" destination="wwP-4V-zHi" id="y6L-X3-VbI"/>
+                <outlet property="img_patient" destination="iw3-3s-gRs" id="Qfq-ef-BNa"/>
+                <outlet property="label_patient_first_name" destination="Xrt-mi-hbx" id="buZ-ve-ZP7"/>
+                <outlet property="label_patient_name" destination="Qzo-e8-iwa" id="y6I-V5-9Tr"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+            <point key="canvasLocation" x="137.68115942028987" y="101.11607142857143"/>
         </tableViewCell>
     </objects>
 </document>

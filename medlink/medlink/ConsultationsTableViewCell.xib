@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNS-iD-jb8">
-                                <rect key="frame" x="12" y="11" width="228" height="28"/>
+                                <rect key="frame" x="12" y="3" width="228" height="28"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.36299796039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -35,20 +35,13 @@
                                 <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.15577942440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TTb-2E-xwQ">
-                                <rect key="frame" x="249" y="4" width="63" height="63"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="TTb-2E-xwQ" firstAttribute="top" secondItem="G86-L5-s49" secondAttribute="top" constant="4" id="F9f-Fj-r2V"/>
                             <constraint firstItem="V2S-De-syx" firstAttribute="leading" secondItem="G86-L5-s49" secondAttribute="leading" constant="12" id="FYb-c4-TFi"/>
-                            <constraint firstItem="V2S-De-syx" firstAttribute="top" secondItem="hNS-iD-jb8" secondAttribute="bottom" constant="1" id="I7M-Ux-BIa"/>
+                            <constraint firstItem="V2S-De-syx" firstAttribute="top" secondItem="hNS-iD-jb8" secondAttribute="bottom" constant="9" id="I7M-Ux-BIa"/>
                             <constraint firstItem="V2S-De-syx" firstAttribute="trailing" secondItem="hNS-iD-jb8" secondAttribute="trailing" id="SlZ-0Q-zIy"/>
-                            <constraint firstItem="TTb-2E-xwQ" firstAttribute="trailing" secondItem="G86-L5-s49" secondAttribute="trailingMargin" id="Wqg-eD-mY6"/>
                             <constraint firstAttribute="bottom" secondItem="V2S-De-syx" secondAttribute="bottom" constant="10" id="g3N-QO-wiq"/>
-                            <constraint firstItem="TTb-2E-xwQ" firstAttribute="leading" secondItem="V2S-De-syx" secondAttribute="trailing" constant="9" id="hnn-sw-kge"/>
-                            <constraint firstItem="TTb-2E-xwQ" firstAttribute="centerY" secondItem="G86-L5-s49" secondAttribute="centerY" id="mJS-x8-Cht"/>
                             <constraint firstItem="V2S-De-syx" firstAttribute="leading" secondItem="hNS-iD-jb8" secondAttribute="leading" id="sJW-Sx-KeA"/>
                         </constraints>
                     </view>
@@ -62,7 +55,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="img_patient" destination="TTb-2E-xwQ" id="7ED-j5-MiX"/>
                 <outlet property="label_date" destination="V2S-De-syx" id="Bjw-KA-qUg"/>
                 <outlet property="label_patient" destination="hNS-iD-jb8" id="1F0-Yg-yY9"/>
             </connections>

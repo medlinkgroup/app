@@ -58,9 +58,9 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         
         let optionD = UINavigationController(rootViewController: ObjetsListViewController())
         //optionD.isNavigationBarHidden = false
-        optionD.tabBarItem.title = NSLocalizedString("list_objets", comment: "")
-        let image3 = UIImage(named: "list_patients")
-        optionD.tabBarItem.image = image2
+        optionD.tabBarItem.title = NSLocalizedString("list_objects", comment: "")
+        let image3 = UIImage(named: "list_objects")
+        optionD.tabBarItem.image = image3
     
      
         navBarCont.viewControllers = [optionA, optionB, optionC, optionD]
