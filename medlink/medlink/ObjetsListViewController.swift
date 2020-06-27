@@ -55,14 +55,47 @@ class ObjetsListViewController: UIViewController, UITableViewDataSource, UITable
           return cell
       }
       
-    /*
-    // MARK: - Navigation
+    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+              print("***************You tapped cell number \(indexPath.row).")
+          }
+      
+ 
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+                 let objet = self.objets[indexPath.row]
+                 if editingStyle == UITableViewCell.EditingStyle.delete {
+               
+                 let refreshAlert = UIAlertController(title: "Confirmation", message: " Click OK to confirme your deletion.", preferredStyle: UIAlertController.Style.alert)
+                 refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in do {
+                          
+                          self.objetService.delete( id: objet._id){
+                                                       (success) in print(success)
+                                              
+                             self.viewDidAppear(true)
+                                                   }
+                          }
+                          
+                         }))
+                
+                 refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil ))
+                      self.present(refreshAlert, animated: true, completion: nil)
+                }
+       }
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+       {
+              let closeAction = UIContextualAction(style: .normal, title:  "Modifier", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+              let objet = self.objets[indexPath.row]
+              self.objetEdit = objet
+                  
+              let next = EditObjetViewController().newInstance(detail: self.objetEdit)
+                 
+                  self.navigationController?.pushViewController(next, animated: true)
+               })
+               closeAction.image = UIImage(named: "update")
+               closeAction.backgroundColor = .purple
+       
+               return UISwipeActionsConfiguration(actions: [closeAction])
+       
+      }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
