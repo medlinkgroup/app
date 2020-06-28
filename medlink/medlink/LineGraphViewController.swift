@@ -17,7 +17,8 @@ class LineGraphViewController: UIViewController {
     @IBOutlet var textField_observations: UITextField!
     @IBOutlet var label_diagnostics: UILabel!
     @IBOutlet var btn_save: UIButton!
-    
+    var id : String?
+    var editTitle: String?
     var consultationDetail: Consultation!
     var consultationAccDetail: Consultation!
     var tabX = [Double] ()
@@ -30,6 +31,10 @@ class LineGraphViewController: UIViewController {
               //return PatientMockService()
            return TemperatureAPIService()
        }
+    var consultationService: ConsultationService{
+                 //return PatientMockService()
+              return ConsultationAPIService()
+          }
        
        var accelerometerService: AccelerometerService{
                  //return PatientMockService()
@@ -73,7 +78,9 @@ class LineGraphViewController: UIViewController {
         // CHART TEMPERATURE
        // updateGraphTemp()
        // updateGraphAcc()
-        
+        textField_observations.text = consultationDetail.description
+        id = consultationDetail._id
+        editTitle = consultationDetail.title
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -130,41 +137,43 @@ class LineGraphViewController: UIViewController {
                 
                self.accelerometerService.getAll { (accelerometres) in
                   print(accelerometres)
-                self.accelerometres = accelerometres.filter({$0.deviceID == self.patient.objetUid})
-                  // filter just doctorId
-                print("ACCELEROMETRE")
+                if(self.patient != nil){
+                    self.accelerometres = accelerometres.filter({$0.deviceID == self.patient.objetUid})
+                                    // filter just doctorId
+                                  print("ACCELEROMETRE")
 
-                print (self.accelerometres.count)
-                  print(self.accelerometres)
-                self.accelerometre = self.accelerometres.last(where: { (accelerometre) -> Bool in
-                    accelerometre.date == self.consultationDetail.date
-                })
-                
-               // print("DATE CONS")
-               // print(self.consultationDetail.date)
-               // print("DATE ACC")
-                //print(self.accelerometre.date)
-             
-                if (self.accelerometre != nil){
-                    
-                    for i in 0..<self.accelerometre.accelerometerXValues.count {
-                        let value = self.accelerometre.accelerometerXValues[i]
-                        //print(i)
-                        self.tabX.append(value)
-                    }
-                   for i in 0..<self.accelerometre.accelerometerYValues.count {
-                       let value = self.accelerometre.accelerometerYValues[i]
-                       self.tabY.append(value)
-                   }
-                    for i in 0..<self.accelerometre.accelerometerZValues.count {
-                        let value = self.accelerometre.accelerometerZValues[i]
-                        self.tabZ.append(value)
-                    }
-                   self.updateGraphAcc()
-                   
+                                  print (self.accelerometres.count)
+                                    print(self.accelerometres)
+                                  self.accelerometre = self.accelerometres.last(where: { (accelerometre) -> Bool in
+                                      accelerometre.date == self.consultationDetail.date
+                                  })
+                                  
+                                 // print("DATE CONS")
+                                 // print(self.consultationDetail.date)
+                                 // print("DATE ACC")
+                                  //print(self.accelerometre.date)
+                               
+                                  if (self.accelerometre != nil){
+                                      
+                                      for i in 0..<self.accelerometre.accelerometerXValues.count {
+                                          let value = self.accelerometre.accelerometerXValues[i]
+                                          //print(i)
+                                          self.tabX.append(value)
+                                      }
+                                     for i in 0..<self.accelerometre.accelerometerYValues.count {
+                                         let value = self.accelerometre.accelerometerYValues[i]
+                                         self.tabY.append(value)
+                                     }
+                                      for i in 0..<self.accelerometre.accelerometerZValues.count {
+                                          let value = self.accelerometre.accelerometerZValues[i]
+                                          self.tabZ.append(value)
+                                      }
+                                     self.updateGraphAcc()
+                                     
+                                  }
+                                  
                 }
-               
-                
+              
               }
                
         
@@ -250,32 +259,76 @@ class LineGraphViewController: UIViewController {
   
     
     @IBAction func btn_save(_ sender: Any) {
-        let observations = textField_observations.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+       // let observations = textField_observations.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
-        // two next lines must be fixed
-        //textField_observations.text = consultationDetail.description // bien faire appel api
-        
-        
-        // A FAIRE
-        /*guard let userID = Auth.auth().currentUser?.uid else { return }
-        let db = Firestore.firestore()
-        let userRef = db.collection("consultations").document(userID)
-        
-        // Set the "capital" field of the city 'DC'
-        userRef.updateData([
-            "description": observations
-        ]) { err in
-            if let err = err {
-                print("Error updating document: \(err)")
-            } else {
-                print("Document successfully updated")
-                let alertController = UIAlertController(title: nil, message: "Observation was sucessfully updated", preferredStyle: .alert)
-                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-            }
-        }
-         */
+        guard
+                     let id = id,
+            //let title = editTitle,
+            let description = textField_observations.text,
+                   //  let date = DateText.text,
+                     //let timeStart = TimeStartText.text,
+                  
+                     
+                        // id.count > 0,
+                         //title.count > 0,
+                         description.count > 0
+                       //  date.count > 0,
+                       //  timeStart.count > 0,
+                      //   date.count > 0,
+                       //  timeStart.count > 0
+                         
+                     else {
+                         
+                         self.displayError(message: NSLocalizedString("missing_field", comment: ""))
+                         return
+                     }
+                        
+                           //let email = emailTextField.text,
+        self.consultationService.edit(id: id, title: consultationDetail.title, description: description, doctorUid: consultationDetail.doctorUid, patientUid: consultationDetail.patientUid, date: consultationDetail.date, appointmentTime: consultationDetail.appointmentTime, timeEnd: consultationDetail.timeEnd){
+                  (success) in
+                  
+              }
+                    
+                         let confirmationAlert = UIAlertController(title: NSLocalizedString("success", comment: ""), message: NSLocalizedString("modif_success", comment: ""), preferredStyle: UIAlertController.Style.alert)
+                                                   confirmationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:nil ))
+                                                    
+                                                 
+                                                   self.present(confirmationAlert, animated: true, completion: nil)
+       
     }
+    func displayError(message: String) {
+          let alert = UIAlertController(title: NSLocalizedString("error", comment: ""), message: message, preferredStyle: .alert)
+          alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel))
+          self.present(alert, animated: true)
+      }
+      
     
 
 }
+
+
+
+
+// two next lines must be fixed
+       //textField_observations.text = consultationDetail.description // bien faire appel api
+       
+       
+       // A FAIRE
+       /*guard let userID = Auth.auth().currentUser?.uid else { return }
+       let db = Firestore.firestore()
+       let userRef = db.collection("consultations").document(userID)
+       
+       // Set the "capital" field of the city 'DC'
+       userRef.updateData([
+           "description": observations
+       ]) { err in
+           if let err = err {
+               print("Error updating document: \(err)")
+           } else {
+               print("Document successfully updated")
+               let alertController = UIAlertController(title: nil, message: "Observation was sucessfully updated", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+               self.present(alertController, animated: true, completion: nil)
+           }
+       }
+        */
