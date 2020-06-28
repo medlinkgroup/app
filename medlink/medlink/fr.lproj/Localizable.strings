@@ -75,3 +75,4 @@
 "incorrect_pass" = "Mot de passe incorrect ! Veuillez réessayer";
 "email_exists" = "Cet email existe déjà";
 "error_save_data" = "Erreur lors de la sauvegarde";
+"add_success" = "Ajouté avec succès !";

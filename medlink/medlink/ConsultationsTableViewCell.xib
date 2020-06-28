@@ -27,49 +27,65 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOj-U5-WCw">
-                                <rect key="frame" x="58" y="23" width="157" height="28"/>
+                                <rect key="frame" x="53" y="23" width="157" height="28"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.36299796039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2S-De-syx">
-                                <rect key="frame" x="94" y="54.5" width="121" height="23"/>
+                                <rect key="frame" x="3" y="54.5" width="176" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="121" id="aL8-5x-Wdw"/>
+                                    <constraint firstAttribute="width" constant="176" id="aL8-5x-Wdw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.15577942440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6P6-FV-Gt2">
-                                <rect key="frame" x="223" y="54" width="183" height="24"/>
+                                <rect key="frame" x="246" y="54" width="155" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.15577942440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgW-OP-4UD">
-                                <rect key="frame" x="223" y="23" width="41.5" height="28"/>
+                                <rect key="frame" x="218" y="23" width="41.5" height="28"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.36299796039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ROF-Z5-JTZ">
+                                <rect key="frame" x="181" y="52" width="29" height="28"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="Ixj-4z-pat">
+                                <rect key="frame" x="217" y="52" width="26" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="C4S-4c-S0K"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="FOj-U5-WCw" firstAttribute="trailing" secondItem="V2S-De-syx" secondAttribute="trailing" id="1BW-dY-X3M"/>
-                            <constraint firstItem="FOj-U5-WCw" firstAttribute="leading" secondItem="G86-L5-s49" secondAttribute="leading" constant="58" id="3iK-BJ-jIX"/>
+                            <constraint firstItem="FOj-U5-WCw" firstAttribute="trailing" secondItem="V2S-De-syx" secondAttribute="trailing" constant="31" id="1BW-dY-X3M"/>
+                            <constraint firstItem="FOj-U5-WCw" firstAttribute="leading" secondItem="G86-L5-s49" secondAttribute="leading" constant="53" id="3iK-BJ-jIX"/>
                             <constraint firstItem="FOj-U5-WCw" firstAttribute="top" secondItem="G86-L5-s49" secondAttribute="top" constant="23" id="4Cl-Rs-zTj"/>
-                            <constraint firstItem="6P6-FV-Gt2" firstAttribute="leading" secondItem="rgW-OP-4UD" secondAttribute="leading" id="BJM-cN-32e"/>
-                            <constraint firstItem="V2S-De-syx" firstAttribute="leading" secondItem="G86-L5-s49" secondAttribute="leading" constant="94" id="FYb-c4-TFi"/>
+                            <constraint firstItem="Ixj-4z-pat" firstAttribute="leading" secondItem="ROF-Z5-JTZ" secondAttribute="trailing" constant="7" id="67Q-Wl-bvh"/>
+                            <constraint firstItem="6P6-FV-Gt2" firstAttribute="leading" secondItem="rgW-OP-4UD" secondAttribute="leading" constant="28" id="BJM-cN-32e"/>
+                            <constraint firstItem="V2S-De-syx" firstAttribute="leading" secondItem="G86-L5-s49" secondAttribute="leading" constant="3" id="FYb-c4-TFi"/>
+                            <constraint firstItem="Ixj-4z-pat" firstAttribute="top" secondItem="rgW-OP-4UD" secondAttribute="bottom" constant="1" id="Gac-fe-KNK"/>
                             <constraint firstItem="6P6-FV-Gt2" firstAttribute="top" secondItem="rgW-OP-4UD" secondAttribute="bottom" constant="3" id="KkB-Vn-yr6"/>
                             <constraint firstItem="V2S-De-syx" firstAttribute="top" secondItem="FOj-U5-WCw" secondAttribute="bottom" constant="3.5" id="QD2-XY-s6V"/>
                             <constraint firstItem="FOj-U5-WCw" firstAttribute="baseline" secondItem="rgW-OP-4UD" secondAttribute="baseline" id="U4S-Nc-Obw"/>
                             <constraint firstItem="rgW-OP-4UD" firstAttribute="leading" secondItem="FOj-U5-WCw" secondAttribute="trailing" constant="8" id="Wmt-GY-Jjd"/>
                             <constraint firstItem="6P6-FV-Gt2" firstAttribute="centerY" secondItem="V2S-De-syx" secondAttribute="centerY" id="X5K-dx-Fmb"/>
+                            <constraint firstItem="6P6-FV-Gt2" firstAttribute="leading" secondItem="Ixj-4z-pat" secondAttribute="trailing" constant="3" id="X9y-Ug-exb"/>
+                            <constraint firstItem="Ixj-4z-pat" firstAttribute="bottom" secondItem="ROF-Z5-JTZ" secondAttribute="bottom" id="ZoV-de-OA5"/>
                             <constraint firstItem="FOj-U5-WCw" firstAttribute="centerY" secondItem="G86-L5-s49" secondAttribute="centerY" constant="-6" id="bST-gZ-z1r"/>
+                            <constraint firstItem="ROF-Z5-JTZ" firstAttribute="leading" secondItem="V2S-De-syx" secondAttribute="trailing" constant="2" id="dqN-M8-ocl"/>
+                            <constraint firstItem="Ixj-4z-pat" firstAttribute="centerY" secondItem="V2S-De-syx" secondAttribute="centerY" id="dwa-5H-L62"/>
                             <constraint firstItem="FOj-U5-WCw" firstAttribute="firstBaseline" secondItem="rgW-OP-4UD" secondAttribute="firstBaseline" id="fh1-6V-97p"/>
                             <constraint firstAttribute="bottom" secondItem="V2S-De-syx" secondAttribute="bottom" constant="8.5" id="g3N-QO-wiq"/>
-                            <constraint firstAttribute="trailing" secondItem="6P6-FV-Gt2" secondAttribute="trailing" constant="31" id="skn-vb-SjB"/>
+                            <constraint firstAttribute="trailing" secondItem="6P6-FV-Gt2" secondAttribute="trailing" constant="36" id="skn-vb-SjB"/>
+                            <constraint firstItem="ROF-Z5-JTZ" firstAttribute="top" secondItem="FOj-U5-WCw" secondAttribute="bottom" constant="1" id="taE-bP-ad9"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -91,4 +107,8 @@
             <point key="canvasLocation" x="163.04347826086959" y="91.071428571428569"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="calendar" width="256" height="256"/>
+        <image name="time" width="542" height="542"/>
+    </resources>
 </document>

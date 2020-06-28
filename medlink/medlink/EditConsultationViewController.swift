@@ -145,7 +145,7 @@ class EditConsultationViewController: UIViewController {
       @objc func donedatePicker(){
 
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        formatter.dateFormat = "yyyy-MM-dd"
           DateText.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
       }

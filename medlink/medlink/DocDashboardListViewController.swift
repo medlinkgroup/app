@@ -119,7 +119,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     func sortData() {
         let date  = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        formatter.dateFormat = "yyyy-MM-dd"
         let result = formatter.string(from: date)
         data[.future] = consultations.filter({$0.date >= result })
         data[.past] = consultations.filter({$0.date < result})
