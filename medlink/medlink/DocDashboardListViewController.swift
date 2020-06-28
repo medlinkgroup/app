@@ -28,6 +28,8 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     let SectionHeaderHeight: CGFloat = 30
     var consultationEdit: Consultation!
     var data = [TableSection: [Consultation]]()
+    var patients = [Patient] ()
+    var patient : Patient!
     
     var consultationDetail: Consultation!
     
@@ -44,6 +46,11 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
       //  return ConsultationMockService()
         return ConsultationAPIService()
     }
+    var patientService: PatientService{
+         //  return ConsultationMockService()
+           return PatientAPIService()
+       }
+    
     
      override func viewDidLoad() {
          super.viewDidLoad()
@@ -103,7 +110,12 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
                        //fatalError(" Erreur : aucun user connect")
                        print("no user connected")
                    }
-               
+        self.patientService.getAll{
+            (patients) in
+            self.patients = patients
+                 self.consultationsTableView.reloadData()
+        }
+              
     }
          
        
@@ -115,6 +127,7 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
             self.sortData()
             self.consultationsTableView.reloadData()
         }
+       
     }
     func sortData() {
         let date  = Date()
@@ -166,8 +179,21 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
                   let cell = tableView.dequeueReusableCell(withIdentifier: DocDashboardListViewController.consultationsTableViewCellId, for: indexPath) as! ConsultationsTableViewCell
                // ajout des events dans chaque section
                if let tableSection = TableSection(rawValue: indexPath.section), let consultation = data[tableSection]?[indexPath.row] {
-               
+               self.patient = patients.first(where: { (patient) -> Bool in
+                   patient._id == consultation.patientUid
+                   
+               })
+                print(self.patient)
+                                                
+                                               
+                            
                 cell.label_patient.text = consultation.title
+                cell.label_time.text = consultation.appointmentTime
+                if (self.patient != nil){
+                    cell.label_first_name.text = self.patient.firstName +  " " + self.patient.lastName
+                }
+                //cell.label_first_name.text = consultation.patientUid
+                
                  //    cell.sizeToFit()
                 cell.label_date.text = formatDate(date: consultation.date)
     

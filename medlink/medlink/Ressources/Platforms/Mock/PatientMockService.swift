@@ -10,6 +10,10 @@ import Foundation
 import CoreLocation
 
 class PatientMockService: PatientService {
+    func getPatientById(id: String, completion: @escaping ([Patient]) -> Void) {
+         completion(self.patients)
+    }
+    
     func create(firstName: String, lastName: String, phone: String, photo: String, email: String, doctorUid: String, place: String, location: CLLocation, birthDate: String, objetUid: String, completion: @escaping (Bool) -> Void) {
         completion(false)
     }

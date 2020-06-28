@@ -29,7 +29,14 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
            //return PatientMockService()
         return PatientAPIService()
     }
-   
+    var objetService: ObjetService{
+             return ObjetApiService()
+             //return PatientMockService()
+           }
+   var objects = [Objet] ()
+   var selectedObjectId: String?
+   var selectedObjectName: String?
+   var objet : Objet!
     var patientDetail: Patient!
     var DoctorUID: String = ""
     var patientEdit: Patient!
@@ -111,8 +118,10 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
             
             print(self.patients)
         }
+        
+                 
     }
-    
+  
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: PatientsListViewController.patientsTableViewCellId, for: indexPath) as! PatientsTableViewCell

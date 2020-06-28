@@ -78,6 +78,8 @@ class ObjetsListViewController: UIViewController, UITableViewDataSource, UITable
                              self.viewDidAppear(true)
                                                    }
                           }
+                    
+                    
                           
                          }))
                 
