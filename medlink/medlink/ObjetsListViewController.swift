@@ -55,10 +55,26 @@ class ObjetsListViewController: UIViewController, UITableViewDataSource, UITable
       }
       
       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          let cell = tableView.dequeueReusableCell(withIdentifier: ObjetsListViewController.objetcsTableViewCellId, for: indexPath) as! ObjetsTableViewCell
-          let objet = self.objets[indexPath.row]
-          cell.label_object_name.text = objet.name
-          return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ObjetsListViewController.objetcsTableViewCellId, for: indexPath) as! ObjetsTableViewCell
+        let objet = self.objets[indexPath.row]
+        cell.label_object_name.text = objet.name
+        if objet.isAttributed {
+            cell.label_isAttributed.text = NSLocalizedString("not_available", comment: "")
+            cell.label_isAtt_desc.text = NSLocalizedString("isAtt_desc", comment: "")
+            cell.img_available.image = UIImage(named: "not_available_icon.png")
+            
+            //let image : UIImage = UIImage(named:"available_icon")!
+            //cell.img_available = UIImageView(image: image)
+        } else {
+            cell.label_isAttributed.text = NSLocalizedString("available", comment: "")
+            cell.label_isAtt_desc.text = NSLocalizedString("isNotAtt_desc", comment: "")
+            cell.img_available.image = UIImage(named: "available_icon.png")
+            
+            //let image : UIImage = UIImage(named:"not_available_icon")!
+            //cell.img_available = UIImageView(image: image)
+        }
+         
+        return cell
       }
       
     private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

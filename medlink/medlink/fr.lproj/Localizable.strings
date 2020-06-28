@@ -76,3 +76,7 @@
 "email_exists" = "Cet email existe déjà";
 "error_save_data" = "Erreur lors de la sauvegarde";
 "add_success" = "Ajouté avec succès !";
+"available" = "Attribué";
+"not_available" = "Non Attribué";
+"isAtt_desc" = "Cet appareil est en train d'être utilisé par un patient.";
+"isNotAtt_desc" = "Cet appareil n'est utilisé par aucun patient.";

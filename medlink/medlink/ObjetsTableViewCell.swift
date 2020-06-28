@@ -11,8 +11,15 @@ import UIKit
 class ObjetsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var label_object_name: UILabel!
+    @IBOutlet var label_isAttributed: UILabel!
+    @IBOutlet var label_isAtt_desc: UILabel!
+    @IBOutlet var img_available: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
         // Initialization code
     }
 
