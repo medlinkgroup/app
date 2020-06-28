@@ -117,8 +117,19 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
             // filter just doctorId
             
             print(self.patients)
+            self.tableview_list_patients.reloadData()
+            
         }
-        
+        self.objetService.getAll{ (objets) in
+            print(objets)
+            print(". . . . . . . . \(self.DoctorUID)")
+            self.objects = objets
+            // filter just doctorId
+            
+            
+            self.tableview_list_patients.reloadData()
+            
+        }
                  
     }
   
@@ -172,6 +183,20 @@ class PatientsListViewController: UIViewController, UITableViewDataSource , UITa
                                                       //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
                           self.viewDidAppear(true)
                                                 }
+                
+                self.objet = self.objects.first(where: { (objet) -> Bool in
+                 objet._id == patient.objetUid
+                 
+             })
+                print(self.objet)
+                if(self.objet != nil){
+                    self.objetService.edit(id: self.objet._id, name: self.objet.name, isAttributed: false){
+                        (success) in
+                        
+                    }
+                    
+                }
+               
                        }
                        
                       }))

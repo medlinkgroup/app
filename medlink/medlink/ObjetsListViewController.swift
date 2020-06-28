@@ -33,6 +33,7 @@ class ObjetsListViewController: UIViewController, UITableViewDataSource, UITable
             // filter just doctorId
             
             print(self.objets)
+            self.tableview_list_objects.reloadData()
         }
     }
     override func viewDidLoad() {
