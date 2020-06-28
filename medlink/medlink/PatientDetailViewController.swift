@@ -18,13 +18,11 @@ class PatientDetailViewController: UIViewController {
     @IBOutlet var label_phone: UILabel!
     @IBOutlet var label_email: UILabel!
     @IBOutlet var label_adress: UILabel!
-    @IBOutlet var label_location: UILabel!
     @IBOutlet var img_photo_patient: UIImageView!
     @IBOutlet var label_birthdate_val: UILabel!
     @IBOutlet var label_phone_val: UILabel!
     @IBOutlet var label_email_val: UILabel!
     @IBOutlet var label_adress_val: UILabel!
-    @IBOutlet var label_location_val: UILabel!
     @IBOutlet var label_objectid: UILabel!
     @IBOutlet var label_objectid_val: UILabel!
     
@@ -56,14 +54,12 @@ class PatientDetailViewController: UIViewController {
         label_phone.text = NSLocalizedString("phone_number", comment: "")
         label_email.text = NSLocalizedString("email", comment: "")
         label_adress.text = NSLocalizedString("adress", comment: "")
-        label_location.text = NSLocalizedString("location", comment: "")
         label_objectid.text = NSLocalizedString("objectid", comment: "")
         
         label_birthdate_val.textAlignment = .natural
         label_phone_val.textAlignment = .natural
         label_email_val.textAlignment = .natural
         label_adress_val.textAlignment = .natural
-        label_location_val.textAlignment = .natural
         label_objectid_val.textAlignment = .natural
         
         loadDataDetails()
@@ -119,7 +115,7 @@ class PatientDetailViewController: UIViewController {
         label_email_val.text = patientDetail.email
         label_adress_val.text = patientDetail.place
         //label_objectid_val.text = patientDetail.objetUid
-        
+        img_photo_patient.image = UIImage(named: "profile_default.png") // restore default image
         // label_location_val.text = patientDetail.location
         if let pictureURL = patientDetail.photo {
              DispatchQueue.global().async {
