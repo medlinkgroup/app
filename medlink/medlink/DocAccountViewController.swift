@@ -22,10 +22,33 @@ class DocAccountViewController: UIViewController {
     
     @IBOutlet weak var specialityTextField: UITextField!
     
+    @IBOutlet var label_my_account: UILabel!
+    @IBOutlet var label_first_name: UILabel!
+    @IBOutlet var label_last_name: UILabel!
+    @IBOutlet var label_email: UILabel!
+    @IBOutlet var label_phone_number: UILabel!
+    @IBOutlet var label_specialty: UILabel!
+    @IBOutlet var btn_save: UIButton!
+    @IBOutlet var btn_sign_out: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
+        label_my_account.text = NSLocalizedString("my_account", comment: "")
+        label_first_name.text = NSLocalizedString("firstname", comment: "")
+        label_last_name.text = NSLocalizedString("lastname", comment: "")
+        label_email.text = NSLocalizedString("email", comment: "")
+        label_phone_number.text = NSLocalizedString("phone_number", comment: "")
+        label_specialty.text = NSLocalizedString("field", comment: "")
+        btn_save.setTitle(NSLocalizedString("save", comment: ""), for: .normal)
+        btn_sign_out.setTitle(NSLocalizedString("logout", comment: ""), for: .normal)
+        
         let db = Firestore.firestore()
           
               if let user = Auth.auth().currentUser {
@@ -34,7 +57,7 @@ class DocAccountViewController: UIViewController {
                   
                  docRef.getDocument { (document, error) in
                  if let document = document, document.exists {
-                      self.firstNameTextField.text = document["firstname"] as? String
+                      self.firstNameTextField.text = document["fistname"] as? String
                       self.lastNameTextField.text = document["lastname"] as? String
                       self.emailTextField.text = document["email"] as? String
                       self.phoneNumberTextField.text = document["phone"] as? String
@@ -79,7 +102,7 @@ class DocAccountViewController: UIViewController {
             // Set the "capital" field of the city 'DC'
             userRef.updateData([
                 "email": email,
-                "firstname": firstname,
+                "fistname": firstname,
                 "lastname": lastname,
                 "phone": phone,
                 "speciality": speciality,
@@ -88,13 +111,18 @@ class DocAccountViewController: UIViewController {
                     print("Error updating document: \(err)")
                 } else {
                     print("Document successfully updated")
+                    let alertController = UIAlertController(title: nil, message: NSLocalizedString("user_updated", comment: ""), preferredStyle: .alert)
+                     alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
                 }
             }
 
     }
         
+   
 
 
 }
+    
     
 

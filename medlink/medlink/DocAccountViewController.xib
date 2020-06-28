@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocAccountViewController" customModule="medlink" customModuleProvider="target">
             <connections>
+                <outlet property="btn_save" destination="9jD-dD-56i" id="Sg2-3w-FN4"/>
+                <outlet property="btn_sign_out" destination="Gjb-ZJ-e2T" id="Rd7-Wa-qWI"/>
                 <outlet property="emailTextField" destination="nng-SA-t1n" id="YGp-uV-wU4"/>
                 <outlet property="firstNameTextField" destination="ZQm-kF-E0L" id="OIv-25-0sT"/>
-                <outlet property="lastNameTextField" destination="nng-SA-t1n" id="SnO-r1-H7v"/>
+                <outlet property="label_email" destination="Z7s-M5-yJm" id="Xq2-U2-i7Z"/>
+                <outlet property="label_first_name" destination="hy6-HS-SXT" id="5Xn-fg-Loo"/>
+                <outlet property="label_last_name" destination="v09-nL-tKg" id="eUE-Eu-4ac"/>
+                <outlet property="label_my_account" destination="WX2-0h-itH" id="qeT-wQ-eYo"/>
+                <outlet property="label_phone_number" destination="R42-VR-A8g" id="D0C-i8-9xO"/>
+                <outlet property="label_specialty" destination="yvA-hH-abb" id="VWY-BB-8uy"/>
+                <outlet property="lastNameTextField" destination="ivB-UA-yuY" id="t7L-QD-bbx"/>
                 <outlet property="phoneNumberTextField" destination="lzh-Fs-HYu" id="2Xe-od-Ho5"/>
                 <outlet property="specialityTextField" destination="mob-WJ-nqE" id="1qv-SI-oqQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

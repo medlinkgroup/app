@@ -13,13 +13,24 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var login_Btn: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var signUpBtn: UIButton!
-       
+    @IBOutlet var label_login_title: UILabel!
+    @IBOutlet var label_username: UILabel!
+    @IBOutlet var label_password: UILabel!
+    @IBOutlet var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
 
+        
+        login_Btn.setTitle(NSLocalizedString("login", comment: ""), for: .normal)
+        signUpBtn.setTitle(NSLocalizedString("signup", comment: ""), for: .normal)
+        signUpBtn.titleLabel?.textAlignment = NSTextAlignment.center
+        label_login_title.text = NSLocalizedString("login", comment: "")
+        label_username.text = NSLocalizedString("email", comment: "")
+        label_password.text = NSLocalizedString("password", comment: "")
+        
         //AuthCheck()
         errorLabel.alpha = 0
 
@@ -70,7 +81,7 @@ class HomeViewController: UIViewController {
                    // connection
                    Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                        if error != nil {
-                           self.showError("Mot de passe incorrect")
+                           self.showError(NSLocalizedString("incorrect_pass", comment: ""))
                        } else {
                            self.navigationController?.setViewControllers([NavBarController()], animated: true)
                        }

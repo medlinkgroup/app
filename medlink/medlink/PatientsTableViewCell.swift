@@ -11,9 +11,13 @@ import UIKit
 class PatientsTableViewCell: UITableViewCell {
 
     @IBOutlet var label_patient_name: UILabel!
+    @IBOutlet var label_patient_first_name: UILabel!
+    @IBOutlet var img_patient: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        label_patient_name.text = label_patient_name.text?.uppercased()
         // Initialization code
     }
 

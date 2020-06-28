@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocDashboardListViewController" customModule="medlink" customModuleProvider="target">
             <connections>
+                <outlet property="btn_add_object" destination="gQC-gz-F36" id="FRa-GQ-tcY"/>
                 <outlet property="consultationsTableView" destination="C4q-50-NNi" id="DHF-jC-TNz"/>
-                <outlet property="label_consultations" destination="iGs-Y3-C8M" id="coK-zW-gp0"/>
-                <outlet property="label_dashboard" destination="KPa-Ts-H6i" id="0xM-zp-YyF"/>
+                <outlet property="img_add_consultation" destination="pGC-3d-djN" id="y6K-Vh-aVn"/>
+                <outlet property="img_add_patient" destination="qfr-zM-DF4" id="MAY-4P-EY3"/>
+                <outlet property="label_consultations" destination="iGs-Y3-C8M" id="Ax7-Tq-qMN"/>
+                <outlet property="label_dashboard" destination="KPa-Ts-H6i" id="krY-hT-DZ5"/>
+                <outlet property="mapView" destination="ghN-8y-wDs" id="nQ7-eB-tBI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,45 +26,85 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cu3-es-XQg">
                     <rect key="frame" x="0.0" y="-44" width="414" height="940"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPa-Ts-H6i">
-                            <rect key="frame" x="28" y="100" width="358" height="39"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPa-Ts-H6i">
+                            <rect key="frame" x="29" y="139" width="355" height="39"/>
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGs-Y3-C8M">
-                            <rect key="frame" x="28" y="270" width="358" height="31"/>
+                            <rect key="frame" x="28" y="296" width="217" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="217" id="ktm-m6-nNL"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.1058823529" alpha="0.4279751712" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C4q-50-NNi">
-                            <rect key="frame" x="0.0" y="309" width="414" height="523"/>
+                            <rect key="frame" x="0.0" y="334" width="414" height="523"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="523" id="0bv-79-MXl"/>
                             </constraints>
                         </tableView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="H7T-eQ-VhX">
-                            <rect key="frame" x="132" y="150" width="150" height="112"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_add_patient_title" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-zM-DF4">
+                            <rect key="frame" x="364" y="288" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="1hQ-IC-s8M"/>
+                                <constraint firstAttribute="width" constant="40" id="OXl-mV-oac"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_add_consultation_black" translatesAutoresizingMaskIntoConstraints="NO" id="pGC-3d-djN">
+                            <rect key="frame" x="314" y="293" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="0Qc-ve-JIR"/>
+                                <constraint firstAttribute="width" constant="33" id="zBY-Lt-QXE"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghN-8y-wDs">
+                            <rect key="frame" x="344" y="154" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Map" image="icon_map"/>
+                            <connections>
+                                <action selector="map_view:" destination="-1" eventType="touchUpInside" id="tTy-t9-kx1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-gz-F36">
+                            <rect key="frame" x="253" y="291" width="35" height="34"/>
+                            <state key="normal" title="objet" image="icon_add_object"/>
+                            <connections>
+                                <action selector="btn_add_object:" destination="-1" eventType="touchUpInside" id="pYO-7u-m97"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="H7T-eQ-VhX">
+                            <rect key="frame" x="173" y="176" width="68" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="bdN-OE-skm"/>
+                                <constraint firstAttribute="width" constant="68" id="rh5-P2-fId"/>
+                            </constraints>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.79796293220000003" green="0.87132878940000003" blue="0.91894416209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstItem="KPa-Ts-H6i" firstAttribute="top" secondItem="cu3-es-XQg" secondAttribute="top" constant="100" id="0XW-bt-2Gd"/>
-                        <constraint firstAttribute="trailing" secondItem="H7T-eQ-VhX" secondAttribute="trailing" constant="132" id="6Qg-sg-GO7"/>
-                        <constraint firstItem="KPa-Ts-H6i" firstAttribute="centerX" secondItem="cu3-es-XQg" secondAttribute="centerX" id="6we-aX-sWA"/>
-                        <constraint firstItem="C4q-50-NNi" firstAttribute="top" secondItem="iGs-Y3-C8M" secondAttribute="bottom" constant="8" id="9SN-GO-bLf"/>
-                        <constraint firstItem="H7T-eQ-VhX" firstAttribute="top" secondItem="KPa-Ts-H6i" secondAttribute="bottom" constant="11" id="9Zd-Q7-wvJ"/>
-                        <constraint firstItem="iGs-Y3-C8M" firstAttribute="leading" secondItem="cu3-es-XQg" secondAttribute="leading" constant="28" id="CXH-lI-hu2"/>
+                        <constraint firstItem="C4q-50-NNi" firstAttribute="top" secondItem="qfr-zM-DF4" secondAttribute="bottom" constant="6" id="8YQ-Pn-iIn"/>
                         <constraint firstItem="C4q-50-NNi" firstAttribute="leading" secondItem="cu3-es-XQg" secondAttribute="leading" id="ERb-gk-pjP"/>
-                        <constraint firstItem="KPa-Ts-H6i" firstAttribute="leading" secondItem="cu3-es-XQg" secondAttribute="leading" constant="28" id="bzJ-Xm-DIf"/>
-                        <constraint firstItem="iGs-Y3-C8M" firstAttribute="top" secondItem="H7T-eQ-VhX" secondAttribute="bottom" constant="8" id="dyq-Jo-laK"/>
-                        <constraint firstItem="H7T-eQ-VhX" firstAttribute="leading" secondItem="cu3-es-XQg" secondAttribute="leading" constant="132" id="hDk-b3-G55"/>
-                        <constraint firstItem="KPa-Ts-H6i" firstAttribute="centerX" secondItem="cu3-es-XQg" secondAttribute="centerX" id="hng-Kr-ozW"/>
-                        <constraint firstAttribute="trailing" secondItem="iGs-Y3-C8M" secondAttribute="trailing" constant="28" id="nA8-gW-ZHw"/>
+                        <constraint firstItem="iGs-Y3-C8M" firstAttribute="top" secondItem="H7T-eQ-VhX" secondAttribute="bottom" constant="70" id="Eb0-zh-q5b"/>
+                        <constraint firstItem="iGs-Y3-C8M" firstAttribute="leading" secondItem="cu3-es-XQg" secondAttribute="leading" constant="28" id="KD1-4O-YU6"/>
+                        <constraint firstItem="pGC-3d-djN" firstAttribute="leading" secondItem="gQC-gz-F36" secondAttribute="trailing" constant="26" id="SNu-YC-fqr"/>
+                        <constraint firstItem="gQC-gz-F36" firstAttribute="centerY" secondItem="qfr-zM-DF4" secondAttribute="centerY" id="UKd-QC-Zvj"/>
+                        <constraint firstAttribute="trailing" secondItem="KPa-Ts-H6i" secondAttribute="trailing" constant="30" id="Ycm-aG-f0Q"/>
+                        <constraint firstItem="qfr-zM-DF4" firstAttribute="top" secondItem="cu3-es-XQg" secondAttribute="top" constant="288" id="Zia-3K-h44"/>
+                        <constraint firstItem="C4q-50-NNi" firstAttribute="top" secondItem="iGs-Y3-C8M" secondAttribute="bottom" constant="7" id="cKu-9d-gnK"/>
+                        <constraint firstItem="C4q-50-NNi" firstAttribute="top" secondItem="gQC-gz-F36" secondAttribute="bottom" constant="9" id="d01-3j-cun"/>
+                        <constraint firstItem="C4q-50-NNi" firstAttribute="top" secondItem="pGC-3d-djN" secondAttribute="bottom" constant="8" id="drf-qX-uRY"/>
+                        <constraint firstAttribute="trailing" secondItem="qfr-zM-DF4" secondAttribute="trailing" constant="10" id="eLF-dI-42i"/>
+                        <constraint firstItem="KPa-Ts-H6i" firstAttribute="top" secondItem="cu3-es-XQg" secondAttribute="top" constant="139" id="gjg-5s-gMh"/>
+                        <constraint firstItem="gQC-gz-F36" firstAttribute="leading" secondItem="iGs-Y3-C8M" secondAttribute="trailing" constant="8" symbolic="YES" id="hPX-Gz-eRt"/>
+                        <constraint firstItem="qfr-zM-DF4" firstAttribute="leading" secondItem="pGC-3d-djN" secondAttribute="trailing" constant="17" id="pco-Yd-LX7"/>
+                        <constraint firstItem="KPa-Ts-H6i" firstAttribute="leading" secondItem="cu3-es-XQg" secondAttribute="leading" constant="29" id="pyB-un-w0o"/>
+                        <constraint firstItem="H7T-eQ-VhX" firstAttribute="centerX" secondItem="cu3-es-XQg" secondAttribute="centerX" id="st2-5x-foA"/>
                         <constraint firstAttribute="trailing" secondItem="C4q-50-NNi" secondAttribute="trailing" id="vhe-hJ-3KO"/>
-                        <constraint firstAttribute="trailing" secondItem="KPa-Ts-H6i" secondAttribute="trailing" constant="28" id="x4r-FM-69v"/>
                     </constraints>
                 </view>
             </subviews>
@@ -75,6 +119,10 @@
         </view>
     </objects>
     <resources>
-        <image name="logo" width="127" height="112"/>
+        <image name="icon_add_consultation_black" width="512" height="512"/>
+        <image name="icon_add_object" width="512" height="512"/>
+        <image name="icon_add_patient_title" width="427" height="389"/>
+        <image name="icon_map" width="512" height="512"/>
+        <image name="logo" width="397" height="356"/>
     </resources>
 </document>

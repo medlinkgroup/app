@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5671ADA97027FEC6D9EFFB60 /* Pods_medlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4BC736FF6FEFC0A5FE9B44 /* Pods_medlink.framework */; };
+		7A08D36424A2A6B4004D7E8B /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A08D36024A2A6B4004D7E8B /* Accelerometer.swift */; };
+		7A08D36524A2A6B4004D7E8B /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A08D36124A2A6B4004D7E8B /* Temperature.swift */; };
+		7A08D36624A2A6B4004D7E8B /* TemperatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A08D36224A2A6B4004D7E8B /* TemperatureService.swift */; };
+		7A08D36724A2A6B4004D7E8B /* AccelerometerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A08D36324A2A6B4004D7E8B /* AccelerometerService.swift */; };
+		7A08D36D24A2A6DE004D7E8B /* AccelerometerApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A08D36824A2A6DE004D7E8B /* AccelerometerApiService.swift */; };
+		7A08D36E24A2A6DE004D7E8B /* AccelerometerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A08D36924A2A6DE004D7E8B /* AccelerometerFactory.swift */; };
+		7A08D37024A2A6DE004D7E8B /* TemperatureApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A08D36B24A2A6DE004D7E8B /* TemperatureApiService.swift */; };
+		7A08D37124A2A6DE004D7E8B /* TemperatureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A08D36C24A2A6DE004D7E8B /* TemperatureFactory.swift */; };
 		7A628BA92456FD5500C3FAFE /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A628BA72456FD5500C3FAFE /* NavBarController.swift */; };
 		7A628BAA2456FD5500C3FAFE /* NavBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A628BA82456FD5500C3FAFE /* NavBarController.xib */; };
 		7A628BB124571D9000C3FAFE /* DocAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A628BAF24571D9000C3FAFE /* DocAccountViewController.swift */; };
@@ -30,6 +38,26 @@
 		7A6F8F9C249A40BD00281048 /* ConsultationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F9B249A40BD00281048 /* ConsultationFactory.swift */; };
 		7A6F8F9E249A40E300281048 /* ConsultationApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F9D249A40E300281048 /* ConsultationApiService.swift */; };
 		7A6F8FA0249A48A400281048 /* ConsultationMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F8F9F249A48A400281048 /* ConsultationMockService.swift */; };
+		7AB47B7C24A6400000A352BE /* Objet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B7B24A6400000A352BE /* Objet.swift */; };
+		7AB47B7E24A641F100A352BE /* ObjetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B7D24A641F100A352BE /* ObjetService.swift */; };
+		7AB47B8024A6428900A352BE /* ObjetApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B7F24A6428900A352BE /* ObjetApiService.swift */; };
+		7AB47B8224A642BC00A352BE /* ObjetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B8124A642BC00A352BE /* ObjetFactory.swift */; };
+		7AB47B8524A6BED500A352BE /* EditConsultationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B8324A6BED500A352BE /* EditConsultationViewController.swift */; };
+		7AB47B8624A6BED500A352BE /* EditConsultationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B8424A6BED500A352BE /* EditConsultationViewController.xib */; };
+		7AB47B8924A6C24700A352BE /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B8724A6C24700A352BE /* EditPatientViewController.swift */; };
+		7AB47B8A24A6C24700A352BE /* EditPatientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B8824A6C24700A352BE /* EditPatientViewController.xib */; };
+		7AB47B8D24A7219C00A352BE /* PatientsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B8B24A7219B00A352BE /* PatientsMapViewController.swift */; };
+		7AB47B8E24A7219C00A352BE /* PatientsMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B8C24A7219B00A352BE /* PatientsMapViewController.xib */; };
+		7AB47B9124A7376400A352BE /* ObjetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B8F24A7376400A352BE /* ObjetsListViewController.swift */; };
+		7AB47B9224A7376400A352BE /* ObjetsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B9024A7376400A352BE /* ObjetsListViewController.xib */; };
+		7AB47B9524A7381800A352BE /* ObjetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B9324A7381800A352BE /* ObjetsTableViewCell.swift */; };
+		7AB47B9624A7381800A352BE /* ObjetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B9424A7381800A352BE /* ObjetsTableViewCell.xib */; };
+		7AB47B9924A74B3500A352BE /* EditObjetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B9724A74B3500A352BE /* EditObjetViewController.swift */; };
+		7AB47B9A24A74B3500A352BE /* EditObjetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B9824A74B3500A352BE /* EditObjetViewController.xib */; };
+		7AB47B9D24A7627B00A352BE /* AddObjetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB47B9B24A7627B00A352BE /* AddObjetViewController.swift */; };
+		7AB47B9E24A7627B00A352BE /* AddObjetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB47B9C24A7627B00A352BE /* AddObjetViewController.xib */; };
+		7AD00CB3249E5E4C00A5AAC9 /* PatientApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD00CB2249E5E4C00A5AAC9 /* PatientApiService.swift */; };
+		7AD00CB5249E5EEB00A5AAC9 /* PatientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD00CB4249E5EEB00A5AAC9 /* PatientFactory.swift */; };
 		CE02178B24619A9A00D36114 /* DocDashboardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02178924619A9A00D36114 /* DocDashboardListViewController.swift */; };
 		CE02178C24619A9A00D36114 /* DocDashboardListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02178A24619A9A00D36114 /* DocDashboardListViewController.xib */; };
 		CE0217922461B9A300D36114 /* Consultation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0217912461B9A300D36114 /* Consultation.swift */; };
@@ -49,6 +77,8 @@
 		CE6B29D9249A700E001F3732 /* PatientMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B29D8249A700E001F3732 /* PatientMockService.swift */; };
 		CE6B29DC249A79B3001F3732 /* PatientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B29DA249A79B3001F3732 /* PatientDetailViewController.swift */; };
 		CE6B29DD249A79B3001F3732 /* PatientDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6B29DB249A79B3001F3732 /* PatientDetailViewController.xib */; };
+		CEE47BE8249E47E30051D3C8 /* LineGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE47BE6249E47E30051D3C8 /* LineGraphViewController.swift */; };
+		CEE47BE9249E47E30051D3C8 /* LineGraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE47BE7249E47E30051D3C8 /* LineGraphViewController.xib */; };
 		CEF124EA246048A100534FA5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF124EC246048A100534FA5 /* Localizable.strings */; };
 		CEF1250124607CAE00534FA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1AED9F24212C96009A86D2 /* Assets.xcassets */; };
 		E407D49F0A7EF61B263FFFBC /* Pods_medlinkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */; };
@@ -66,6 +96,14 @@
 
 /* Begin PBXFileReference section */
 		65B55DBF0DCDDF43947C069D /* Pods-medlinkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlinkTests.release.xcconfig"; path = "Target Support Files/Pods-medlinkTests/Pods-medlinkTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A08D36024A2A6B4004D7E8B /* Accelerometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accelerometer.swift; sourceTree = "<group>"; };
+		7A08D36124A2A6B4004D7E8B /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		7A08D36224A2A6B4004D7E8B /* TemperatureService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureService.swift; sourceTree = "<group>"; };
+		7A08D36324A2A6B4004D7E8B /* AccelerometerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerService.swift; sourceTree = "<group>"; };
+		7A08D36824A2A6DE004D7E8B /* AccelerometerApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerApiService.swift; sourceTree = "<group>"; };
+		7A08D36924A2A6DE004D7E8B /* AccelerometerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerFactory.swift; sourceTree = "<group>"; };
+		7A08D36B24A2A6DE004D7E8B /* TemperatureApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureApiService.swift; sourceTree = "<group>"; };
+		7A08D36C24A2A6DE004D7E8B /* TemperatureFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureFactory.swift; sourceTree = "<group>"; };
 		7A628BA72456FD5500C3FAFE /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		7A628BA82456FD5500C3FAFE /* NavBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavBarController.xib; sourceTree = "<group>"; };
 		7A628BAF24571D9000C3FAFE /* DocAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocAccountViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +126,26 @@
 		7A6F8F9B249A40BD00281048 /* ConsultationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationFactory.swift; sourceTree = "<group>"; };
 		7A6F8F9D249A40E300281048 /* ConsultationApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationApiService.swift; sourceTree = "<group>"; };
 		7A6F8F9F249A48A400281048 /* ConsultationMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationMockService.swift; sourceTree = "<group>"; };
+		7AB47B7B24A6400000A352BE /* Objet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objet.swift; sourceTree = "<group>"; };
+		7AB47B7D24A641F100A352BE /* ObjetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetService.swift; sourceTree = "<group>"; };
+		7AB47B7F24A6428900A352BE /* ObjetApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetApiService.swift; sourceTree = "<group>"; };
+		7AB47B8124A642BC00A352BE /* ObjetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetFactory.swift; sourceTree = "<group>"; };
+		7AB47B8324A6BED500A352BE /* EditConsultationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditConsultationViewController.swift; sourceTree = "<group>"; };
+		7AB47B8424A6BED500A352BE /* EditConsultationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditConsultationViewController.xib; sourceTree = "<group>"; };
+		7AB47B8724A6C24700A352BE /* EditPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
+		7AB47B8824A6C24700A352BE /* EditPatientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPatientViewController.xib; sourceTree = "<group>"; };
+		7AB47B8B24A7219B00A352BE /* PatientsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsMapViewController.swift; sourceTree = "<group>"; };
+		7AB47B8C24A7219B00A352BE /* PatientsMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientsMapViewController.xib; sourceTree = "<group>"; };
+		7AB47B8F24A7376400A352BE /* ObjetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetsListViewController.swift; sourceTree = "<group>"; };
+		7AB47B9024A7376400A352BE /* ObjetsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjetsListViewController.xib; sourceTree = "<group>"; };
+		7AB47B9324A7381800A352BE /* ObjetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetsTableViewCell.swift; sourceTree = "<group>"; };
+		7AB47B9424A7381800A352BE /* ObjetsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjetsTableViewCell.xib; sourceTree = "<group>"; };
+		7AB47B9724A74B3500A352BE /* EditObjetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditObjetViewController.swift; sourceTree = "<group>"; };
+		7AB47B9824A74B3500A352BE /* EditObjetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditObjetViewController.xib; sourceTree = "<group>"; };
+		7AB47B9B24A7627B00A352BE /* AddObjetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObjetViewController.swift; sourceTree = "<group>"; };
+		7AB47B9C24A7627B00A352BE /* AddObjetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddObjetViewController.xib; sourceTree = "<group>"; };
+		7AD00CB2249E5E4C00A5AAC9 /* PatientApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientApiService.swift; sourceTree = "<group>"; };
+		7AD00CB4249E5EEB00A5AAC9 /* PatientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PatientFactory.swift; path = /Users/cylia.boukhiba/Documents/Cours/pa/fabi3/app/medlink/medlink/Ressources/Platforms/Api/PatientFactory.swift; sourceTree = "<absolute>"; };
 		8BD1A4BEBE60B4AC8BC4CC54 /* Pods_medlinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90961D039CD43F420F5747AF /* Pods-medlink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medlink.release.xcconfig"; path = "Target Support Files/Pods-medlink/Pods-medlink.release.xcconfig"; sourceTree = "<group>"; };
 		9B4BC736FF6FEFC0A5FE9B44 /* Pods_medlink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medlink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +174,8 @@
 		CE6B29D8249A700E001F3732 /* PatientMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMockService.swift; sourceTree = "<group>"; };
 		CE6B29DA249A79B3001F3732 /* PatientDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailViewController.swift; sourceTree = "<group>"; };
 		CE6B29DB249A79B3001F3732 /* PatientDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientDetailViewController.xib; sourceTree = "<group>"; };
+		CEE47BE6249E47E30051D3C8 /* LineGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphViewController.swift; sourceTree = "<group>"; };
+		CEE47BE7249E47E30051D3C8 /* LineGraphViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineGraphViewController.xib; sourceTree = "<group>"; };
 		CEF124E72460487A00534FA5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CEF124EB246048A100534FA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF124ED246048A700534FA5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -177,6 +237,14 @@
 				7A6F8F95249934D800281048 /* DoctorFactory.swift */,
 				7A6F8F9D249A40E300281048 /* ConsultationApiService.swift */,
 				7A6F8F9B249A40BD00281048 /* ConsultationFactory.swift */,
+				7A08D36824A2A6DE004D7E8B /* AccelerometerApiService.swift */,
+				7A08D36924A2A6DE004D7E8B /* AccelerometerFactory.swift */,
+				7A08D36B24A2A6DE004D7E8B /* TemperatureApiService.swift */,
+				7A08D36C24A2A6DE004D7E8B /* TemperatureFactory.swift */,
+				7AD00CB2249E5E4C00A5AAC9 /* PatientApiService.swift */,
+				7AD00CB4249E5EEB00A5AAC9 /* PatientFactory.swift */,
+				7AB47B7F24A6428900A352BE /* ObjetApiService.swift */,
+				7AB47B8124A642BC00A352BE /* ObjetFactory.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -196,10 +264,16 @@
 			children = (
 				CE0217952461B9E000D36114 /* Doctor.swift */,
 				7A6F8F93249933AD00281048 /* DoctorService.swift */,
+				7A08D36024A2A6B4004D7E8B /* Accelerometer.swift */,
+				7A08D36324A2A6B4004D7E8B /* AccelerometerService.swift */,
+				7A08D36124A2A6B4004D7E8B /* Temperature.swift */,
+				7A08D36224A2A6B4004D7E8B /* TemperatureService.swift */,
 				CE0217912461B9A300D36114 /* Consultation.swift */,
 				7A6F8F97249A2BD200281048 /* ConsultationService.swift */,
 				CE0217932461B9C800D36114 /* Patient.swift */,
 				7A6F8F99249A2BE700281048 /* PatientService.swift */,
+				7AB47B7B24A6400000A352BE /* Objet.swift */,
+				7AB47B7D24A641F100A352BE /* ObjetService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -257,6 +331,22 @@
 				7A6F8F892499127F00281048 /* PatientsListViewController.xib */,
 				CE6B29DA249A79B3001F3732 /* PatientDetailViewController.swift */,
 				CE6B29DB249A79B3001F3732 /* PatientDetailViewController.xib */,
+				CEE47BE6249E47E30051D3C8 /* LineGraphViewController.swift */,
+				CEE47BE7249E47E30051D3C8 /* LineGraphViewController.xib */,
+				7AB47B8324A6BED500A352BE /* EditConsultationViewController.swift */,
+				7AB47B8424A6BED500A352BE /* EditConsultationViewController.xib */,
+				7AB47B8724A6C24700A352BE /* EditPatientViewController.swift */,
+				7AB47B8824A6C24700A352BE /* EditPatientViewController.xib */,
+				7AB47B8B24A7219B00A352BE /* PatientsMapViewController.swift */,
+				7AB47B8C24A7219B00A352BE /* PatientsMapViewController.xib */,
+				7AB47B8F24A7376400A352BE /* ObjetsListViewController.swift */,
+				7AB47B9024A7376400A352BE /* ObjetsListViewController.xib */,
+				7AB47B9324A7381800A352BE /* ObjetsTableViewCell.swift */,
+				7AB47B9424A7381800A352BE /* ObjetsTableViewCell.xib */,
+				7AB47B9724A74B3500A352BE /* EditObjetViewController.swift */,
+				7AB47B9824A74B3500A352BE /* EditObjetViewController.xib */,
+				7AB47B9B24A7627B00A352BE /* AddObjetViewController.swift */,
+				7AB47B9C24A7627B00A352BE /* AddObjetViewController.xib */,
 			);
 			path = medlink;
 			sourceTree = "<group>";
@@ -381,14 +471,22 @@
 				7A6D180524532F56002E4FB2 /* GoogleService-Info.plist in Resources */,
 				7A628BAA2456FD5500C3FAFE /* NavBarController.xib in Resources */,
 				CE02178C24619A9A00D36114 /* DocDashboardListViewController.xib in Resources */,
+				7AB47B8A24A6C24700A352BE /* EditPatientViewController.xib in Resources */,
 				CE4295332498C1740002DB9A /* PatientsTableViewCell.xib in Resources */,
+				CEE47BE9249E47E30051D3C8 /* LineGraphViewController.xib in Resources */,
 				7A628BB224571D9000C3FAFE /* DocAccountViewController.xib in Resources */,
 				CE2CDD9F2428BCD900034E61 /* HomeSignUpViewController.xib in Resources */,
+				7AB47B9224A7376400A352BE /* ObjetsListViewController.xib in Resources */,
+				7AB47B9A24A74B3500A352BE /* EditObjetViewController.xib in Resources */,
 				CE1AEDA324212C96009A86D2 /* LaunchScreen.storyboard in Resources */,
 				7A628BBA245733C200C3FAFE /* AddPatientViewController.xib in Resources */,
+				7AB47B9624A7381800A352BE /* ObjetsTableViewCell.xib in Resources */,
 				CE42952F2498BF330002DB9A /* ConsultationsTableViewCell.xib in Resources */,
+				7AB47B8624A6BED500A352BE /* EditConsultationViewController.xib in Resources */,
 				CEF1250124607CAE00534FA5 /* Assets.xcassets in Resources */,
 				7A6F8F872499121C00281048 /* AddConsultationViewController.xib in Resources */,
+				7AB47B8E24A7219C00A352BE /* PatientsMapViewController.xib in Resources */,
+				7AB47B9E24A7627B00A352BE /* AddObjetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,31 +569,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A628BB9245733C200C3FAFE /* AddPatientViewController.swift in Sources */,
+				7A08D37124A2A6DE004D7E8B /* TemperatureFactory.swift in Sources */,
 				CE1AED9B24212C93009A86D2 /* ViewController.swift in Sources */,
+				7AB47B9124A7376400A352BE /* ObjetsListViewController.swift in Sources */,
 				7A6F8F822498F94B00281048 /* HomeViewController.swift in Sources */,
 				7A6F8F9A249A2BE700281048 /* PatientService.swift in Sources */,
+				7AD00CB3249E5E4C00A5AAC9 /* PatientApiService.swift in Sources */,
 				7A6F8F98249A2BD200281048 /* ConsultationService.swift in Sources */,
 				CE0217942461B9C800D36114 /* Patient.swift in Sources */,
 				7A6F8F9C249A40BD00281048 /* ConsultationFactory.swift in Sources */,
 				CE42952E2498BF330002DB9A /* ConsultationsTableViewCell.swift in Sources */,
+				7AB47B7C24A6400000A352BE /* Objet.swift in Sources */,
+				7A08D36424A2A6B4004D7E8B /* Accelerometer.swift in Sources */,
 				7A6F8F8A2499127F00281048 /* PatientsListViewController.swift in Sources */,
+				7AB47B9524A7381800A352BE /* ObjetsTableViewCell.swift in Sources */,
 				7A6F8FA0249A48A400281048 /* ConsultationMockService.swift in Sources */,
 				CE1AED9724212C93009A86D2 /* AppDelegate.swift in Sources */,
+				7A08D36E24A2A6DE004D7E8B /* AccelerometerFactory.swift in Sources */,
 				CE6B29DC249A79B3001F3732 /* PatientDetailViewController.swift in Sources */,
+				7A08D36D24A2A6DE004D7E8B /* AccelerometerApiService.swift in Sources */,
 				7A6F8F902499336500281048 /* DoctorApiService.swift in Sources */,
 				CE0217962461B9E000D36114 /* Doctor.swift in Sources */,
+				7AB47B9D24A7627B00A352BE /* AddObjetViewController.swift in Sources */,
+				7A08D36524A2A6B4004D7E8B /* Temperature.swift in Sources */,
+				7A08D36724A2A6B4004D7E8B /* AccelerometerService.swift in Sources */,
+				7AB47B8524A6BED500A352BE /* EditConsultationViewController.swift in Sources */,
+				CEE47BE8249E47E30051D3C8 /* LineGraphViewController.swift in Sources */,
 				7A6F8F922499338D00281048 /* DoctorMockService.swift in Sources */,
 				7A6F8F94249933AD00281048 /* DoctorService.swift in Sources */,
+				7AB47B7E24A641F100A352BE /* ObjetService.swift in Sources */,
+				7AD00CB5249E5EEB00A5AAC9 /* PatientFactory.swift in Sources */,
 				7A6F8F9E249A40E300281048 /* ConsultationApiService.swift in Sources */,
 				CE42952B249772510002DB9A /* UserUtils.swift in Sources */,
 				CE6B29D9249A700E001F3732 /* PatientMockService.swift in Sources */,
 				7A628BB124571D9000C3FAFE /* DocAccountViewController.swift in Sources */,
+				7AB47B8924A6C24700A352BE /* EditPatientViewController.swift in Sources */,
 				7A6F8F96249934D800281048 /* DoctorFactory.swift in Sources */,
 				CE4295322498C1740002DB9A /* PatientsTableViewCell.swift in Sources */,
+				7A08D36624A2A6B4004D7E8B /* TemperatureService.swift in Sources */,
+				7AB47B8D24A7219C00A352BE /* PatientsMapViewController.swift in Sources */,
+				7AB47B8024A6428900A352BE /* ObjetApiService.swift in Sources */,
 				7A6F8F862499121C00281048 /* AddConsultationViewController.swift in Sources */,
 				7A628BA92456FD5500C3FAFE /* NavBarController.swift in Sources */,
 				CE0217922461B9A300D36114 /* Consultation.swift in Sources */,
+				7A08D37024A2A6DE004D7E8B /* TemperatureApiService.swift in Sources */,
 				CE02178B24619A9A00D36114 /* DocDashboardListViewController.swift in Sources */,
+				7AB47B9924A74B3500A352BE /* EditObjetViewController.swift in Sources */,
+				7AB47B8224A642BC00A352BE /* ObjetFactory.swift in Sources */,
 				CE2CDD9E2428BCD900034E61 /* HomeSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

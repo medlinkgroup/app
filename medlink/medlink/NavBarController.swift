@@ -35,30 +35,35 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         navBarCont = UITabBarController()
         
         navBarCont.delegate = self
-        
-        let optionD = UINavigationController(rootViewController: DocDashboardListViewController())
-        optionD.isNavigationBarHidden = false
-        optionD.tabBarItem.title="Home"
-        let image4 = UIImage(named: "Home")
-        optionD.tabBarItem.image = image4
-        
-        let optionA = UINavigationController(rootViewController: DocAccountViewController())
-        optionA.setNavigationBarHidden(true, animated: true)
-        optionA.isNavigationBarHidden = true
-        optionA.tabBarItem.title="Account"
-        let image1 = UIImage(named: "Account")
-        optionA.tabBarItem.image  = image1
-        
 
-        let optionC = UINavigationController(rootViewController: PatientsListViewController())
-        optionC.isNavigationBarHidden = true
-        optionC.tabBarItem.title="Patients"
-        let image3 = UIImage(named: "")
-        optionC.tabBarItem.image = image3
+        let optionA = UINavigationController(rootViewController: DocDashboardListViewController())
+        //optionD.isNavigationBarHidden = false
+        optionA.tabBarItem.title = NSLocalizedString("home", comment: "")
+        let image4 = UIImage(named: "Home")
+        optionA.tabBarItem.image = image4
         
+        let optionB = UINavigationController(rootViewController: PatientsListViewController())
+        //optionD.isNavigationBarHidden = false
+        optionB.tabBarItem.title = NSLocalizedString("list_patients", comment: "")
+        let image2 = UIImage(named: "list_patients")
+        optionB.tabBarItem.image = image2
+        
+        let optionC = UINavigationController(rootViewController: DocAccountViewController())
+        optionC.setNavigationBarHidden(true, animated: true)
+        //optionA.isNavigationBarHidden = true
+        optionC.tabBarItem.title = NSLocalizedString("view_profile", comment: "")
+        let image1 = UIImage(named: "Account")
+        optionC.tabBarItem.image  = image1
+        
+        
+        let optionD = UINavigationController(rootViewController: ObjetsListViewController())
+        //optionD.isNavigationBarHidden = false
+        optionD.tabBarItem.title = NSLocalizedString("list_objects", comment: "")
+        let image3 = UIImage(named: "list_objects")
+        optionD.tabBarItem.image = image3
     
      
-        navBarCont.viewControllers = [optionD, optionC, optionA]
+        navBarCont.viewControllers = [optionA, optionB, optionD, optionC]
         self.view.addSubview(navBarCont.view)
     }
 }

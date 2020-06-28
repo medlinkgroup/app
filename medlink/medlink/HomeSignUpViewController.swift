@@ -18,7 +18,7 @@ class HomeSignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet var btn_sign_in: UIButton!
     
     @IBOutlet var label_sign_up_title: UILabel!
     @IBOutlet var label_email: UILabel!
@@ -26,10 +26,12 @@ class HomeSignUpViewController: UIViewController {
     @IBOutlet var label_first_name: UILabel!
     @IBOutlet var label_last_name: UILabel!
     @IBOutlet var btn_sign_up: UIButton!
+    @IBOutlet var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //errorLabel.alpha = 0
+        errorLabel.alpha = 0
+        
         
         label_sign_up_title.text = NSLocalizedString("sign_up_title", comment: "")
         label_last_name.text = NSLocalizedString("lastname", comment: "")
@@ -37,7 +39,7 @@ class HomeSignUpViewController: UIViewController {
         label_email.text = NSLocalizedString("email", comment: "")
         label_password.text = NSLocalizedString("password", comment: "")
         btn_sign_up.setTitle(NSLocalizedString("btn_signup", comment: ""), for: .normal)
-        
+        btn_sign_in.setTitle(NSLocalizedString("sign_in_here", comment: ""), for: .normal)
         
         // Do any additional setup after loading the view.
     }
@@ -65,7 +67,7 @@ class HomeSignUpViewController: UIViewController {
       
              // go to home
              self.navigationController?.setViewControllers([HomeViewController()], animated: true)
-             let alertController = UIAlertController(title: nil, message: "User was sucessfully created", preferredStyle: .alert)
+             let alertController = UIAlertController(title: nil, message: NSLocalizedString("user_created", comment: ""), preferredStyle: .alert)
               alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
              self.present(alertController, animated: true, completion: nil)
     
@@ -87,7 +89,7 @@ class HomeSignUpViewController: UIViewController {
           
             Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
                 if error != nil {
-                    self.showError("Cette email existe")
+                    self.showError(NSLocalizedString("email_exists", comment: ""))
                     return
                 }
                 guard let userID = Auth.auth().currentUser?.uid else { return }
@@ -103,7 +105,7 @@ class HomeSignUpViewController: UIViewController {
                           
                 ]) { (err) in
                         if err != nil {
-                            self.showError("error saveing data user")
+                            self.showError(NSLocalizedString("error_save_data", comment: ""))
                         } else {
                            
                             print("Document added with ID: \(userID)")
@@ -115,6 +117,9 @@ class HomeSignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func go_to_login(_ sender: Any) {
+        self.navigationController?.pushViewController(HomeViewController(), animated: true)
+    }
     /*@IBAction func signUpBtn(_ sender: Any) {
         let error = valedateFields()
         if (error != nil){

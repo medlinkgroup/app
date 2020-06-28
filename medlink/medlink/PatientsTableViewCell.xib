@@ -9,32 +9,64 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ptvc" id="KGk-i7-Jjw" customClass="PatientsTableViewCell" customModule="medlink" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ptvc" rowHeight="108" id="KGk-i7-Jjw" customClass="PatientsTableViewCell" customModule="medlink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="107"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="398" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwP-4V-zHi">
-                        <rect key="frame" x="16" y="8" width="288" height="28"/>
-                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                        <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.15577942440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqk-x3-TWp">
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="107"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzo-e8-iwa">
+                                <rect key="frame" x="130" y="21" width="219" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.36299796039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrt-mi-hbx">
+                                <rect key="frame" x="130" y="55" width="219" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="BXX-2b-ACE"/>
+                                    <constraint firstAttribute="height" constant="21" id="wgf-aa-h8d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.36299796039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iw3-3s-gRs">
+                                <rect key="frame" x="14" y="18" width="70" height="71"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iw3-3s-gRs" firstAttribute="leading" secondItem="fqk-x3-TWp" secondAttribute="leading" constant="14" id="2nf-h8-l5Q"/>
+                            <constraint firstItem="Xrt-mi-hbx" firstAttribute="top" secondItem="Qzo-e8-iwa" secondAttribute="bottom" constant="6" id="EuH-x4-bfz"/>
+                            <constraint firstItem="Xrt-mi-hbx" firstAttribute="leading" secondItem="Qzo-e8-iwa" secondAttribute="leading" id="Flh-cO-Rhw"/>
+                            <constraint firstAttribute="trailing" secondItem="Qzo-e8-iwa" secondAttribute="trailing" constant="49" id="HPz-mh-YHq"/>
+                            <constraint firstAttribute="bottom" secondItem="iw3-3s-gRs" secondAttribute="bottom" constant="18" id="NEK-gE-JKf"/>
+                            <constraint firstAttribute="trailing" secondItem="iw3-3s-gRs" secondAttribute="trailing" constant="314" id="bKT-M1-onE"/>
+                            <constraint firstAttribute="bottom" secondItem="Xrt-mi-hbx" secondAttribute="bottom" constant="31" id="oXH-82-yMP"/>
+                            <constraint firstItem="iw3-3s-gRs" firstAttribute="top" secondItem="fqk-x3-TWp" secondAttribute="top" constant="18" id="qFu-K3-ltg"/>
+                            <constraint firstItem="Xrt-mi-hbx" firstAttribute="leading" secondItem="fqk-x3-TWp" secondAttribute="leading" constant="130" id="uyo-TG-f7f"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="wwP-4V-zHi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0Ke-8c-fiq"/>
-                    <constraint firstAttribute="trailing" secondItem="wwP-4V-zHi" secondAttribute="trailing" constant="16" id="9eD-cf-S1x"/>
-                    <constraint firstItem="wwP-4V-zHi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hzp-Qj-fHH"/>
-                    <constraint firstItem="wwP-4V-zHi" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lnd-M3-LOy"/>
+                    <constraint firstAttribute="bottom" secondItem="fqk-x3-TWp" secondAttribute="bottom" id="AAk-HQ-83s"/>
+                    <constraint firstItem="fqk-x3-TWp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JCa-2v-01q"/>
+                    <constraint firstItem="fqk-x3-TWp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="p5d-Vb-WuM"/>
+                    <constraint firstAttribute="trailing" secondItem="fqk-x3-TWp" secondAttribute="trailing" id="yXP-7Y-qnO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="label_patient_name" destination="wwP-4V-zHi" id="y6L-X3-VbI"/>
+                <outlet property="img_patient" destination="iw3-3s-gRs" id="Qfq-ef-BNa"/>
+                <outlet property="label_patient_first_name" destination="Xrt-mi-hbx" id="buZ-ve-ZP7"/>
+                <outlet property="label_patient_name" destination="Qzo-e8-iwa" id="y6I-V5-9Tr"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+            <point key="canvasLocation" x="194.20289855072465" y="88.727678571428569"/>
         </tableViewCell>
     </objects>
 </document>
