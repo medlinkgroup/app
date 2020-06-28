@@ -134,7 +134,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
         
               let imageURL = ImageURLText.text,
             
-            let  patient =  ObjectText.text,
+            let  objet =  ObjectText.text,
             
               firstName.count > 0,
               lastName.count > 0,
@@ -142,8 +142,8 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
               place.count > 0,
               date.count > 0,
               phone.count > 0,
-              doctorUid.count > 0
-            //objetUid.count > 0
+              doctorUid.count > 0,
+              objet.count > 0
              else {
                 self.displayError(message: "Missing required field")
             return

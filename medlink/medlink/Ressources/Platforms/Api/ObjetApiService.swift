@@ -11,7 +11,7 @@ import CoreLocation
 
 class ObjetApiService: ObjetService {
     func edit(id: String, name: String, isAttributed: Bool, completion: @escaping (Bool) -> Void) {
-        let body: [String: Any] = [
+            let body: [String: Any] = [
                                  "name": name,
                                  "isAttributed": isAttributed
                              ]
