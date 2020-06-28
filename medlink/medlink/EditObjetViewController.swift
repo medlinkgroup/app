@@ -31,7 +31,7 @@ class EditObjetViewController: UIViewController {
         
         label_edit_object.text = NSLocalizedString("edit_object", comment: "")
         label_object_name.text = NSLocalizedString("object_name", comment: "")
-        label_is_attributed.text = NSLocalizedString("is_attributed", comment: "")
+        label_is_attributed.text = NSLocalizedString("attributed_on", comment: "")
         btn_edit.setTitle(NSLocalizedString("save", comment: ""), for: .normal)
         self.id = editObjet._id
         loadData()

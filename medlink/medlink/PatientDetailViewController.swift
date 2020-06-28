@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseStorage
 
 class PatientDetailViewController: UIViewController {
 
@@ -23,15 +25,30 @@ class PatientDetailViewController: UIViewController {
     @IBOutlet var label_email_val: UILabel!
     @IBOutlet var label_adress_val: UILabel!
     @IBOutlet var label_location_val: UILabel!
-    
+    @IBOutlet var label_objectid: UILabel!
+    @IBOutlet var label_objectid_val: UILabel!
     
     var patientDetail: Patient!
+    
+    var objects = [Objet] ()
+    var selectedObjectId: String?
+    var selectedObjectName: String?
+    var objet : Objet!
+    var id : String?
+    var doctorUID : String?
+    let db = Firestore.firestore()
+    var objetService: ObjetService{
+        return ObjetApiService()
+    }
+    var patientService: PatientService{
+        return PatientAPIService()
+        //return PatientMockService()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //btn_add_consultation.setTitle(NSLocalizedString("add", comment: ""), for: .normal)
-        //label_add_consultation.text = NSLocalizedString("add_consultation", comment: "")
+        label_objectid_val.text = "N/A"
         label_patient_name.text = label_patient_name.text?.uppercased()
         
         //label_patient_name.text = NSLocalizedString("", comment: "")
@@ -40,17 +57,39 @@ class PatientDetailViewController: UIViewController {
         label_email.text = NSLocalizedString("email", comment: "")
         label_adress.text = NSLocalizedString("adress", comment: "")
         label_location.text = NSLocalizedString("location", comment: "")
+        label_objectid.text = NSLocalizedString("objectid", comment: "")
         
         label_birthdate_val.textAlignment = .natural
         label_phone_val.textAlignment = .natural
         label_email_val.textAlignment = .natural
         label_adress_val.textAlignment = .natural
         label_location_val.textAlignment = .natural
+        label_objectid_val.textAlignment = .natural
         
         loadDataDetails()
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+       
+        self.objetService.getAll { (objets) in
+            print(objets)
+            self.objet = objets.first(where: { (objet) -> Bool in
+                objet._id == self.patientDetail.objetUid
+            })
+                
+            if (self.objet != nil){
+                self.label_objectid_val.text = self.objet.name
+            }
+            self.objetService.getAll { (objects) in
+                print(objects)
+                self.objects = objects.filter({$0.isAttributed == false})
+                // filter just doctorId
+                print(self.objects)
+            }
+        }
     }
 
 
@@ -72,13 +111,14 @@ class PatientDetailViewController: UIViewController {
          }*/
         label_patient_name.text = patientDetail.lastName
         label_patient_name.text = label_patient_name.text?.uppercased()
-         label_patient_firstname.text = patientDetail.firstName
-         label_birthdate_val.text = patientDetail.birthDate
-         let first10 = String((label_birthdate_val.text?.prefix(10))!)
-         label_birthdate_val.text = first10
-         label_phone_val.text = patientDetail.phone
-         label_email_val.text = patientDetail.email
-         label_adress_val.text = patientDetail.place
+        label_patient_firstname.text = patientDetail.firstName
+        label_birthdate_val.text = patientDetail.birthDate
+        let first10 = String((label_birthdate_val.text?.prefix(10))!)
+        label_birthdate_val.text = first10
+        label_phone_val.text = patientDetail.phone
+        label_email_val.text = patientDetail.email
+        label_adress_val.text = patientDetail.place
+        //label_objectid_val.text = patientDetail.objetUid
         
         // label_location_val.text = patientDetail.location
         if let pictureURL = patientDetail.photo {

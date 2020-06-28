@@ -32,7 +32,8 @@ class AddObjetViewController: UIViewController, UITextFieldDelegate {
         
         label_add_object.text = NSLocalizedString("add_object", comment: "")
         label_object_name.text = NSLocalizedString("object_name", comment: "")
-        label_is_attributed.text = NSLocalizedString("is_attributed", comment: "")
+        label_is_attributed.text = NSLocalizedString("attributed_off", comment: "")
+        btn_is_attributed.isOn = false
         btn_add.setTitle(NSLocalizedString("add", comment: ""), for: .normal)
         // Do any additional setup after loading the view.
         
