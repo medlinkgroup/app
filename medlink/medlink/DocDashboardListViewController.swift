@@ -189,8 +189,9 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
                             
                 cell.label_patient.text = consultation.title
                 cell.label_time.text = consultation.appointmentTime
+                let lastname = self.patient.lastName.uppercased()
                 if (self.patient != nil){
-                    cell.label_first_name.text = self.patient.firstName +  " " + self.patient.lastName
+                    cell.label_first_name.text = self.patient.firstName +  " " + lastname
                 }
                 //cell.label_first_name.text = consultation.patientUid
                 

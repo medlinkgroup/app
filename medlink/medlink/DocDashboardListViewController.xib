@@ -63,7 +63,7 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghN-8y-wDs">
-                            <rect key="frame" x="344" y="111" width="40" height="40"/>
+                            <rect key="frame" x="344" y="154" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Map" image="icon_map"/>
                             <connections>

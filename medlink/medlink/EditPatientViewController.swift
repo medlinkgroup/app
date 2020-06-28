@@ -141,7 +141,7 @@ class EditPatientViewController: UIViewController, UIPickerViewDelegate {
               
             //objetUid.count > 0
              else {
-                self.displayError(message: "Missing required field")
+                self.displayError(message: NSLocalizedString("missing_field", comment: ""))
             return
         }
           
@@ -151,7 +151,8 @@ class EditPatientViewController: UIViewController, UIPickerViewDelegate {
                   let allPlacemarks = placemarks,
                   let placeloc = allPlacemarks.first,
                   let loc = placeloc.location else {
-                    self.displayError(message: "Address not found")
+                    self.displayError(message: NSLocalizedString("address_not_found", comment: "")
+)
                     return
             }
         
@@ -177,7 +178,9 @@ class EditPatientViewController: UIViewController, UIPickerViewDelegate {
                    }
             }
        
-          let confirmationAlert = UIAlertController(title: "Succes", message: " creation succes.", preferredStyle: UIAlertController.Style.alert)
+          let confirmationAlert = UIAlertController(title: NSLocalizedString("success", comment: "")
+, message: NSLocalizedString("add_success", comment: "")
+, preferredStyle: UIAlertController.Style.alert)
                              confirmationAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:nil ))
                               
                            
@@ -221,8 +224,10 @@ class EditPatientViewController: UIViewController, UIPickerViewDelegate {
        }
       
      func displayError(message: String) {
-                  let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-                  alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                  let alert = UIAlertController(title: NSLocalizedString("error", comment: "")
+, message: message, preferredStyle: .alert)
+                  alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: "")
+, style: .cancel))
                   self.present(alert, animated: true)
               }
         func createObjetPicker(){
@@ -231,7 +236,8 @@ class EditPatientViewController: UIViewController, UIPickerViewDelegate {
                     objectPicker.delegate = self
                     let toolBar = UIToolbar()
                     toolBar.sizeToFit()
-                    let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self,
+                    let doneButton = UIBarButtonItem(title: NSLocalizedString("done", comment: "")
+, style: .plain, target: self,
                     action: #selector(AddPatientViewController.doneObjetPicker))
                     toolBar.setItems([doneButton], animated: false)
                     toolBar.isUserInteractionEnabled = true
@@ -247,7 +253,8 @@ class EditPatientViewController: UIViewController, UIPickerViewDelegate {
        // datePicker.datePickerMode = .date
         let toolbar = UIToolbar()
          toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddPatientViewController.donedatePicker ))
+        let doneButton = UIBarButtonItem(title: NSLocalizedString("done", comment: "")
+, style: .plain, target: self, action: #selector(AddPatientViewController.donedatePicker ))
         toolbar.setItems([doneButton], animated: true)
         toolbar.isUserInteractionEnabled = true
     DateText.inputAccessoryView = toolbar

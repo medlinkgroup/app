@@ -9,24 +9,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ptvc" rowHeight="72" id="KGk-i7-Jjw" customClass="PatientsTableViewCell" customModule="medlink" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="398" height="71"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ptvc" rowHeight="108" id="KGk-i7-Jjw" customClass="PatientsTableViewCell" customModule="medlink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="107"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="398" height="71"/>
+                <rect key="frame" x="0.0" y="0.0" width="398" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqk-x3-TWp">
-                        <rect key="frame" x="0.0" y="0.0" width="398" height="71"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="107"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzo-e8-iwa">
-                                <rect key="frame" x="14" y="7.5" width="219" height="27.5"/>
+                                <rect key="frame" x="130" y="21" width="219" height="28"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <color key="textColor" red="0.061214704160000001" green="0.20097619529999999" blue="0.36299796039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrt-mi-hbx">
-                                <rect key="frame" x="14" y="36" width="219" height="21"/>
+                                <rect key="frame" x="130" y="55" width="219" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="219" id="BXX-2b-ACE"/>
                                     <constraint firstAttribute="height" constant="21" id="wgf-aa-h8d"/>
@@ -36,21 +36,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iw3-3s-gRs">
-                                <rect key="frame" x="324" y="2" width="70" height="70"/>
+                                <rect key="frame" x="14" y="18" width="70" height="71"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Xrt-mi-hbx" firstAttribute="top" secondItem="Qzo-e8-iwa" secondAttribute="bottom" constant="1" id="EuH-x4-bfz"/>
+                            <constraint firstItem="iw3-3s-gRs" firstAttribute="leading" secondItem="fqk-x3-TWp" secondAttribute="leading" constant="14" id="2nf-h8-l5Q"/>
+                            <constraint firstItem="Xrt-mi-hbx" firstAttribute="top" secondItem="Qzo-e8-iwa" secondAttribute="bottom" constant="6" id="EuH-x4-bfz"/>
                             <constraint firstItem="Xrt-mi-hbx" firstAttribute="leading" secondItem="Qzo-e8-iwa" secondAttribute="leading" id="Flh-cO-Rhw"/>
-                            <constraint firstAttribute="bottom" secondItem="iw3-3s-gRs" secondAttribute="bottom" constant="-1" id="NEK-gE-JKf"/>
-                            <constraint firstAttribute="trailing" secondItem="iw3-3s-gRs" secondAttribute="trailing" constant="4" id="bKT-M1-onE"/>
-                            <constraint firstItem="iw3-3s-gRs" firstAttribute="leading" secondItem="Qzo-e8-iwa" secondAttribute="trailing" constant="91" id="enC-Hk-lT8"/>
-                            <constraint firstItem="Xrt-mi-hbx" firstAttribute="trailing" secondItem="Qzo-e8-iwa" secondAttribute="trailing" id="ngN-I2-OUY"/>
-                            <constraint firstAttribute="bottom" secondItem="Xrt-mi-hbx" secondAttribute="bottom" constant="14" id="oXH-82-yMP"/>
-                            <constraint firstItem="iw3-3s-gRs" firstAttribute="top" secondItem="fqk-x3-TWp" secondAttribute="top" constant="2" id="qFu-K3-ltg"/>
-                            <constraint firstItem="Xrt-mi-hbx" firstAttribute="leading" secondItem="fqk-x3-TWp" secondAttribute="leading" constant="14" id="uyo-TG-f7f"/>
-                            <constraint firstItem="iw3-3s-gRs" firstAttribute="leading" secondItem="Xrt-mi-hbx" secondAttribute="trailing" constant="91" id="wN1-JD-duQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Qzo-e8-iwa" secondAttribute="trailing" constant="49" id="HPz-mh-YHq"/>
+                            <constraint firstAttribute="bottom" secondItem="iw3-3s-gRs" secondAttribute="bottom" constant="18" id="NEK-gE-JKf"/>
+                            <constraint firstAttribute="trailing" secondItem="iw3-3s-gRs" secondAttribute="trailing" constant="314" id="bKT-M1-onE"/>
+                            <constraint firstAttribute="bottom" secondItem="Xrt-mi-hbx" secondAttribute="bottom" constant="31" id="oXH-82-yMP"/>
+                            <constraint firstItem="iw3-3s-gRs" firstAttribute="top" secondItem="fqk-x3-TWp" secondAttribute="top" constant="18" id="qFu-K3-ltg"/>
+                            <constraint firstItem="Xrt-mi-hbx" firstAttribute="leading" secondItem="fqk-x3-TWp" secondAttribute="leading" constant="130" id="uyo-TG-f7f"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -67,7 +66,7 @@
                 <outlet property="label_patient_first_name" destination="Xrt-mi-hbx" id="buZ-ve-ZP7"/>
                 <outlet property="label_patient_name" destination="Qzo-e8-iwa" id="y6I-V5-9Tr"/>
             </connections>
-            <point key="canvasLocation" x="194.20289855072465" y="100.78125"/>
+            <point key="canvasLocation" x="194.20289855072465" y="88.727678571428569"/>
         </tableViewCell>
     </objects>
 </document>

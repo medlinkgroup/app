@@ -80,3 +80,4 @@
 "not_available" = "Non Attribué";
 "isAtt_desc" = "Cet appareil est en train d'être utilisé par un patient.";
 "isNotAtt_desc" = "Cet appareil n'est utilisé par aucun patient.";
+"address_not_found" = "Adresse non trouvée";

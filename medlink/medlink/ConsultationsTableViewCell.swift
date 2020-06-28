@@ -16,7 +16,6 @@ class ConsultationsTableViewCell: UITableViewCell {
     
     //new fields
     @IBOutlet var label_first_name: UILabel! //patient prenom
-    @IBOutlet var label_last_name: UILabel! //patient nom
     @IBOutlet var label_time: UILabel! //heure
     
     override func awakeFromNib() {

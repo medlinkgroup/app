@@ -63,7 +63,7 @@ class NavBarController: UITabBarController , UITabBarControllerDelegate {
         optionD.tabBarItem.image = image3
     
      
-        navBarCont.viewControllers = [optionA, optionB, optionC, optionD]
+        navBarCont.viewControllers = [optionA, optionB, optionD, optionC]
         self.view.addSubview(navBarCont.view)
     }
 }
