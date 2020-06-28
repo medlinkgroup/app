@@ -187,25 +187,37 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
           }
       }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-              let consultation = self.consultations[indexPath.row]
-              if editingStyle == UITableViewCell.EditingStyle.delete {
+        if let tableSection = TableSection(rawValue: indexPath.section) {
             
-              let refreshAlert = UIAlertController(title: NSLocalizedString("delete", comment: ""), message: NSLocalizedString("confirm_delete", comment: ""), preferredStyle: UIAlertController.Style.alert)
-              refreshAlert.addAction(UIAlertAction(title: NSLocalizedString("yes", comment: ""), style: .default, handler: { (action: UIAlertAction!) in do {
+            
+                           
+                    
+            //let consultation = self.consultations[indexPath.row]
+            let consultation = data[tableSection]?[indexPath.row]
+              self.consultationEdit = consultation
+                         if editingStyle == UITableViewCell.EditingStyle.delete {
                        
-                       self.consultationService.delete( id: consultation._id){
-                                                    (success) in print(success)
-                                                      //self.events.remove(at: indexPath.row)
-                                                      //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-                          self.viewWillAppear(true)
-                                                }
-                       }
-                       
-                      }))
+                         let refreshAlert = UIAlertController(title: NSLocalizedString("delete", comment: ""), message: NSLocalizedString("confirm_delete", comment: ""), preferredStyle: UIAlertController.Style.alert)
+                         refreshAlert.addAction(UIAlertAction(title: NSLocalizedString("yes", comment: ""), style: .default, handler: { (action: UIAlertAction!) in do {
+                                  
+                            self.consultationService.delete( id: self.consultationEdit._id ){
+                                                               (success) in print(success)
+                                                                 //self.events.remove(at: indexPath.row)
+                                                                 //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                                     self.viewWillAppear(true)
+                                                           }
+                                  }
+                                  
+                                 }))
+                        
+                         refreshAlert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler:nil ))
+                              self.present(refreshAlert, animated: true, completion: nil)
+                        }
+            
+        }
+                 
+        
              
-              refreshAlert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler:nil ))
-                   self.present(refreshAlert, animated: true, completion: nil)
-             }
                 
     }
     
@@ -213,9 +225,14 @@ class DocDashboardListViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
      {
             let closeAction = UIContextualAction(style: .normal, title:  NSLocalizedString("modify", comment: ""), handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-            let consultation = self.consultations[indexPath.row]
-                print(indexPath.row)
-            self.consultationEdit = consultation
+                
+                if let tableSection = TableSection(rawValue: indexPath.section){
+                    let consultation = self.data[tableSection]?[indexPath.row]
+                                 self.consultationEdit = consultation
+                }
+          //  let consultation = self.consultations[indexPath.row]
+               // print(indexPath.row)
+           // self.consultationEdit = consultation
                 
             let next = EditConsultationViewController().newInstance(detail: self.consultationEdit)
                 // self.navigationController?.pushViewController(next, animated: true)
