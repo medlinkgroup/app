@@ -13,7 +13,12 @@ class ConsultationsTableViewCell: UITableViewCell {
     
     @IBOutlet var label_patient: UILabel!
     @IBOutlet var label_date: UILabel!
-
+    
+    //new fields
+    @IBOutlet var label_first_name: UILabel! //patient prenom
+    @IBOutlet var label_last_name: UILabel! //patient nom
+    @IBOutlet var label_time: UILabel! //heure
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
