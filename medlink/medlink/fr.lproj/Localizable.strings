@@ -81,3 +81,7 @@
 "isAtt_desc" = "Cet appareil est en train d'être utilisé par un patient.";
 "isNotAtt_desc" = "Cet appareil n'est utilisé par aucun patient.";
 "address_not_found" = "Adresse non trouvée";
+"stddv" = "Écart type";
+"avg" = "Moyenne";
+"max" = "Valeur Maximum";
+"min" = "Valeur Minimum";

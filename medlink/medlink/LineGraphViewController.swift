@@ -17,6 +17,14 @@ class LineGraphViewController: UIViewController {
     @IBOutlet var textField_observations: UITextField!
     @IBOutlet var label_diagnostics: UILabel!
     @IBOutlet var btn_save: UIButton!
+    @IBOutlet var label_stddv: UILabel!
+    @IBOutlet var label_tempavg: UILabel!
+    @IBOutlet var label_tempmax: UILabel!
+    @IBOutlet var label_tempmin: UILabel!
+    @IBOutlet var label_stddv_val: UILabel!
+    @IBOutlet var label_tempavg_val: UILabel!
+    @IBOutlet var label_tempmax_val: UILabel!
+    @IBOutlet var label_tempmin_val: UILabel!
     var id : String?
     var editTitle: String?
     var consultationDetail: Consultation!
@@ -75,6 +83,11 @@ class LineGraphViewController: UIViewController {
         label_diagnostics.text = NSLocalizedString("diagnostics", comment: "")
         btn_save.setTitle(NSLocalizedString("save", comment: ""), for: .normal)
         btn_save.contentHorizontalAlignment = .right
+        
+        label_stddv.text = NSLocalizedString("stddv", comment: "")
+        label_tempavg.text = NSLocalizedString("avg", comment: "")
+        label_tempmax.text = NSLocalizedString("max", comment: "")
+        label_tempmin.text = NSLocalizedString("min", comment: "")
         // CHART TEMPERATURE
        // updateGraphTemp()
        // updateGraphAcc()
@@ -127,8 +140,8 @@ class LineGraphViewController: UIViewController {
                                  }
                                 print(self.numbersTemp)
                                   self.updateGraphTemp()
-                                 
-                                 
+                                self.sd()
+                                self.moyenne_min_max()
                              }
                     
                              
@@ -183,7 +196,25 @@ class LineGraphViewController: UIViewController {
           }
  
 
-
+    func sd() {
+        let expression = NSExpression(forFunction: "stddev:", arguments: [NSExpression(forConstantValue: numbersTemp)])
+        let standardDeviation = expression.expressionValue(with: nil, context: nil)
+        print("******** SD = \(standardDeviation!)")
+        self.label_stddv_val.text = (standardDeviation! as AnyObject).stringValue
+    }
+    
+    
+    
+    
+    
+    func moyenne_min_max() {
+        let sumArray = Double(numbersTemp.reduce(0, +))
+        let avgArrayValue = Double (Double(sumArray) / Double(Int(numbersTemp.count)) )
+        print("******** AVG = \(avgArrayValue)")
+        self.label_tempavg_val.text = String(avgArrayValue)
+        self.label_tempmin_val.text = String(self.numbersTemp.min()!)
+        self.label_tempmax_val.text = String(self.numbersTemp.max()!)
+    }
     
     // CHART TEMPERATURE
     func updateGraphTemp(){
@@ -203,6 +234,7 @@ class LineGraphViewController: UIViewController {
         let data = LineChartData() //This is the object that will be added to the chart
         data.addDataSet(line1) //Adds the line to the dataSet
         chtChart.data = data //finally - it adds the chart data to the chart and causes an update
+        
     }
     
     // CHART ACC
