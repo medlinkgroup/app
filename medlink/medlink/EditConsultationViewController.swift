@@ -144,7 +144,7 @@ class EditConsultationViewController: UIViewController {
           toolbar.isUserInteractionEnabled = true
           DateText.inputAccessoryView = toolbar
           DateText.inputView = datePicker
-          
+         datePicker.minimumDate = Date()
       }
       @objc func donedatePicker(){
 
