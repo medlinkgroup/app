@@ -234,6 +234,7 @@ class LineGraphViewController: UIViewController {
         let data = LineChartData() //This is the object that will be added to the chart
         data.addDataSet(line1) //Adds the line to the dataSet
         chtChart.data = data //finally - it adds the chart data to the chart and causes an update
+        chtChart.animate(xAxisDuration: 1.0, easingOption: .linear)
         
     }
     
@@ -285,6 +286,7 @@ class LineGraphViewController: UIViewController {
 
         chtChartAcc.data = data //finally - it adds the chart data to the chart and causes an update
         //chtChart.chartDescription?.text = "Temperature" // Here we set the description for the graph
+        chtChartAcc.animate(xAxisDuration: 1.0, easingOption: .linear)
     }
     
     // CHART TEMPERATURE
