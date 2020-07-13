@@ -13,7 +13,7 @@ import FirebaseStorage
 import MobileCoreServices
 import CoreLocation
 
-class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerViewDelegate {
+class AddPatientViewController: UIViewController, UIPickerViewDelegate {
 
     @IBOutlet var label_add_patient: UILabel!
     @IBOutlet var label_name: UILabel!
@@ -102,7 +102,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
                    self.EmailText.delegate = self
                    self.PhoneText.delegate = self
                    self.PlaceText.delegate = self
-                 //  self.DateText.delegate = self
+                   self.DateText.delegate = self
                    self.ImageURLText.delegate = self
                    self.imagePicker.delegate = self
                    self.ObjectText.delegate = self
@@ -328,5 +328,11 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
 
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
         picker.dismiss(animated: true, completion:nil)
+    }
+}
+
+extension AddPatientViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
     }
 }

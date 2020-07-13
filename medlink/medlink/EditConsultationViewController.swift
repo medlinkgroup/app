@@ -48,6 +48,10 @@ class EditConsultationViewController: UIViewController {
         loadData()
         createDatePicker()
         createTimeStartPicker()
+        
+        self.DateText.delegate = self
+        self.TimeStartText.delegate = self
+        
     }
 
     func newInstance(detail: Consultation) -> EditConsultationViewController {
@@ -150,6 +154,12 @@ class EditConsultationViewController: UIViewController {
         self.view.endEditing(true)
       }
     }
+
+extension EditConsultationViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
+    }
+}
     
    
 

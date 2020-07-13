@@ -1216,7 +1216,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F8E23DC2-B76C-4A35-B507-E4FD1D95C512"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/Ressources/AddConsultationViewController.swift"
@@ -1428,8 +1428,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "290"
             endingLineNumber = "290"
-            landmarkName = "action_add_patient(gesture:)"
-            landmarkType = "7">
+            landmarkName = "DocDashboardListViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1468,7 +1468,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2D09CE94-AD9E-4B70-8589-B82F6FC42362"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/Ressources/AddConsultationViewController.swift"
@@ -1500,7 +1500,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "19648EE4-EB10-41B2-B65B-EE1BADC7A515"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/AddPatientViewController.swift"
@@ -1508,8 +1508,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "301"
             endingLineNumber = "301"
-            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
-            landmarkType = "7">
+            landmarkName = "AddPatientViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1532,7 +1532,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "913540DD-4398-4F6C-9E94-8352603F9E23"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/AddPatientViewController.swift"
@@ -1596,7 +1596,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6AFD2C02-6852-4F69-A88A-26F51D29CC02"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/AddPatientViewController.swift"
@@ -1980,8 +1980,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
-            landmarkName = "mapView(_:viewFor:)"
-            landmarkType = "7">
+            landmarkName = "PatientsMapViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1996,8 +1996,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
             endingLineNumber = "108"
-            landmarkName = "touchCallout(_:)"
-            landmarkType = "7">
+            landmarkName = "PatientsMapViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2028,7 +2028,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "mapView(_:viewFor:)"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2164,7 +2164,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "42E8FFF1-E4F7-4FF7-B956-4852DC05E8CD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2196,7 +2196,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "78882246-6ABA-4F92-BD4F-B5E3E607EBA5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2228,7 +2228,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8806D251-0A43-4018-8345-2D19E0445503"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2244,7 +2244,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F5C4B8EB-AFA5-4BAF-A0DC-9C4E19CD8671"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2260,7 +2260,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E573A4E0-13A9-4F5C-9449-2FA5AC3331AB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2272,14 +2272,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E573A4E0-13A9-4F5C-9449-2FA5AC3331AB - cf091d3c88f6d303"
+                  uuid = "E573A4E0-13A9-4F5C-9449-2FA5AC3331AB - 42c9f43bda2fa8a0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "medlink.LineGraphViewController.viewDidAppear(Swift.Bool) -&gt; ()"
                   moduleName = "medlink"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi4/app/medlink/medlink/LineGraphViewController.swift"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/LineGraphViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
@@ -2287,14 +2287,14 @@
                   offsetFromSymbolStart = "326">
                </Location>
                <Location
-                  uuid = "E573A4E0-13A9-4F5C-9449-2FA5AC3331AB - 1c72aea73aa38bb"
+                  uuid = "E573A4E0-13A9-4F5C-9449-2FA5AC3331AB - 8c07c3ed21734318"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #2 (Swift.Array&lt;medlink.Temperature&gt;) -&gt; () in medlink.LineGraphViewController.viewDidAppear(Swift.Bool) -&gt; ()"
                   moduleName = "medlink"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi4/app/medlink/medlink/LineGraphViewController.swift"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/LineGraphViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "101"
@@ -2404,7 +2404,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A41E6B64-E652-4006-901E-0E42A4A500BB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2420,7 +2420,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8A7DFB68-4200-4444-BE8D-8D00B744FC88"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2436,7 +2436,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F74E42B7-3676-4AA8-AC37-DC910CD961BE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2448,14 +2448,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F74E42B7-3676-4AA8-AC37-DC910CD961BE - 1c72aea73aa38bb"
+                  uuid = "F74E42B7-3676-4AA8-AC37-DC910CD961BE - 8c07c3ed21734318"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #2 (Swift.Array&lt;medlink.Temperature&gt;) -&gt; () in medlink.LineGraphViewController.viewDidAppear(Swift.Bool) -&gt; ()"
                   moduleName = "medlink"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi4/app/medlink/medlink/LineGraphViewController.swift"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/LineGraphViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "104"
@@ -2463,14 +2463,14 @@
                   offsetFromSymbolStart = "688">
                </Location>
                <Location
-                  uuid = "F74E42B7-3676-4AA8-AC37-DC910CD961BE - 521fef1a69297c54"
+                  uuid = "F74E42B7-3676-4AA8-AC37-DC910CD961BE - dfdf061d3bf007f7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (medlink.Temperature) -&gt; Swift.Bool in closure #2 (Swift.Array&lt;medlink.Temperature&gt;) -&gt; () in medlink.LineGraphViewController.viewDidAppear(Swift.Bool) -&gt; ()"
                   moduleName = "medlink"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi4/app/medlink/medlink/LineGraphViewController.swift"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/LineGraphViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "104"
@@ -2484,7 +2484,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CD9D707F-0D26-465A-99AC-E5414DB08E30"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2500,7 +2500,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6B9C5629-D57A-4D76-B9AB-57FCAB0B50D1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2516,7 +2516,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A3677CEC-D5C8-4F22-BA22-88555963F881"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2532,7 +2532,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FA216994-C14B-4E8A-A007-6C9F4479663B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/LineGraphViewController.swift"
@@ -2544,14 +2544,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "FA216994-C14B-4E8A-A007-6C9F4479663B - cf091d3c88f6d303"
+                  uuid = "FA216994-C14B-4E8A-A007-6C9F4479663B - 42c9f43bda2fa8a0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "medlink.LineGraphViewController.viewDidAppear(Swift.Bool) -&gt; ()"
                   moduleName = "medlink"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi4/app/medlink/medlink/LineGraphViewController.swift"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/LineGraphViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
@@ -2559,14 +2559,14 @@
                   offsetFromSymbolStart = "326">
                </Location>
                <Location
-                  uuid = "FA216994-C14B-4E8A-A007-6C9F4479663B - 1c72aea73aa38bb"
+                  uuid = "FA216994-C14B-4E8A-A007-6C9F4479663B - 8c07c3ed21734318"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #2 (Swift.Array&lt;medlink.Temperature&gt;) -&gt; () in medlink.LineGraphViewController.viewDidAppear(Swift.Bool) -&gt; ()"
                   moduleName = "medlink"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi4/app/medlink/medlink/LineGraphViewController.swift"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/LineGraphViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "101"
@@ -2580,14 +2580,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1F535FFA-DDCF-481C-BA72-9526AAC0AAD7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/EditPatientViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "newInstance(detail:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2596,7 +2596,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9161907F-1B4D-433C-BA9A-582311ADCD90"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/EditPatientViewController.swift"
@@ -2608,14 +2608,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9161907F-1B4D-433C-BA9A-582311ADCD90 - c67217dbfa9f9e0d"
+                  uuid = "9161907F-1B4D-433C-BA9A-582311ADCD90 - e589bedbc8a79b56"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "medlink.EditPatientViewController.viewDidAppear(Swift.Bool) -&gt; ()"
                   moduleName = "medlink"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi4/app/medlink/medlink/EditPatientViewController.swift"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/EditPatientViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -2623,14 +2623,14 @@
                   offsetFromSymbolStart = "37">
                </Location>
                <Location
-                  uuid = "9161907F-1B4D-433C-BA9A-582311ADCD90 - 1df7be080c9acb5a"
+                  uuid = "9161907F-1B4D-433C-BA9A-582311ADCD90 - 3e0c17083ea2ce01"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Array&lt;medlink.Objet&gt;) -&gt; () in medlink.EditPatientViewController.viewDidAppear(Swift.Bool) -&gt; ()"
                   moduleName = "medlink"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi4/app/medlink/medlink/EditPatientViewController.swift"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/EditPatientViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
@@ -2644,7 +2644,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "55D73B57-1DAB-4939-AC49-AF4C181F9739"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/EditPatientViewController.swift"
@@ -2666,8 +2666,8 @@
             filePath = "medlink/EditPatientViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "save_btn(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2682,8 +2682,8 @@
             filePath = "medlink/EditPatientViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "save_btn(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2698,8 +2698,8 @@
             filePath = "medlink/EditPatientViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "save_btn(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2708,7 +2708,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "92A81BEC-B022-4019-A2D0-46C14E4EF787"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/EditObjetViewController.swift"
@@ -2756,14 +2756,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7BA1D5C2-BB90-4C51-9583-0F98D6A8FD56"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/EditConsultationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "newInstance(detail:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2784,33 +2784,33 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A917C98F-01EE-4E42-A57D-F6DBF2E09510 - 2e0b20007cdbc042"
+                  uuid = "A917C98F-01EE-4E42-A57D-F6DBF2E09510 - 1780efb5a28dbba5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in medlink.DocDashboardListViewController.tableView(_: __C.UITableView, commit: __C.UITableViewCellEditingStyle, forRowAt: Foundation.IndexPath) -&gt; ()"
                   moduleName = "medlink"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi4/app/medlink/medlink/DocDashboardListViewController.swift"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/DocDashboardListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "229"
-                  endingLineNumber = "229"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
                   offsetFromSymbolStart = "134">
                </Location>
                <Location
-                  uuid = "A917C98F-01EE-4E42-A57D-F6DBF2E09510 - e3ad172bf9e13c34"
+                  uuid = "A917C98F-01EE-4E42-A57D-F6DBF2E09510 - da26d89e27b747d3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in medlink.DocDashboardListViewController.tableView(_: __C.UITableView, commit: __C.UITableViewCellEditingStyle, forRowAt: Foundation.IndexPath) -&gt; ()"
                   moduleName = "medlink"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/fabi4/app/medlink/medlink/DocDashboardListViewController.swift"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/DocDashboardListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "230"
-                  endingLineNumber = "230"
+                  startingLineNumber = "231"
+                  endingLineNumber = "231"
                   offsetFromSymbolStart = "32">
                </Location>
             </Locations>
@@ -2820,7 +2820,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AC76E5AB-BE5B-4FFB-8E6C-E921C29CA658"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/DocDashboardListViewController.swift"
@@ -2836,7 +2836,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E4E60A12-0D0D-4155-B90F-29F49E1F22D8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/DocDashboardListViewController.swift"
@@ -2852,7 +2852,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "50BABF95-6B9D-406F-8519-77F42FE864AC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "medlink/DocDashboardListViewController.swift"
@@ -2909,6 +2909,70 @@
             startingLineNumber = "154"
             endingLineNumber = "154"
             landmarkName = "add_patient_btn(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8C9F2715-684C-4522-9189-B052C149E559 - 13da93f8c0f6aff7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medlink.AddPatientViewController.add_patient_btn(Any) -&gt; ()"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/AddPatientViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "4992">
+               </Location>
+               <Location
+                  uuid = "8C9F2715-684C-4522-9189-B052C149E559 - a40e53548cdf850b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.CLPlacemark&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in medlink.AddPatientViewController.add_patient_btn(Any) -&gt; ()"
+                  moduleName = "medlink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cylia.boukhiba/Documents/Cours/pa/version%20dernie%CC%80re/app/medlink/medlink/AddPatientViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "829">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D21044AE-A771-4B20-84BC-42D18A5887B0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/Ressources/AddConsultationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1AFFB4A-DBD8-4E74-891C-D65575A6500A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medlink/DocDashboardListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "tableView(_:leadingSwipeActionsConfigurationForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

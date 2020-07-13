@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class AddConsultationViewController: UIViewController, UITextFieldDelegate {
+class AddConsultationViewController: UIViewController {
 
     
     @IBOutlet var label_add_consultation: UILabel!
@@ -243,6 +243,11 @@ extension AddConsultationViewController: UIPickerViewDataSource, UIPickerViewDel
         PatientText.text = selectedPatientName
     }
    
+}
+extension AddConsultationViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
+    }
 }
 
 

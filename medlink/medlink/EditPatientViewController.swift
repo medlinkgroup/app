@@ -105,6 +105,9 @@ class EditPatientViewController: UIViewController, UIPickerViewDelegate {
         loadData()
         createDatePicker()
         createObjetPicker()
+        
+        self.DateText.delegate = self
+        self.ObjectText.delegate = self
     }
 
 
@@ -372,6 +375,11 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
 
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
         picker.dismiss(animated: true, completion:nil)
+    }
+}
+extension EditPatientViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
     }
 }
 
