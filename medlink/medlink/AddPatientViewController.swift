@@ -214,7 +214,7 @@ class AddPatientViewController: UIViewController, UIPickerViewDelegate {
         toolbar.isUserInteractionEnabled = true
     DateText.inputAccessoryView = toolbar
     DateText.inputView = datePicker
-   
+        datePicker.maximumDate = Date()
         
     }
     @objc func donedatePicker(){

@@ -14,6 +14,7 @@ import FirebaseFirestore
 
 class LineGraphViewController: UIViewController {
 
+    @IBOutlet var btn_refresh: UIButton!
     @IBOutlet var textField_observations: UITextField!
     @IBOutlet var label_diagnostics: UILabel!
     @IBOutlet var btn_save: UIButton!
@@ -80,6 +81,7 @@ class LineGraphViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        btn_refresh.alpha = 0
         label_diagnostics.text = NSLocalizedString("diagnostics", comment: "")
         btn_save.setTitle(NSLocalizedString("save", comment: ""), for: .normal)
         btn_save.contentHorizontalAlignment = .right
@@ -95,6 +97,7 @@ class LineGraphViewController: UIViewController {
         id = consultationDetail._id
         editTitle = consultationDetail.title
         // Do any additional setup after loading the view.
+
     }
     override func viewDidAppear(_ animated: Bool) {
         
@@ -336,6 +339,9 @@ class LineGraphViewController: UIViewController {
           self.present(alert, animated: true)
       }
       
+    @IBAction func btn_refresh(_ sender: Any) {
+        
+    }
     
 
 }
