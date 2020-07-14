@@ -13,7 +13,7 @@ import FirebaseStorage
 import MobileCoreServices
 import CoreLocation
 
-class AddPatientViewController: UIViewController, UIPickerViewDelegate {
+class AddPatientViewController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate {
 
     @IBOutlet var label_add_patient: UILabel!
     @IBOutlet var label_name: UILabel!
@@ -332,8 +332,3 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
     }
 }
 
-extension AddPatientViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return false
-    }
-}

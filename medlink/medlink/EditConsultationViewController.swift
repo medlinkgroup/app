@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditConsultationViewController: UIViewController {
+class EditConsultationViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var label_edit_consultation: UILabel!
     @IBOutlet weak var TitleText: UITextField!
@@ -155,11 +155,7 @@ class EditConsultationViewController: UIViewController {
       }
     }
 
-extension EditConsultationViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return false
-    }
-}
+
     
    
 

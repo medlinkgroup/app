@@ -12,7 +12,7 @@ import FirebaseFirestore
 import FirebaseStorage
 import MobileCoreServices
 
-class EditPatientViewController: UIViewController, UIPickerViewDelegate {
+class EditPatientViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
 
     
     @IBOutlet var label_modify_patient: UILabel!
@@ -378,9 +378,9 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
         picker.dismiss(animated: true, completion:nil)
     }
 }
-extension EditPatientViewController: UITextFieldDelegate {
+/*extension EditPatientViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return false
     }
-}
+}*/
 
