@@ -76,8 +76,8 @@
 "email_exists" = "Cet email existe déjà";
 "error_save_data" = "Erreur lors de la sauvegarde";
 "add_success" = "Ajouté avec succès !";
-"available" = "Non Attribué";
-"not_available" = "Attribué";
+"available" = "Disponible";
+"not_available" = "Non Disponible";
 "isAtt_desc" = "Cet appareil est en train d'être utilisé par un patient.";
 "isNotAtt_desc" = "Cet appareil n'est utilisé par aucun patient.";
 "address_not_found" = "Adresse non trouvée";
