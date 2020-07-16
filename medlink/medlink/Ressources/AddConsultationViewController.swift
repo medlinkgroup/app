@@ -174,6 +174,7 @@ func displayError(message: String) {
           toolbar.isUserInteractionEnabled = true
       DateText.inputAccessoryView = toolbar
       DateText.inputView = datePicker
+      datePicker.minimumDate = Date()
           
       }
       @objc func donedatePicker(){
@@ -244,5 +245,6 @@ extension AddConsultationViewController: UIPickerViewDataSource, UIPickerViewDel
     }
    
 }
+
 
 

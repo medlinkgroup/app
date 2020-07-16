@@ -13,7 +13,7 @@ import FirebaseStorage
 import MobileCoreServices
 import CoreLocation
 
-class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerViewDelegate {
+class AddPatientViewController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate {
 
     @IBOutlet var label_add_patient: UILabel!
     @IBOutlet var label_name: UILabel!
@@ -102,7 +102,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
                    self.EmailText.delegate = self
                    self.PhoneText.delegate = self
                    self.PlaceText.delegate = self
-                 //  self.DateText.delegate = self
+                   self.DateText.delegate = self
                    self.ImageURLText.delegate = self
                    self.imagePicker.delegate = self
                    self.ObjectText.delegate = self
@@ -214,6 +214,7 @@ class AddPatientViewController: UIViewController,UITextFieldDelegate, UIPickerVi
         toolbar.isUserInteractionEnabled = true
     DateText.inputAccessoryView = toolbar
     DateText.inputView = datePicker
+        datePicker.maximumDate = Date()
         
     }
     @objc func donedatePicker(){
@@ -330,3 +331,4 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
         picker.dismiss(animated: true, completion:nil)
     }
 }
+

@@ -81,4 +81,7 @@
 "isAtt_desc" = "This device is currently being used by a patient.";
 "isNotAtt_desc" = "This device is not being used by any patient.";
 "address_not_found" = "Address not found";
-
+"stddv" = "Standard Deviation";
+"avg" = "Average";
+"max" = "Maximum Value";
+"min" = "Minimum Value";

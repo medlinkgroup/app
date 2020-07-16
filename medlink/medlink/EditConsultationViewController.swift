@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditConsultationViewController: UIViewController {
+class EditConsultationViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var label_edit_consultation: UILabel!
     @IBOutlet weak var TitleText: UITextField!
@@ -48,6 +48,10 @@ class EditConsultationViewController: UIViewController {
         loadData()
         createDatePicker()
         createTimeStartPicker()
+        
+        self.DateText.delegate = self
+        self.TimeStartText.delegate = self
+        
     }
 
     func newInstance(detail: Consultation) -> EditConsultationViewController {
@@ -140,7 +144,7 @@ class EditConsultationViewController: UIViewController {
           toolbar.isUserInteractionEnabled = true
           DateText.inputAccessoryView = toolbar
           DateText.inputView = datePicker
-          
+         datePicker.minimumDate = Date()
       }
       @objc func donedatePicker(){
 
@@ -150,6 +154,8 @@ class EditConsultationViewController: UIViewController {
         self.view.endEditing(true)
       }
     }
+
+
     
    
 
